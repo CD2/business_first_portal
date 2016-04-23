@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  order_type: 1
+  item: MyString
+  quantity: 1
+  needed_by: 2016-04-21 17:32:04
+  ordered: 2016-04-21 17:32:04
+  ordered_from: MyString
+  status: 1
+
+two:
+  order_type: 1
+  item: MyString
+  quantity: 1
+  needed_by: 2016-04-21 17:32:04
+  ordered: 2016-04-21 17:32:04
+  ordered_from: MyString
+  status: 1

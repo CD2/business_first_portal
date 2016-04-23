@@ -1,0 +1,51 @@
+class InvoiceRequestsController < ApplicationController
+  before_action :set_invoice_request, only: [:edit, :update, :destroy, :show]
+
+  def index
+    @invoice_requests = InvoiceRequest.invoices
+  end
+
+  def delivery_notes
+    @invoice_requests = InvoiceRequest.delivery_notes
+  end
+
+  def new
+    @invoice_request = InvoiceRequest.new
+  end
+
+  def create
+    @invoice_request = InvoiceRequest.new(invoice_request_params)
+    if @invoice_request.save
+      flash[:notice] = "Invoice Request Created"
+      redirect_to @invoice_request
+    else
+      render :new
+    end
+  end
+
+  def update
+    if @invoice_request.update(invoice_request_params)
+      flash[:notice] = "Invoice Request Updated"
+      redirect_to @invoice_request
+    else
+      render :new
+    end
+  end
+
+  def destroy
+    @invoice_request.destroy
+    redirect_to invoice_requests_url
+  end
+
+  private
+
+    def set_invoice_request
+      @invoice_request = InvoiceRequest.find(params[:id])
+    end
+
+    def invoice_request_params
+      params.require(:invoice_request).permit(:status, :date, :invoice_number, :company_id, :same_dispatch_address, :device_user, :cost_code, :notes, :delivery_note_only,
+                                              :invoice_address_one, :invoice_address_two, :invoice_address_city, :invoice_address_county, :invoice_address_postcode, :dispatch_address_one, :dispatch_address_two, :dispatch_address_city, :dispatch_address_county, :dispatch_address_postcode)
+    end
+
+end

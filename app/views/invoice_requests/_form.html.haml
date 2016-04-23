@@ -1,0 +1,78 @@
+= form_for @invoice_request do |f|
+
+  #two_panel_form
+    #main_panel
+
+      = field_set_tag 'Company' do
+        .field
+          = f.label :company_id
+          = f.collection_select :company_id, Company.all, :id, :name
+        .field
+          = f.label :invoice_address_one, "Address One"
+          = f.text_field :invoice_address_one
+        .field
+          = f.label :invoice_address_two, "Address Two"
+          = f.text_field :invoice_address_two
+        .field
+          = f.label :invoice_address_city, "City"
+          = f.text_field :invoice_address_city
+        .field
+          = f.label :invoice_address_county, "County"
+          = f.text_field :invoice_address_county
+        .field
+          = f.label :invoice_address_postcode, "Postcode"
+          = f.text_field :invoice_address_postcode
+        .field.check_box_hiding_div
+          = f.label :same_dispatch_address, "Dispatch to Invoice Address"
+          = f.check_box :same_dispatch_address
+          .check_box_hidden_div
+            .field
+              = f.label :dispatch_address_one, "Address One"
+              = f.text_field :dispatch_address_one
+            .field
+              = f.label :dispatch_address_two, "Address Two"
+              = f.text_field :dispatch_address_two
+            .field
+              = f.label :dispatch_address_city, "City"
+              = f.text_field :dispatch_address_city
+            .field
+              = f.label :dispatch_address_county, "County"
+              = f.text_field :dispatch_address_county
+            .field
+              = f.label :dispatch_address_postcode, "Postcode"
+              = f.text_field :dispatch_address_postcode
+
+    #side_panel
+      = field_set_tag 'Accounts only' do
+        .field
+          = f.label :status
+          = f.select :status, InvoiceRequest.statuses.keys.map { |s| [s.humanize, s] }
+        .field
+          = f.label :date
+          = f.date_field :date
+        .field
+          = f.label :invoice_number
+          = f.text_field :invoice_number
+
+
+
+      = field_set_tag 'Information' do
+        .field
+          = f.label :device_user
+          = f.text_field :device_user
+        .field
+          = f.label :cost_code
+          = f.text_field :cost_code
+        .field
+          = f.label :notes
+          = f.text_area :notes
+        .field
+          = f.label :delivery_note_only do
+            = f.check_box :delivery_note_only
+            %span Create delivery note only
+
+  .actions
+    - if @invoice_request.new_record?
+      = f.submit "Save and Add Products", data: {disable_with: 'Creating Invoice Request...'}
+    - else
+      = f.submit :submit, "Save"

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: 1
+  date: 2016-04-09 13:00:50
+  invoice_number: MyString
+  dispatch_to_id: 1
+  invoice_to_id: 1
+  notes: MyText
+  delivery_note_only: false
+
+two:
+  status: 1
+  date: 2016-04-09 13:00:50
+  invoice_number: MyString
+  dispatch_to_id: 1
+  invoice_to_id: 1
+  notes: MyText
+  delivery_note_only: false

@@ -1,0 +1,18 @@
+- provide :title, "Companies"
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Company
+      %th
+
+  %tbody
+    - @companies.each do |company|
+      %tr
+        %td= company.name
+        %td= company.company
+        %td
+          = link_to 'Show', company
+          = link_to 'Edit', edit_company_path(company)
+          = link_to 'Destroy', company, :method => :delete, :data => { :confirm => 'Are you sure?' }

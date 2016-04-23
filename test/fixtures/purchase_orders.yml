@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  status: 1
+  payment_type: 1
+  company_id: 1
+  notes: MyText
+  received_goods: false
+  received_invoice: false
+  under_query: false
+
+two:
+  status: 1
+  payment_type: 1
+  company_id: 1
+  notes: MyText
+  received_goods: false
+  received_invoice: false
+  under_query: false

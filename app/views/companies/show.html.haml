@@ -1,0 +1,42 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @company.name
+%p
+  %b Company:
+  = @company.company
+%p
+  %b Address one:
+  = @company.address_one
+%p
+  %b Address two:
+  = @company.address_two
+%p
+  %b City:
+  = @company.city
+%p
+  %b County:
+  = @company.county
+%p
+  %b Postcode:
+  = @company.postcode
+%p
+  %b Phone:
+  = @company.phone
+%p
+  %b Fax:
+  = @company.fax
+%p
+  %b Company registration:
+  = @company.company_registration
+%p
+  %b Referred by:
+  = @company.referred_by
+%p
+  %b Vat number:
+  = @company.vat_number
+
+= link_to 'Edit', edit_company_path(@company)
+\|
+= link_to 'Back', companies_path
