@@ -1,4 +1,4 @@
-task copy_comp_from_drup: :environment do
+task initialise_companies: :environment do
   companies_json = [
     {
       "company": {
@@ -7235,6 +7235,6 @@ task copy_comp_from_drup: :environment do
   Company.include_root_in_json = true
 
   companies_json.each do |json|
-    Company.new.from_json json.to_json
+    Company.create!(json[:company])
   end
 end

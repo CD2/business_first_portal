@@ -1,3 +1,3 @@
 class Company < ApplicationRecord
-  validates :company, :address_one, :city, :county, :postcode, presence: true
+  validates :name, presence: true
 end
