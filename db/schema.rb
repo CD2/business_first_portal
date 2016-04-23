@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160421163204) do
+ActiveRecord::Schema.define(version: 20160423225729) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20160421163204) do
     t.string   "device_user"
     t.string   "cost_code"
     t.boolean  "delivery_note_only",        default: false
+    t.integer  "user_id"
     t.datetime "created_at",                                null: false
     t.datetime "updated_at",                                null: false
   end
@@ -70,6 +71,20 @@ ActiveRecord::Schema.define(version: 20160421163204) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
+
+  create_table "products", force: :cascade do |t|
+    t.string   "name"
+    t.string   "imei"
+    t.string   "quantity"
+    t.string   "price"
+    t.string   "notes"
+    t.string   "reference_type"
+    t.integer  "reference_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "products", ["reference_type", "reference_id"], name: "index_products_on_reference_type_and_reference_id", using: :btree
 
   create_table "purchase_orders", force: :cascade do |t|
     t.integer  "status"

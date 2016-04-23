@@ -2,6 +2,7 @@ class InvoiceRequest < ApplicationRecord
 
   scope :invoices, -> {where(delivery_note_only: false)}
   scope :delivery_notes, -> {where(delivery_note_only: false)}
+  belongs_to :user
 
   enum status: [:active, :complete]
 

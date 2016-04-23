@@ -1,6 +1,6 @@
 #form_page
   = form_for @invoice_request do |f|
-
+    = render '_common/validation_errors', object: @invoice_request
     #two_panel_form
       #main_panel
 

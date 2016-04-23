@@ -1,6 +1,7 @@
 class InvoiceRequestsController < ApplicationController
   before_action :set_invoice_request, only: [:edit, :update, :destroy, :show]
 
+
   def show
   end
 
@@ -21,6 +22,7 @@ class InvoiceRequestsController < ApplicationController
 
   def create
     @invoice_request = InvoiceRequest.new(invoice_request_params)
+    @invoice_request.assign_creator current_user
     if @invoice_request.save
       flash[:notice] = "Invoice Request Created"
       redirect_to @invoice_request
