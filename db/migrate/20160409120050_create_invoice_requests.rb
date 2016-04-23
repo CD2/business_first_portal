@@ -4,12 +4,13 @@ class CreateInvoiceRequests < ActiveRecord::Migration[5.0]
 
       #ACCOUNTS
       t.integer :status
-      t.datetime :date
+      t.datetime :invoice_date
       t.string :invoice_number
 
       #GENERAL
       t.integer :company_id
 
+      t.string :po_number
       t.string :invoice_address_one
       t.string :invoice_address_two
       t.string :invoice_address_city
@@ -18,6 +19,7 @@ class CreateInvoiceRequests < ActiveRecord::Migration[5.0]
 
       t.boolean :same_dispatch_address, default: true
 
+      t.string :attention_of
       t.string :dispatch_address_one
       t.string :dispatch_address_two
       t.string :dispatch_address_city

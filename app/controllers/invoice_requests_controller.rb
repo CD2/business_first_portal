@@ -1,8 +1,14 @@
 class InvoiceRequestsController < ApplicationController
   before_action :set_invoice_request, only: [:edit, :update, :destroy, :show]
 
+  def show
+  end
+
   def index
-    @invoice_requests = InvoiceRequest.invoices
+    @invoice_requests = InvoiceRequest.send(params[:filter])
+  rescue
+    flash[:notice] = "Invalid filter" if params[:channel].present?
+    @invoice_requests = InvoiceRequest.all
   end
 
   def delivery_notes
@@ -45,7 +51,8 @@ class InvoiceRequestsController < ApplicationController
 
     def invoice_request_params
       params.require(:invoice_request).permit(:status, :date, :invoice_number, :company_id, :same_dispatch_address, :device_user, :cost_code, :notes, :delivery_note_only,
-                                              :invoice_address_one, :invoice_address_two, :invoice_address_city, :invoice_address_county, :invoice_address_postcode, :dispatch_address_one, :dispatch_address_two, :dispatch_address_city, :dispatch_address_county, :dispatch_address_postcode)
+                                              :invoice_address_one, :invoice_address_two, :invoice_address_city, :invoice_address_county, :invoice_address_postcode, :dispatch_address_one, :dispatch_address_two, :dispatch_address_city, :dispatch_address_county, :dispatch_address_postcode,
+                                              :invoice_date, :po_number, :attention_of)
     end
 
 end
