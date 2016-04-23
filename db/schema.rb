@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20160421163204) do
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"
+    t.string   "alias"
     t.string   "address_one"
     t.string   "address_two"
     t.string   "city"
@@ -26,11 +27,11 @@ ActiveRecord::Schema.define(version: 20160421163204) do
     t.string   "phone"
     t.string   "email"
     t.string   "fax"
-    t.string   "company_registration"
+    t.string   "registration"
     t.string   "referred_by"
     t.string   "vat_number"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "invoice_requests", force: :cascade do |t|

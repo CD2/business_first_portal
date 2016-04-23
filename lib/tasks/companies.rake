@@ -1,8 +1,9 @@
-task copy_comp_from_drup: :environment do
+task initialise_companies: :environment do
   companies_json = [
     {
       "company": {
-        "name": "02",
+        "name": "",
+        "alias": "02",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -12,12 +13,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "1&1 Internet Ltd",
+        "alias": "1&1 Internet Ltd",
         "referred_by": "",
         "address_one": "10-14 Bath Road",
         "address_two": "",
@@ -27,12 +29,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "3Monkeys",
+        "name": "",
+        "alias": "3Monkeys",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -42,12 +45,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "A",
+        "name": "",
+        "alias": "A",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -57,12 +61,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "A B Plant Shipping Ltd",
+        "alias": "A B Plant Shipping Ltd",
         "referred_by": "APR",
         "address_one": "Colton Grange, High House",
         "address_two": "Farm Lane",
@@ -72,12 +77,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 881199",
         "email": "tanya@abplantshipping.co.uk",
         "fax": "01603881174",
-        "company_registration": "2118674"
+        "registration": "2118674"
       }
     },
     {
       "company": {
         "name": "A.C.S. Scaffolding",
+        "alias": "A.C.S. Scaffolding",
         "referred_by": "",
         "address_one": "3 Wesley Close",
         "address_two": "Mundesley",
@@ -87,12 +93,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01263 721343",
         "email": "acsnorfolk@btinternet.com",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "A1 Electrics",
+        "name": "",
+        "alias": "A1 Electrics",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -102,12 +109,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "A1 Taxis (Sheringham) Limited",
+        "alias": "A1 Taxis (Sheringham) Limited",
         "referred_by": "",
         "address_one": "21 St Peter's Road",
         "address_two": "",
@@ -117,12 +125,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01263 822228",
         "email": "robaipag@aol.com",
         "fax": "01263 822228",
-        "company_registration": "810991"
+        "registration": "810991"
       }
     },
     {
       "company": {
-        "name": "AA Labels",
+        "name": "",
+        "alias": "AA Labels",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -132,12 +141,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "ABC Abacus Ltd",
+        "alias": "ABC Abacus Ltd",
         "referred_by": "",
         "address_one": "Unit 15",
         "address_two": "Page Road",
@@ -147,12 +157,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 660263",
         "email": "easyas@abcabacus.co.uk",
         "fax": "01603 660237",
-        "company_registration": "6714100"
+        "registration": "6714100"
       }
     },
     {
       "company": {
-        "name": "Abillo Greater Anglia",
+        "name": "",
+        "alias": "Abillo Greater Anglia",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -162,12 +173,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Achilles",
+        "alias": "Achilles",
         "referred_by": "",
         "address_one": "30 Western Avenue",
         "address_two": "Milton park",
@@ -177,12 +189,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "ACS Scaffolding",
+        "alias": "ACS Scaffolding",
         "referred_by": "",
         "address_one": "3 Wesley Close",
         "address_two": "Mundesley",
@@ -192,12 +205,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01263 721343",
         "email": "acsnorfolk@btinternet.com",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "ACSN Ltd",
+        "name": "ACSN Ltd ",
+        "alias": "ACSN Ltd",
         "referred_by": "",
         "address_one": "3 Wesley Close",
         "address_two": "",
@@ -207,12 +221,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Activ Cameras",
+        "name": "",
+        "alias": "Activ Cameras",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -222,12 +237,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Adey Electronics",
+        "name": "",
+        "alias": "Adey Electronics",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -237,12 +253,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "ADI Global",
+        "name": "",
+        "alias": "ADI Global",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -252,12 +269,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Admiral Insurance",
+        "name": "",
+        "alias": "Admiral Insurance",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -267,12 +285,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "ADR Components UK",
+        "name": "",
+        "alias": "ADR Components UK",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -282,12 +301,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Advanced Air (UK) Limited",
+        "alias": "Advanced Air (UK) Limited",
         "referred_by": "APR",
         "address_one": "Burrell Way",
         "address_two": "",
@@ -297,12 +317,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01842 765657",
         "email": "mharsley@advancedair.co.uk",
         "fax": "01842 762032",
-        "company_registration": "1093689"
+        "registration": "1093689"
       }
     },
     {
       "company": {
         "name": "Alan Korn",
+        "alias": "Alan Korn",
         "referred_by": "",
         "address_one": "Park House",
         "address_two": "37 Watton Road, Colney",
@@ -312,12 +333,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 810400",
         "email": "Alan.a.j.korn@btinternet.com / Beekorn@talk21.com",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Alison Pye",
+        "name": "Red Letter Days",
+        "alias": "Alison Pye",
         "referred_by": "",
         "address_one": "The Grange",
         "address_two": "100 High Street",
@@ -327,12 +349,13 @@ task copy_comp_from_drup: :environment do
         "phone": "0845 600 7610",
         "email": "alison.pye@redletterdays.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "All Car Parts Ltd",
+        "name": "",
+        "alias": "All Car Parts Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -342,12 +365,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Allendale Electronics Ltd",
+        "name": "",
+        "alias": "Allendale Electronics Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -357,12 +381,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Altron",
+        "name": "Altron Communications Equipment Ltd",
+        "alias": "Altron",
         "referred_by": "",
         "address_one": "Tower House",
         "address_two": "Parc Hendre",
@@ -372,12 +397,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Amazon",
+        "name": "",
+        "alias": "Amazon",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -387,12 +413,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Ameen Uddin",
+        "name": "",
+        "alias": "Ameen Uddin",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -402,12 +429,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Andrea Jones",
+        "alias": "Andrea Jones",
         "referred_by": "",
         "address_one": "Cedar Grange",
         "address_two": "Watton Road",
@@ -417,12 +445,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01953850829",
         "email": "andreajns4@gmail.com",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Andrew James UK Ltd",
+        "name": "",
+        "alias": "Andrew James UK Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -432,12 +461,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Anglian Electricals",
+        "name": "",
+        "alias": "Anglian Electricals",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -447,12 +477,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Anglian Water",
+        "alias": "Anglian Water",
         "referred_by": "",
         "address_one": "Anglian House",
         "address_two": "Ambury Road",
@@ -462,12 +493,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Antec Contracting Services (Anglia) Ltd",
+        "name": "Antec Contracting Services (Anglia) Limited",
+        "alias": "Antec Contracting Services (Anglia) Ltd",
         "referred_by": "APR",
         "address_one": "Unit 2",
         "address_two": "Ashwellthorpe Industrial Estate",
@@ -477,12 +509,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01508 481630",
         "email": "antec@antec-asbestos.co.uk",
         "fax": "01508 481631",
-        "company_registration": "2610902"
+        "registration": "2610902"
       }
     },
     {
       "company": {
-        "name": "AP MotorStore",
+        "name": "",
+        "alias": "AP MotorStore",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -492,12 +525,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Apple",
+        "name": "Apple Inc",
+        "alias": "Apple",
         "referred_by": "",
         "address_one": "Unit 216",
         "address_two": "Upper Merchants Hall Chapelfield",
@@ -507,12 +541,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 216620",
         "email": "chapelfield@apple.com",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "APR Telecoms (Maintenance) Limited",
+        "alias": "APR Telecoms (Maintenance) Limited",
         "referred_by": "APR",
         "address_one": "Philip Ford Way",
         "address_two": "Silfield",
@@ -522,12 +557,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01953 713333",
         "email": "andy.rackham@aprtelecoms.co.uk",
         "fax": "01953 713345",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Archant Limited",
+        "alias": "Archant Limited",
         "referred_by": "",
         "address_one": "Prospect House",
         "address_two": "Rouen Road",
@@ -537,12 +573,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 772772",
         "email": "",
         "fax": "",
-        "company_registration": "4126997"
+        "registration": "4126997"
       }
     },
     {
       "company": {
-        "name": "Arslan Communications",
+        "name": "",
+        "alias": "Arslan Communications",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -552,12 +589,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Ascent Communications Limited",
+        "alias": "Ascent Communications Limited",
         "referred_by": "",
         "address_one": "Rivington House",
         "address_two": "82 Great Eastern Street",
@@ -567,12 +605,13 @@ task copy_comp_from_drup: :environment do
         "phone": "0207 223 0068",
         "email": "dconlon@ascentcomms.co.uk",
         "fax": "0207 900 2353",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Asda",
+        "name": "",
+        "alias": "Asda",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -582,12 +621,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "asdosif",
+        "name": "",
+        "alias": "asdosif",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -597,12 +637,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Asperger East Anglia",
+        "alias": "Asperger East Anglia",
         "referred_by": "",
         "address_one": "Asperger East Anglia, Charing Cross Centre",
         "address_two": "17-19 St John Maddermarket",
@@ -612,12 +653,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 620500",
         "email": "thecla@asperger.org.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Avenir",
+        "name": "",
+        "alias": "Avenir",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -627,12 +669,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "AVI",
+        "name": "Anglia Vehicle Installations",
+        "alias": "AVI",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -642,12 +685,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Babz Media Ltd",
+        "name": "",
+        "alias": "Babz Media Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -657,12 +701,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Badland",
+        "name": "",
+        "alias": "Badland",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -672,12 +717,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Badlands",
+        "name": "RW Badland Ltd",
+        "alias": "Badlands",
         "referred_by": "",
         "address_one": "Unit 3 Providence St",
         "address_two": "Lye",
@@ -687,12 +733,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01384 423160",
         "email": "adrian@badland.co.uk",
         "fax": "01384 895051",
-        "company_registration": "1231902"
+        "registration": "1231902"
       }
     },
     {
       "company": {
-        "name": "Ballicom International",
+        "name": "",
+        "alias": "Ballicom International",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -702,12 +749,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Bargain World",
+        "name": "",
+        "alias": "Bargain World",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -717,12 +765,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Bastin Steward Ltd",
+        "alias": "Bastin Steward Ltd",
         "referred_by": "APR",
         "address_one": "7 The Close",
         "address_two": "",
@@ -732,12 +781,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 665996",
         "email": "ben@bastinsteward.com",
         "fax": "",
-        "company_registration": "6692708"
+        "registration": "6692708"
       }
     },
     {
       "company": {
         "name": "BBH Ltd",
+        "alias": "BBH Ltd",
         "referred_by": "APR",
         "address_one": "Units 9-10, 251 Holt Road",
         "address_two": "Horsford",
@@ -747,12 +797,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 897350",
         "email": "enquiries@bbhltd.biz",
         "fax": "01603 890080",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Beal Ltd",
+        "name": "",
+        "alias": "Beal Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -762,12 +813,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Beal UK Ltd",
+        "name": "",
+        "alias": "Beal UK Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -777,12 +829,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Beds r Direct",
+        "name": "",
+        "alias": "Beds r Direct",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -792,12 +845,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Belmont Roofing Ltd",
+        "alias": "Belmont Roofing Ltd",
         "referred_by": "",
         "address_one": "88 Drayton Road",
         "address_two": "",
@@ -807,12 +861,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 410761",
         "email": "p.arthurs@belmontroofing.co.uk",
         "fax": "01603 789510",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Best Western",
+        "name": "",
+        "alias": "Best Western",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -822,12 +877,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "BeWILDERwood",
+        "name": "BeWILDerwood",
+        "alias": "BeWILDERwood",
         "referred_by": "",
         "address_one": "BeWILDERwood Norfolk",
         "address_two": "Horning Road",
@@ -837,12 +893,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01692 633033",
         "email": "bogglebanker@bewilderwood.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "BLTDirect",
+        "name": "",
+        "alias": "BLTDirect",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -852,12 +909,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Break",
+        "alias": "Break",
         "referred_by": "Lorraine Mills",
         "address_one": "Davison House",
         "address_two": "1 Montague Road,",
@@ -867,12 +925,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01263576927",
         "email": "lorrain.mills@break-charity.org",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Broadland Housing Group",
+        "alias": "Broadland Housing Group",
         "referred_by": "",
         "address_one": "NCFC, Jarrold Stand",
         "address_two": "Carrow Road",
@@ -882,12 +941,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 750209",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Brook Hotel",
+        "name": "",
+        "alias": "Brook Hotel",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -897,12 +957,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "BSAS Telecoms",
+        "name": "",
+        "alias": "BSAS Telecoms",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -912,12 +973,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "BT Shop",
+        "name": "",
+        "alias": "BT Shop",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -927,12 +989,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Budgens",
+        "name": "",
+        "alias": "Budgens",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -942,12 +1005,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Business First Solutions Ltd",
+        "alias": "Business First Solutions Ltd",
         "referred_by": "",
         "address_one": "Business First Solutions Ltd",
         "address_two": "33a Whiffler Road",
@@ -957,12 +1021,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 400063",
         "email": "michelle@business-first.com",
         "fax": "01603 483111",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Busseys",
+        "name": "",
+        "alias": "Busseys",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -972,12 +1037,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Buy a Battery",
+        "name": "",
+        "alias": "Buy a Battery",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -987,12 +1053,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Campingland Surgery",
+        "alias": "Campingland Surgery",
         "referred_by": "APR",
         "address_one": "Campingland Surgery",
         "address_two": "",
@@ -1002,12 +1069,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01760 726007",
         "email": "liz.wing@nhs.net",
         "fax": "01760 726009",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Camsecure",
+        "name": "",
+        "alias": "Camsecure",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1017,12 +1085,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Carbon Fibre Technologies Limited",
+        "alias": "Carbon Fibre Technologies Limited",
         "referred_by": "",
         "address_one": "Unit 28 Ashwell Thorpe Industrial Estate",
         "address_two": "Ashwell Thorpe",
@@ -1032,12 +1101,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Carl Gamble",
+        "name": "Carl Gamble Graphic Designer",
+        "alias": "Carl Gamble",
         "referred_by": "",
         "address_one": "Flat 3",
         "address_two": "Mill Hill Rd",
@@ -1047,12 +1117,13 @@ task copy_comp_from_drup: :environment do
         "phone": "07540 815793",
         "email": "carlcankit@gmail.com",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Carlton Books",
+        "alias": "Carlton Books",
         "referred_by": "",
         "address_one": "22 Mortimer St",
         "address_two": "",
@@ -1062,12 +1133,13 @@ task copy_comp_from_drup: :environment do
         "phone": "0207 612 0499",
         "email": "jhociej@carltonbooks.co.uk",
         "fax": "",
-        "company_registration": "2625229"
+        "registration": "2625229"
       }
     },
     {
       "company": {
-        "name": "Carphone Warehouse",
+        "name": "",
+        "alias": "Carphone Warehouse",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1077,12 +1149,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Cascan Tools Ltd",
+        "name": "",
+        "alias": "Cascan Tools Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1092,12 +1165,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "CCL",
+        "name": "CCL Components Ltd",
+        "alias": "CCL",
         "referred_by": "",
         "address_one": "1 Cairn Court",
         "address_two": "Nerston",
@@ -1107,12 +1181,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "CCS-UK",
+        "name": "",
+        "alias": "CCS-UK",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1122,12 +1197,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "CCTV Chap - James Thompson",
+        "alias": "CCTV Chap - James Thompson",
         "referred_by": "Ebay",
         "address_one": "",
         "address_two": "",
@@ -1137,12 +1213,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "CD2 Solutions Ltd",
+        "name": "CD2 Solutions Ltd.",
+        "alias": "CD2 Solutions Ltd",
         "referred_by": "",
         "address_one": "23 Whiffler Road",
         "address_two": "",
@@ -1152,12 +1229,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Cell Phone Cases",
+        "name": "",
+        "alias": "Cell Phone Cases",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1167,12 +1245,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Chameleon",
+        "alias": "Chameleon",
         "referred_by": "",
         "address_one": "17-19 Smeaton Close",
         "address_two": "Severalls Business Park",
@@ -1182,12 +1261,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Chapelfield Car Park",
+        "name": "",
+        "alias": "Chapelfield Car Park",
         "referred_by": "",
         "address_one": "Chapelfield",
         "address_two": "",
@@ -1197,12 +1277,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Chaucer Direct",
+        "name": "",
+        "alias": "Chaucer Direct",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1212,12 +1293,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Chess Telecom",
+        "name": "",
+        "alias": "Chess Telecom",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1227,12 +1309,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Chess Telecom",
+        "name": "",
+        "alias": "Chess Telecom",
         "referred_by": "",
         "address_one": "Chess House",
         "address_two": "Studio Way",
@@ -1242,12 +1325,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Chirag - Lone Worker Bracelet",
+        "name": "Konnect C",
+        "alias": "Chirag - Lone Worker Bracelet",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1257,12 +1341,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Choice Cables",
+        "name": "",
+        "alias": "Choice Cables",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1272,12 +1357,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Churchill",
+        "name": "",
+        "alias": "Churchill",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1287,12 +1373,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "City Tyre Services (Norwich) Ltd",
+        "name": "",
+        "alias": "City Tyre Services (Norwich) Ltd",
         "referred_by": "",
         "address_one": "Unit 19 St Mary's Works",
         "address_two": "Duke Street",
@@ -1302,12 +1389,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 614777",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "CJ Spares Ltd",
+        "alias": "CJ Spares Ltd",
         "referred_by": "APR",
         "address_one": "Unit 1a, Woodland Park Industrial Estate",
         "address_two": "Shortthorn Road",
@@ -1317,12 +1405,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 754414",
         "email": "Pandadawn66@aol.com",
         "fax": "01603 754314",
-        "company_registration": "2801495"
+        "registration": "2801495"
       }
     },
     {
       "company": {
         "name": "Clara's Weaving & Hair Braiding Salon",
+        "alias": "Clara's Weaving & Hair Braiding Salon",
         "referred_by": "",
         "address_one": "43 Blithewood Gardens",
         "address_two": "Sprowston",
@@ -1332,12 +1421,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 417815",
         "email": "claraplummer@hotmail.com",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "clickatell",
+        "name": "",
+        "alias": "clickatell",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1347,12 +1437,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Climate Autogates",
+        "name": "",
+        "alias": "Climate Autogates",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1362,12 +1453,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Co-Star",
+        "name": "Co-Star Components",
+        "alias": "Co-Star",
         "referred_by": "",
         "address_one": "Jubilee Mills Business Park",
         "address_two": "Wath Lane",
@@ -1377,12 +1469,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01423 340066",
         "email": "",
         "fax": "01423 340077",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Colin Feltham",
+        "alias": "Colin Feltham",
         "referred_by": "",
         "address_one": "60 High Green",
         "address_two": "Brooke",
@@ -1392,12 +1485,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01508 550948",
         "email": "Colinfeltham@aol.com",
         "fax": "01508 550704",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Commsense",
+        "name": "",
+        "alias": "Commsense",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1407,12 +1501,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Complete Care Network",
+        "name": "",
+        "alias": "Complete Care Network",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1422,12 +1517,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Compton House",
+        "alias": "Compton House",
         "referred_by": "",
         "address_one": "117 Baldertongate ",
         "address_two": "",
@@ -1437,12 +1533,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Comtech Logic Ltd",
+        "name": "",
+        "alias": "Comtech Logic Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1452,12 +1549,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Comtechlogic",
+        "name": "",
+        "alias": "Comtechlogic",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1467,12 +1565,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Contact Law Limited",
+        "alias": "Contact Law Limited",
         "referred_by": "",
         "address_one": "The Warehouse Office Suite",
         "address_two": "12a Ravensbury Terrace",
@@ -1482,12 +1581,13 @@ task copy_comp_from_drup: :environment do
         "phone": "0808 1497 886",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "control Risks Screening Limited",
+        "alias": "control Risks Screening Limited",
         "referred_by": "",
         "address_one": "Cambridge House",
         "address_two": "Cambridge Grove, Hammersmith",
@@ -1497,12 +1597,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Corrine Holden",
+        "alias": "Corrine Holden",
         "referred_by": "",
         "address_one": "Wakefield Farm",
         "address_two": "Guestwick Road, Foulsham",
@@ -1512,12 +1613,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01263 862142",
         "email": "cozadodd@yahoo.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "CPC",
+        "name": "",
+        "alias": "CPC",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1527,12 +1629,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Crazy Daisy Software Ltd",
+        "alias": "Crazy Daisy Software Ltd",
         "referred_by": "",
         "address_one": "Sayesbury House",
         "address_two": "1a Western Road",
@@ -1542,12 +1645,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "CreditSafe",
+        "name": "Creditsafe Business Solutions Ltd",
+        "alias": "CreditSafe",
         "referred_by": "",
         "address_one": "Bryn House",
         "address_two": "Caerphilly Business Park",
@@ -1557,12 +1661,13 @@ task copy_comp_from_drup: :environment do
         "phone": "02920 856780",
         "email": "creditcontrol@creditsafeuk.com",
         "fax": "02920 856545",
-        "company_registration": "03836192"
+        "registration": "03836192"
       }
     },
     {
       "company": {
-        "name": "Crowne Plaza",
+        "name": "",
+        "alias": "Crowne Plaza",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1572,12 +1677,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Crucial.com",
+        "name": "",
+        "alias": "Crucial.com",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1587,12 +1693,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Crucial.com",
+        "alias": "Crucial.com",
         "referred_by": "",
         "address_one": "Opladen Way",
         "address_two": "Bagshot Rd",
@@ -1602,12 +1709,13 @@ task copy_comp_from_drup: :environment do
         "phone": "08000137385",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "CSI",
+        "alias": "CSI",
         "referred_by": "",
         "address_one": "CSI Solution Ltd",
         "address_two": "33a Whiffler Road",
@@ -1617,12 +1725,13 @@ task copy_comp_from_drup: :environment do
         "phone": "0843 2891559",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "cts-direct",
+        "name": "",
+        "alias": "cts-direct",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1632,12 +1741,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Currys",
+        "name": "",
+        "alias": "Currys",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1647,12 +1757,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Dabs",
+        "name": "",
+        "alias": "Dabs",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1662,12 +1773,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Dal Tec",
+        "name": "",
+        "alias": "Dal Tec",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1677,12 +1789,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Daniel Armstrong",
+        "name": "DAG CIVILS",
+        "alias": "Daniel Armstrong",
         "referred_by": "",
         "address_one": "55 Livingstone Street",
         "address_two": "",
@@ -1692,12 +1805,13 @@ task copy_comp_from_drup: :environment do
         "phone": "07884316171",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Dartford Crossing",
+        "name": "",
+        "alias": "Dartford Crossing",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1707,12 +1821,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Dashmount - DO NOT USE - Dashmount does not exist anymore",
+        "name": "DO NOT USE",
+        "alias": "Dashmount - DO NOT USE - Dashmount does not exist anymore",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1722,12 +1837,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Data Select",
+        "name": "Data Select Ltd",
+        "alias": "Data Select",
         "referred_by": "",
         "address_one": "Building 120",
         "address_two": "136 Edinburgh Avenue",
@@ -1737,12 +1853,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "creditcontrol@dataselect.co.uk",
         "fax": "",
-        "company_registration": "03662640"
+        "registration": "03662640"
       }
     },
     {
       "company": {
-        "name": "Data Select Carriage Credit",
+        "name": "",
+        "alias": "Data Select Carriage Credit",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1752,12 +1869,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Decorus Enterprise Class IT Solutions",
+        "alias": "Decorus Enterprise Class IT Solutions",
         "referred_by": "",
         "address_one": "Decorus Ltd, Decorus House",
         "address_two": "9 Berrington Way",
@@ -1767,12 +1885,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01256 403991",
         "email": "paul.sheppard@decorus.com",
         "fax": "01256 477950",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Dedicated Micros",
+        "alias": "Dedicated Micros",
         "referred_by": "",
         "address_one": "1200 Daresbury Park",
         "address_two": "",
@@ -1782,12 +1901,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Denmans",
+        "name": "",
+        "alias": "Denmans",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1797,12 +1917,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Dent Devils Ltd",
+        "name": "",
+        "alias": "Dent Devils Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1812,12 +1933,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Dexion Storage Centre Anglia Ltd",
+        "alias": "Dexion Storage Centre Anglia Ltd",
         "referred_by": "",
         "address_one": "Unit W1, Flitcham Barns",
         "address_two": "Abbey Road, Flitcham",
@@ -1827,12 +1949,13 @@ task copy_comp_from_drup: :environment do
         "phone": "08456 123646",
         "email": "",
         "fax": "08456 123656",
-        "company_registration": "3594170"
+        "registration": "3594170"
       }
     },
     {
       "company": {
-        "name": "DHL",
+        "name": "",
+        "alias": "DHL",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1842,12 +1965,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Diamond Controls Ltd",
+        "alias": "Diamond Controls Ltd",
         "referred_by": "Amanda Abbs",
         "address_one": "Unit 3",
         "address_two": "Baines Way",
@@ -1857,12 +1981,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "digikey",
+        "alias": "digikey",
         "referred_by": "",
         "address_one": "701 Brooks Avenue South",
         "address_two": "Thief River Falls",
@@ -1872,12 +1997,13 @@ task copy_comp_from_drup: :environment do
         "phone": "08003444539",
         "email": "sales@digikey.com",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Discount fire supplies",
+        "alias": "Discount fire supplies",
         "referred_by": "",
         "address_one": "Unit 2 - SLC industrial park",
         "address_two": "66 Morfa Road",
@@ -1887,12 +2013,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01792452700",
         "email": "info@discountfiresupplies.co.uk",
         "fax": "",
-        "company_registration": "106058639"
+        "registration": "106058639"
       }
     },
     {
       "company": {
         "name": "Diss Town Council",
+        "alias": "Diss Town Council",
         "referred_by": "",
         "address_one": "11-12 Market Hill",
         "address_two": "",
@@ -1902,12 +2029,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01379 643848",
         "email": "sarah.richards@diss.gov.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Diss, Thetford and District Citizens Advice Bureau",
+        "alias": "Diss, Thetford and District Citizens Advice Bureau",
         "referred_by": "APR",
         "address_one": "Shelfanger Road",
         "address_two": "",
@@ -1917,12 +2045,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01379 642291",
         "email": "manager@disscab.cabnet.org.uk",
         "fax": "01379 640530",
-        "company_registration": "4212031"
+        "registration": "4212031"
       }
     },
     {
       "company": {
         "name": "Dixons Carphone",
+        "alias": "Dixons Carphone",
         "referred_by": "",
         "address_one": "1 Portal Way",
         "address_two": "Acton",
@@ -1932,12 +2061,13 @@ task copy_comp_from_drup: :environment do
         "phone": "02031 105853",
         "email": "james.acook@dixonscarphone.com",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "DO NOT USE -29 - Norwich Norse",
+        "name": "Norwich Norse",
+        "alias": "DO NOT USE -29 - Norwich Norse",
         "referred_by": "",
         "address_one": "280 Fifers Lane",
         "address_two": "",
@@ -1947,12 +2077,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Doro Direct",
+        "name": "",
+        "alias": "Doro Direct",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1962,12 +2093,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "dpiesshop",
+        "alias": "dpiesshop",
         "referred_by": "",
         "address_one": "Diamond Point International (Europe) Ltd",
         "address_two": "Suite 13, Ashford House",
@@ -1977,12 +2109,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01634300900",
         "email": "admin@dpiesshop.com",
         "fax": "",
-        "company_registration": "02168609"
+        "registration": "02168609"
       }
     },
     {
       "company": {
-        "name": "dpiesshop - Diamond Point",
+        "name": "",
+        "alias": "dpiesshop - Diamond Point",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -1992,12 +2125,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Dr Ketan Dhatariya",
+        "alias": "Dr Ketan Dhatariya",
         "referred_by": "",
         "address_one": "Queens House Queens Road",
         "address_two": "Hetherset",
@@ -2007,12 +2141,13 @@ task copy_comp_from_drup: :environment do
         "phone": "07966 104316",
         "email": "ketan.dhatariya@nnuh.nhs.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Drive Motor Spares Ltd",
+        "name": "",
+        "alias": "Drive Motor Spares Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2022,12 +2157,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "DVLA",
+        "alias": "DVLA",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2037,12 +2173,13 @@ task copy_comp_from_drup: :environment do
         "phone": "0300 790 6801 - General Enquiries",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "E bay - Aussie-deal",
+        "name": "",
+        "alias": "E bay - Aussie-deal",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2052,12 +2189,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "e Bay - kscbusiness (33907)",
+        "name": "",
+        "alias": "e Bay - kscbusiness (33907)",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2067,12 +2205,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "E Bay - uk3c4u (62090)",
+        "name": "",
+        "alias": "E Bay - uk3c4u (62090)",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2082,12 +2221,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "E Spares",
+        "name": "",
+        "alias": "E Spares",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2097,12 +2237,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "East Coast Groupage",
+        "alias": "East Coast Groupage",
         "referred_by": "",
         "address_one": "Riverside House",
         "address_two": "Riverside Avenue West",
@@ -2112,12 +2253,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01206 395777",
         "email": "",
         "fax": "01206 396057",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Easter Chauffeur Ltd",
+        "alias": "Easter Chauffeur Ltd",
         "referred_by": "",
         "address_one": "14 Manor Farm, Fox Road",
         "address_two": "Framingham Pigot",
@@ -2127,12 +2269,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01508 495 660",
         "email": "",
         "fax": "01508 500 106",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Easton College",
+        "alias": "Easton College",
         "referred_by": "",
         "address_one": "Easton",
         "address_two": "",
@@ -2142,12 +2285,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 731200",
         "email": "cellis@easton-college.ac.uk",
         "fax": "01603 741438",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "EasyJet",
+        "name": "",
+        "alias": "EasyJet",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2157,12 +2301,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "eBay",
+        "name": "",
+        "alias": "eBay",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2172,12 +2317,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "eBay - 2008stocksale",
+        "name": "",
+        "alias": "eBay - 2008stocksale",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2187,12 +2333,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "eBay - 2LMPLtd",
+        "name": "",
+        "alias": "eBay - 2LMPLtd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2202,12 +2349,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "eBay - Bamford Trading",
+        "name": "",
+        "alias": "eBay - Bamford Trading",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2217,12 +2365,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "eBay - Cases & Multiples",
+        "name": "",
+        "alias": "eBay - Cases & Multiples",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2232,12 +2381,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "eBay - Cyberstore2020",
+        "name": "",
+        "alias": "eBay - Cyberstore2020",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2247,12 +2397,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "eBay - directresponse2012 (441)",
+        "name": "",
+        "alias": "eBay - directresponse2012 (441)",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2262,12 +2413,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "eBay - freebits",
+        "name": "",
+        "alias": "eBay - freebits",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2277,12 +2429,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "eBay - Grennwaycn",
+        "name": "",
+        "alias": "eBay - Grennwaycn",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2292,12 +2445,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "ebay - idispatch 13",
+        "name": "",
+        "alias": "ebay - idispatch 13",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2307,12 +2461,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "eBay - kscbusiness(24569)",
+        "name": "",
+        "alias": "eBay - kscbusiness(24569)",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2322,12 +2477,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "ebay - neostore",
+        "name": "",
+        "alias": "ebay - neostore",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2337,12 +2493,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "eBay - ssphoneworld2012",
+        "name": "",
+        "alias": "eBay - ssphoneworld2012",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2352,12 +2509,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "ebay - SYL Trading",
+        "name": "",
+        "alias": "ebay - SYL Trading",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2367,12 +2525,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "eBay - uk-goods",
+        "name": "",
+        "alias": "eBay - uk-goods",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2382,12 +2541,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "eBay Sajjid-uk",
+        "name": "",
+        "alias": "eBay Sajjid-uk",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2397,12 +2557,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Eco Automotive",
+        "name": "",
+        "alias": "Eco Automotive",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2412,12 +2573,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "ECT Service Centres",
+        "name": "",
+        "alias": "ECT Service Centres",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2427,12 +2589,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Edmundson Electrical",
+        "alias": "Edmundson Electrical",
         "referred_by": "",
         "address_one": "The Frenbury Estate",
         "address_two": "Hellesdon Park Road",
@@ -2442,12 +2605,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Edmundsons Electrical",
+        "alias": "Edmundsons Electrical",
         "referred_by": "",
         "address_one": "Barber House",
         "address_two": "Storey's Bar Road",
@@ -2457,12 +2621,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01733 898444",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Edwards Bros",
+        "name": "",
+        "alias": "Edwards Bros",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2472,12 +2637,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "EE",
+        "alias": "EE",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2487,12 +2653,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Efreecity",
+        "name": "",
+        "alias": "Efreecity",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2502,12 +2669,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Elas",
+        "name": "",
+        "alias": "Elas",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2517,12 +2685,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Elite Mobile",
+        "name": "",
+        "alias": "Elite Mobile",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2532,12 +2701,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "EMC Europe",
+        "name": "Environmental Mobile Control Ltd",
+        "alias": "EMC Europe",
         "referred_by": "",
         "address_one": "The Derby Turn Building",
         "address_two": "Derby Road",
@@ -2547,12 +2717,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Empower Services Limited",
+        "alias": "Empower Services Limited",
         "referred_by": "",
         "address_one": "4 Cheyham Mount",
         "address_two": "",
@@ -2562,12 +2733,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 448419",
         "email": "paul@empowerservices.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Energy Solutions (UK) Ltd",
+        "alias": "Energy Solutions (UK) Ltd",
         "referred_by": "Sally",
         "address_one": "George Summers Close",
         "address_two": "Medway City Estate",
@@ -2577,12 +2749,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01634 290772",
         "email": "sales@energy-solutions.co.uk",
         "fax": "01634 290773",
-        "company_registration": "2904541"
+        "registration": "2904541"
       }
     },
     {
       "company": {
-        "name": "Engraved Tags",
+        "name": "",
+        "alias": "Engraved Tags",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2592,12 +2765,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Enterprise",
+        "name": "",
+        "alias": "Enterprise",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2607,12 +2781,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Enterprise Security Distribution",
+        "alias": "Enterprise Security Distribution",
         "referred_by": "",
         "address_one": "17-18 Telford Close",
         "address_two": "Sweet Briar Road Industrial Estate",
@@ -2622,12 +2797,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 789696",
         "email": "bobf@esdsec.com",
         "fax": "01603 409551",
-        "company_registration": "6730296"
+        "registration": "6730296"
       }
     },
     {
       "company": {
-        "name": "Esendex",
+        "name": "",
+        "alias": "Esendex",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2637,12 +2813,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "ESR Electronic Components Ltd",
+        "alias": "ESR Electronic Components Ltd",
         "referred_by": "",
         "address_one": "Station Road",
         "address_two": "Cullercoats",
@@ -2652,12 +2829,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01912514363",
         "email": "sales@esr.co.uk",
         "fax": "",
-        "company_registration": "06526729"
+        "registration": "06526729"
       }
     },
     {
       "company": {
-        "name": "Essex Cellular Telephones",
+        "name": "",
+        "alias": "Essex Cellular Telephones",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2667,12 +2845,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Excel Electrical Services Ltd",
+        "alias": "Excel Electrical Services Ltd",
         "referred_by": "",
         "address_one": "10 Knyvett Green",
         "address_two": "",
@@ -2682,12 +2861,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01508 488007",
         "email": "enquiries@excelelectrical.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Exertis",
+        "name": "Exertis (UK) Ltd",
+        "alias": "Exertis",
         "referred_by": "",
         "address_one": "Shorten Brook Way",
         "address_two": "Alltham Business Park",
@@ -2697,12 +2877,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01282 776776",
         "email": "",
         "fax": "",
-        "company_registration": "1511931"
+        "registration": "1511931"
       }
     },
     {
       "company": {
-        "name": "Expansys",
+        "name": "Expansys UK Ltd",
+        "alias": "Expansys",
         "referred_by": "",
         "address_one": "Network House",
         "address_two": "Globe Park",
@@ -2712,12 +2893,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Experto",
+        "name": "",
+        "alias": "Experto",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2727,12 +2909,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Fabrily",
+        "name": "",
+        "alias": "Fabrily",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2742,12 +2925,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "FedEx",
+        "name": "Federal Exprexx Europe Inc",
+        "alias": "FedEx",
         "referred_by": "",
         "address_one": "PO Box 119",
         "address_two": "",
@@ -2757,12 +2941,13 @@ task copy_comp_from_drup: :environment do
         "phone": "0345 607 0809",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Folkestone Fixings Ltd",
+        "name": "",
+        "alias": "Folkestone Fixings Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2772,12 +2957,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Ford Retail Ltd",
+        "name": "",
+        "alias": "Ford Retail Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2787,12 +2973,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "forTop",
+        "name": "forTop Automation & Energy Control UK Limited",
+        "alias": "forTop",
         "referred_by": "",
         "address_one": "Malvern Hills Science Park",
         "address_two": "Geraldine Road",
@@ -2802,12 +2989,13 @@ task copy_comp_from_drup: :environment do
         "phone": "07572 489230",
         "email": "",
         "fax": "",
-        "company_registration": "08247042"
+        "registration": "08247042"
       }
     },
     {
       "company": {
-        "name": "Frillo",
+        "name": "",
+        "alias": "Frillo",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2817,12 +3005,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Futura Direct",
+        "name": "",
+        "alias": "Futura Direct",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2832,12 +3021,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Gale Construction Co. Limited",
+        "alias": "Gale Construction Co. Limited",
         "referred_by": "APR",
         "address_one": "29-39 Ayton Road",
         "address_two": "",
@@ -2847,12 +3037,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01953 604537",
         "email": "wendys@gale-construction.co.uk",
         "fax": "01953 602680",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Gates & Accessories",
+        "name": "",
+        "alias": "Gates & Accessories",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2862,12 +3053,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "George Cooper Transport",
+        "alias": "George Cooper Transport",
         "referred_by": "",
         "address_one": "Riverside Avenue west",
         "address_two": "Lawford",
@@ -2877,12 +3069,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01206 394331",
         "email": "georgecoopertransport@btconnect.com",
         "fax": "01206 393511",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Globalegrow",
+        "name": "",
+        "alias": "Globalegrow",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2892,12 +3085,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "GoDaddy",
+        "name": "",
+        "alias": "GoDaddy",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2907,12 +3101,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Google Play Store",
+        "name": "",
+        "alias": "Google Play Store",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2922,12 +3117,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "GRA Project Management",
+        "alias": "GRA Project Management",
         "referred_by": "",
         "address_one": "The Old Stables",
         "address_two": "Sandy Hill Lane",
@@ -2937,12 +3133,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01263 588031",
         "email": "gavin@grarmstrong.co.uk",
         "fax": "01263 513495",
-        "company_registration": "7719227"
+        "registration": "7719227"
       }
     },
     {
       "company": {
-        "name": "Green Tech PLC",
+        "name": "GreenTech Distribution Plc",
+        "alias": "Green Tech PLC",
         "referred_by": "",
         "address_one": "Unit 7 Treadaway Tech Centre",
         "address_two": "Treadaway Hill",
@@ -2952,12 +3149,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Halstone",
+        "name": "",
+        "alias": "Halstone",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2967,12 +3165,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Handtec",
+        "name": "",
+        "alias": "Handtec",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -2982,12 +3181,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Harnser Limited",
+        "alias": "Harnser Limited",
         "referred_by": "",
         "address_one": "Units 5-8 Santareen Road",
         "address_two": "",
@@ -2997,12 +3197,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01508 532266",
         "email": "al@harnserltd.co.uk",
         "fax": "01508 531815",
-        "company_registration": "2902263"
+        "registration": "2902263"
       }
     },
     {
       "company": {
         "name": "Hatfield Investments Ltd",
+        "alias": "Hatfield Investments Ltd",
         "referred_by": "",
         "address_one": "Crossways",
         "address_two": "1 The Boulevard",
@@ -3012,12 +3213,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01263 823164",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Health Supplement",
+        "name": "",
+        "alias": "Health Supplement",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3027,12 +3229,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Heritage Legal and Financial Ltd",
+        "alias": "Heritage Legal and Financial Ltd",
         "referred_by": "APR",
         "address_one": "13 Hellesdon Park Road",
         "address_two": "",
@@ -3042,12 +3245,13 @@ task copy_comp_from_drup: :environment do
         "phone": "08453 710281",
         "email": "vjones@heritagewills.co.uk",
         "fax": "01603 894503",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Homechip Ltd",
+        "name": "",
+        "alias": "Homechip Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3057,12 +3261,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Hussey Knights Ltd",
+        "alias": "Hussey Knights Ltd",
         "referred_by": "APR",
         "address_one": "Graphics House",
         "address_two": "17 Hellesdon Park Road",
@@ -3072,12 +3277,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 428110",
         "email": "kevin@husseyknights.co.uk",
         "fax": "01603 428111",
-        "company_registration": "597508"
+        "registration": "597508"
       }
     },
     {
       "company": {
         "name": "Ian Smith Group Limited",
+        "alias": "Ian Smith Group Limited",
         "referred_by": "",
         "address_one": "Unit 18",
         "address_two": "Drayton Ind Est",
@@ -3087,12 +3293,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603861377",
         "email": "",
         "fax": "",
-        "company_registration": "1421681"
+        "registration": "1421681"
       }
     },
     {
       "company": {
         "name": "Imago Productions Limited",
+        "alias": "Imago Productions Limited",
         "referred_by": "",
         "address_one": "Griffin House",
         "address_two": "3 Cathedral Street",
@@ -3102,12 +3309,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 727600",
         "email": "janet@imagoproductions.tv",
         "fax": "01603 727626",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Ingram Micro",
+        "name": "",
+        "alias": "Ingram Micro",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3117,12 +3325,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Ink Jungle",
+        "name": "",
+        "alias": "Ink Jungle",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3132,12 +3341,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "J K Brock Builders",
+        "alias": "J K Brock Builders",
         "referred_by": "",
         "address_one": "Crown Road",
         "address_two": "",
@@ -3147,12 +3357,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01362 692165",
         "email": "jkbrock@btconnect.com",
         "fax": "01362 691238",
-        "company_registration": "1065872"
+        "registration": "1065872"
       }
     },
     {
       "company": {
         "name": "J Medler Limited",
+        "alias": "J Medler Limited",
         "referred_by": "APR",
         "address_one": "Fir Covert Road",
         "address_two": "Felthorpe",
@@ -3162,12 +3373,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 264414",
         "email": "aedan.robinson@jmedler.co.uk",
         "fax": "",
-        "company_registration": "1104519"
+        "registration": "1104519"
       }
     },
     {
       "company": {
         "name": "Jane Betts",
+        "alias": "Jane Betts",
         "referred_by": "",
         "address_one": "69 Blackwell Avenue",
         "address_two": "Sprowston",
@@ -3177,12 +3389,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 402204",
         "email": "",
         "fax": "janebetts@sky.com",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Jarrold & Sons Limited",
+        "alias": "Jarrold & Sons Limited",
         "referred_by": "",
         "address_one": "St James Mill",
         "address_two": "Whitefriars",
@@ -3192,12 +3405,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 677353",
         "email": "",
         "fax": "01603 766511",
-        "company_registration": "75278"
+        "registration": "75278"
       }
     },
     {
       "company": {
         "name": "Jason Armstrong",
+        "alias": "Jason Armstrong",
         "referred_by": "",
         "address_one": "55c Grove Road",
         "address_two": "",
@@ -3207,12 +3421,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01263 822689",
         "email": "grahame@business-first.com",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Jeans for Genes day",
+        "name": "Jeans for Genes",
+        "alias": "Jeans for Genes day",
         "referred_by": "",
         "address_one": "Freepost",
         "address_two": "ANG2739",
@@ -3222,12 +3437,13 @@ task copy_comp_from_drup: :environment do
         "phone": "0800 9804800",
         "email": "",
         "fax": "",
-        "company_registration": "1141583"
+        "registration": "1141583"
       }
     },
     {
       "company": {
-        "name": "Jim Page",
+        "name": "",
+        "alias": "Jim Page",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3237,12 +3453,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "John Lewis",
+        "name": "",
+        "alias": "John Lewis",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3252,12 +3469,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "John Youngs Homes",
+        "alias": "John Youngs Homes",
         "referred_by": "",
         "address_one": "24 City Road",
         "address_two": "",
@@ -3267,12 +3485,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 628421",
         "email": "mail@john-youngs.co.uk",
         "fax": "01603 765742",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Julia's Florist",
+        "name": "",
+        "alias": "Julia's Florist",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3282,12 +3501,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Just Giving",
+        "name": "",
+        "alias": "Just Giving",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3297,12 +3517,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Jxit Store",
+        "name": "",
+        "alias": "Jxit Store",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3312,12 +3533,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Kbins",
+        "name": "",
+        "alias": "Kbins",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3327,12 +3549,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Kelly Developments Limited",
+        "alias": "Kelly Developments Limited",
         "referred_by": "",
         "address_one": "Oaktree House",
         "address_two": "20 Cromer Road",
@@ -3342,12 +3565,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "kelly319@btinternet.com",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Lamberts Ltd",
+        "name": "",
+        "alias": "Lamberts Ltd",
         "referred_by": "",
         "address_one": "58 Whiffler road",
         "address_two": "",
@@ -3357,12 +3581,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603400063",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Langstone Hotel",
+        "alias": "Langstone Hotel",
         "referred_by": "",
         "address_one": "Northney Road",
         "address_two": "Hayling Island",
@@ -3372,12 +3597,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Leica Geosystems",
+        "name": "",
+        "alias": "Leica Geosystems",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3387,12 +3613,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Leisure Mart",
+        "name": "",
+        "alias": "Leisure Mart",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3402,12 +3629,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Lifelight Limited",
+        "alias": "Lifelight Limited",
         "referred_by": "",
         "address_one": "Gunnelswood Road",
         "address_two": "Stevenage",
@@ -3417,12 +3645,13 @@ task copy_comp_from_drup: :environment do
         "phone": "0800 052 7337",
         "email": "",
         "fax": "01438 233018",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Light in the box",
+        "name": "",
+        "alias": "Light in the box",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3432,12 +3661,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Lime Rock Partners",
+        "alias": "Lime Rock Partners",
         "referred_by": "",
         "address_one": "20 Berkeley Square",
         "address_two": "Third Floor",
@@ -3447,12 +3677,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Linc Energy",
+        "alias": "Linc Energy",
         "referred_by": "Ascent",
         "address_one": "Level 3",
         "address_two": "8 Cavendish Square",
@@ -3462,12 +3693,13 @@ task copy_comp_from_drup: :environment do
         "phone": "02070 794403",
         "email": "vicki.thomas@lincenergy.com",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Linzers Bakery",
+        "alias": "Linzers Bakery",
         "referred_by": "APR",
         "address_one": "3 Albertine Close",
         "address_two": "Sweet Briar Estate",
@@ -3477,12 +3709,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 483742",
         "email": "sales@linzers.co.uk",
         "fax": "01603 250777",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Liquid 11",
+        "name": "Liquid 11 Ltd",
+        "alias": "Liquid 11",
         "referred_by": "",
         "address_one": "Sea Lake Road",
         "address_two": "",
@@ -3492,12 +3725,13 @@ task copy_comp_from_drup: :environment do
         "phone": "0844 884 3010",
         "email": "support@switchboard-support.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Livedale Foam Sundries Ltd",
+        "name": "",
+        "alias": "Livedale Foam Sundries Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3507,27 +3741,29 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
+      }
+    },
+    {
+      "company": {
+        "name": "",
+        "alias": "Livewire",
+        "referred_by": "",
+        "address_one": "",
+        "address_two": "",
+        "city": "",
+        "county": "",
+        "postcode": "",
+        "phone": "",
+        "email": "",
+        "fax": "",
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Livewire",
-        "referred_by": "",
-        "address_one": "",
-        "address_two": "",
-        "city": "",
-        "county": "",
-        "postcode": "",
-        "phone": "",
-        "email": "",
-        "fax": "",
-        "company_registration": ""
-      }
-    },
-    {
-      "company": {
-        "name": "Livewire Innovation",
+        "alias": "Livewire Innovation",
         "referred_by": "",
         "address_one": "10288 South Jordan Gateway",
         "address_two": "Ste A",
@@ -3537,12 +3773,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Lombard Odier Asset Management",
+        "alias": "Lombard Odier Asset Management",
         "referred_by": "Ascent",
         "address_one": "Queensbury House",
         "address_two": "3 Old Burlington Street",
@@ -3552,12 +3789,13 @@ task copy_comp_from_drup: :environment do
         "phone": "02032066057",
         "email": "C.noldin@lombardodier.com",
         "fax": "",
-        "company_registration": "7099556"
+        "registration": "7099556"
       }
     },
     {
       "company": {
-        "name": "Luminite Electronics Ltd",
+        "name": "",
+        "alias": "Luminite Electronics Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3567,12 +3805,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Lyreco",
+        "alias": "Lyreco",
         "referred_by": "",
         "address_one": "Deer Park Court",
         "address_two": "Donnington Wood",
@@ -3582,12 +3821,13 @@ task copy_comp_from_drup: :environment do
         "phone": "0845 767 6999 ",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "M J Gladden Digger Hire",
+        "alias": "M J Gladden Digger Hire",
         "referred_by": "Amanda",
         "address_one": "86 High Street",
         "address_two": "Marsham",
@@ -3597,12 +3837,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01263 734515",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Machine Mart",
+        "name": "",
+        "alias": "Machine Mart",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3612,12 +3853,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Maclocks",
+        "name": "",
+        "alias": "Maclocks",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3627,12 +3869,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Macmillan Cancer Support",
+        "name": "",
+        "alias": "Macmillan Cancer Support",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3642,12 +3885,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "MadBid",
+        "name": "",
+        "alias": "MadBid",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3657,12 +3901,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Makro",
+        "name": "Makro Self Service Wholesalers Ltd",
+        "alias": "Makro",
         "referred_by": "",
         "address_one": "Broadland Business Park",
         "address_two": "Cranley Road",
@@ -3672,12 +3917,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": "973269"
+        "registration": "973269"
       }
     },
     {
       "company": {
-        "name": "Mancroft Advice Project (MAP)",
+        "name": "",
+        "alias": "Mancroft Advice Project (MAP)",
         "referred_by": "",
         "address_one": "The Risebrow Centre",
         "address_two": "Chantry Road",
@@ -3687,12 +3933,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 633835",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Marks & Spencer",
+        "name": "",
+        "alias": "Marks & Spencer",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3702,12 +3949,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "MAS Construction (Anglia) Ltd",
+        "alias": "MAS Construction (Anglia) Ltd",
         "referred_by": "",
         "address_one": "Brackendale, Britons Lane",
         "address_two": "Beeston Regis",
@@ -3717,12 +3965,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01263 823951",
         "email": "Aaron24.smith@btinternet.com",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Max Mosley",
+        "name": "",
+        "alias": "Max Mosley",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3732,12 +3981,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Maxey Moverley Ltd",
+        "alias": "Maxey Moverley Ltd",
         "referred_by": "Grahame",
         "address_one": "6 Broad Ground Road",
         "address_two": "Lakeside",
@@ -3747,12 +3997,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01527 522299",
         "email": "accounts@maxeymoverley.com",
         "fax": "01527 522588",
-        "company_registration": "3279540"
+        "registration": "3279540"
       }
     },
     {
       "company": {
         "name": "Mayday Office Equipment",
+        "alias": "Mayday Office Equipment",
         "referred_by": "APR",
         "address_one": "Mayday Office Equipment Ltd, Technology House",
         "address_two": "6 Rhombus Park, Diamond Road",
@@ -3762,12 +4013,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 481995",
         "email": "Dhoy@mayday-online.co.uk'",
         "fax": "01603 481950",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "McDonald's",
+        "name": "",
+        "alias": "McDonald's",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3777,12 +4029,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "McNicholas Construction Ltd",
+        "alias": "McNicholas Construction Ltd",
         "referred_by": "",
         "address_one": "Head Office, Lismirrane Industrial Park",
         "address_two": "Esltree Road",
@@ -3792,12 +4045,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Mediatec",
+        "name": "",
+        "alias": "Mediatec",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3807,12 +4061,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "MHP Computer Services Ltd",
+        "name": "",
+        "alias": "MHP Computer Services Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3822,12 +4077,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Microsoft",
+        "name": "",
+        "alias": "Microsoft",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3837,12 +4093,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Midwich",
+        "name": "Midwich Ltd",
+        "alias": "Midwich",
         "referred_by": "",
         "address_one": "Vinces Road",
         "address_two": "",
@@ -3852,12 +4109,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01379 649347 - Accounts",
         "email": "accounts@midwich.com",
         "fax": "01379 649200 - Sales",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Mini in the box",
+        "name": "",
+        "alias": "Mini in the box",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3867,12 +4125,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Mobile Fun",
+        "name": "Mobile Fun ",
+        "alias": "Mobile Fun",
         "referred_by": "",
         "address_one": "16 Network Park",
         "address_two": "Duddeston Mill Road",
@@ -3882,12 +4141,13 @@ task copy_comp_from_drup: :environment do
         "phone": "0844 249 5060",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Mobile Madhouse",
+        "name": "",
+        "alias": "Mobile Madhouse",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3897,12 +4157,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Mobile Solutions",
+        "alias": "Mobile Solutions",
         "referred_by": "",
         "address_one": "Level 3",
         "address_two": "Castle Mall",
@@ -3912,12 +4173,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 620061",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Moby Memory",
+        "alias": "Moby Memory",
         "referred_by": "",
         "address_one": "Unit 10",
         "address_two": "Lake Business Centre",
@@ -3927,12 +4189,13 @@ task copy_comp_from_drup: :environment do
         "phone": "020 8885 1997",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Modelsport",
+        "name": "",
+        "alias": "Modelsport",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3942,12 +4205,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Modelsport UK",
+        "name": "",
+        "alias": "Modelsport UK",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3957,12 +4221,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Monkey Tree Hosting Ltd",
+        "alias": "Monkey Tree Hosting Ltd",
         "referred_by": "",
         "address_one": "Coventry Technology Park",
         "address_two": "Puma Way",
@@ -3972,12 +4237,13 @@ task copy_comp_from_drup: :environment do
         "phone": "02033580210",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Motor World",
+        "name": "",
+        "alias": "Motor World",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -3987,12 +4253,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Mr Martin Baldry",
+        "name": "Baldry Building & Mainenance",
+        "alias": "Mr Martin Baldry",
         "referred_by": "",
         "address_one": "4 Bridge Court",
         "address_two": "Fishergate",
@@ -4002,12 +4269,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 898999",
         "email": "martin@baldrybuildings.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "My Memory",
+        "name": "",
+        "alias": "My Memory",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -4017,12 +4285,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Neil Burns Thomson",
+        "alias": "Neil Burns Thomson",
         "referred_by": "",
         "address_one": "4 Bardolph Road",
         "address_two": "",
@@ -4032,12 +4301,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01986 948076",
         "email": "Neilburnsthomson587@btinternet.com",
         "fax": "01508 532530",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "network rail",
+        "name": "Network Rail",
+        "alias": "network rail",
         "referred_by": "",
         "address_one": "South Wales Major Resignalling Team",
         "address_two": "NASR Dept",
@@ -4047,12 +4317,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Neville Clarke",
+        "alias": "Neville Clarke",
         "referred_by": "",
         "address_one": "14 Wellington Road",
         "address_two": "",
@@ -4062,12 +4333,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01263 861080",
         "email": "nev666clarke@aol.com",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "NICE",
+        "alias": "NICE",
         "referred_by": "",
         "address_one": "47 Dereham Road",
         "address_two": "",
@@ -4077,12 +4349,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 666876",
         "email": "info@niceincar.com",
         "fax": "01603 612973",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Norfolk & Norwich University NHS Trust",
+        "alias": "Norfolk & Norwich University NHS Trust",
         "referred_by": "Amanda",
         "address_one": "Colney Lane",
         "address_two": "",
@@ -4092,12 +4365,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 287239",
         "email": "judy.sinclair@nnuh.nhs.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norfolk Chamber of Commerce",
+        "name": "",
+        "alias": "Norfolk Chamber of Commerce",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -4107,12 +4381,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Norfolk Homes Limited",
+        "alias": "Norfolk Homes Limited",
         "referred_by": "",
         "address_one": "Norfolk Homes Limited",
         "address_two": "Weybourne Road",
@@ -4122,12 +4397,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Norfolk Recruitment Limited",
+        "alias": "Norfolk Recruitment Limited",
         "referred_by": "",
         "address_one": "484 Sprowston Road",
         "address_two": "",
@@ -4137,12 +4413,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 489000",
         "email": "gary@driverhire.biz",
         "fax": "01603 447337",
-        "company_registration": "7068544"
+        "registration": "7068544"
       }
     },
     {
       "company": {
-        "name": "Norse - 29 - Norwich Norse",
+        "name": "Norwich Norse Limited",
+        "alias": "Norse - 29 - Norwich Norse",
         "referred_by": "",
         "address_one": " 280 Fifers Lane ",
         "address_two": "",
@@ -4152,12 +4429,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 05-1000 - Catering",
+        "name": "Norse Eastern Limited",
+        "alias": "Norse - 05-1000 - Catering",
         "referred_by": "",
         "address_one": "280 Fifers Lane",
         "address_two": "",
@@ -4167,12 +4445,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "amanda.armstrong@ncsgrp.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 05-2000 Cleaning",
+        "name": "Norse Eastern Ltd",
+        "alias": "Norse - 05-2000 Cleaning",
         "referred_by": "",
         "address_one": "280 Fifers Lane",
         "address_two": "",
@@ -4182,12 +4461,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "jessica.rollingson@ncsgrp.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 05-3000 - Grounds",
+        "name": "Norse Eastern Limited",
+        "alias": "Norse - 05-3000 - Grounds",
         "referred_by": "",
         "address_one": "280 Fifers Lane",
         "address_two": "",
@@ -4197,12 +4477,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "christine.burns@ncsgrp.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 05-4000 - N-Able",
+        "name": "Norse Eastern Limited",
+        "alias": "Norse - 05-4000 - N-Able",
         "referred_by": "",
         "address_one": "280 Fifers Lane",
         "address_two": "",
@@ -4212,12 +4493,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "amanda.armstrong@ncsgrp.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Norse - 05-4000 - Transport",
+        "alias": "Norse - 05-4000 - Transport",
         "referred_by": "",
         "address_one": "280 Fifers Lane",
         "address_two": "",
@@ -4227,12 +4509,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Norse - 05-5000 - Waste Management",
+        "alias": "Norse - 05-5000 - Waste Management",
         "referred_by": "",
         "address_one": "280 Fifers Lane",
         "address_two": "",
@@ -4242,12 +4525,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "Hannah.driver@ncsgrp.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 05-7000 - Interprint",
+        "name": "Norse Eastern Limited",
+        "alias": "Norse - 05-7000 - Interprint",
         "referred_by": "",
         "address_one": "280 Fifers Lane",
         "address_two": "",
@@ -4257,12 +4541,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "mark.pearson@ncsgrp.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Norse - 05-9098 County Hall",
+        "alias": "Norse - 05-9098 County Hall",
         "referred_by": "",
         "address_one": "County Hall",
         "address_two": "Martineau Lane",
@@ -4272,12 +4557,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 05-xxx08 - FM County Hall",
+        "name": "Norse Eastern Limited ",
+        "alias": "Norse - 05-xxx08 - FM County Hall",
         "referred_by": "",
         "address_one": "280 Fifers Lane",
         "address_two": "",
@@ -4287,12 +4573,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "norse.helpdek@ncsgrp.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 05-xxx08 - Grounds",
+        "name": "Norse Eastern Limited",
+        "alias": "Norse - 05-xxx08 - Grounds",
         "referred_by": "",
         "address_one": "280 Fifers Lane",
         "address_two": "",
@@ -4302,12 +4589,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "christine.burns@ncsgrp.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Norse - 10 - 0990 - Training Academy",
+        "alias": "Norse - 10 - 0990 - Training Academy",
         "referred_by": "",
         "address_one": "280 Fifers Lane",
         "address_two": "",
@@ -4317,12 +4605,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 10 - 6008 - Cromer Hospital",
+        "name": "Norse Commercial Services Ltd",
+        "alias": "Norse - 10 - 6008 - Cromer Hospital",
         "referred_by": "",
         "address_one": "280 Fifers Lane",
         "address_two": "",
@@ -4332,12 +4621,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 10 - Archant",
+        "name": "Norse Commercial Services Ltd",
+        "alias": "Norse - 10 - Archant",
         "referred_by": "",
         "address_one": "280 Fifers Lane",
         "address_two": "",
@@ -4347,12 +4637,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "norse.helpdesk@ncsgrp.co,uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Norse - 10-0990 - Admin",
+        "alias": "Norse - 10-0990 - Admin",
         "referred_by": "",
         "address_one": "280 Fifers Lane",
         "address_two": "",
@@ -4362,12 +4653,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "michelle.butcher@ncsgrp.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 10-0990 - Finance",
+        "name": "Norse Finance",
+        "alias": "Norse - 10-0990 - Finance",
         "referred_by": "",
         "address_one": "Norse Commercial Services Ltd",
         "address_two": "280 Fifers Lane",
@@ -4377,12 +4669,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 894213",
         "email": "michelle.butcher@ncsgrp.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 10-0990 - H&S",
+        "name": "Norse H&S",
+        "alias": "Norse - 10-0990 - H&S",
         "referred_by": "",
         "address_one": "280, Fifers Lane",
         "address_two": "",
@@ -4392,12 +4685,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "julie.jarvey@ncsgrp.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 10-0990 - HR",
+        "name": "Norse Commercial Services ",
+        "alias": "Norse - 10-0990 - HR",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -4407,12 +4701,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Norse - 10-0990 - QMS",
+        "alias": "Norse - 10-0990 - QMS",
         "referred_by": "",
         "address_one": "280 Fifers Lane",
         "address_two": "",
@@ -4422,12 +4717,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 10-0990 - Sales and Marketing",
+        "name": "",
+        "alias": "Norse - 10-0990 - Sales and Marketing",
         "referred_by": "",
         "address_one": "280 Fifers Lane",
         "address_two": "",
@@ -4437,12 +4733,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 10-0990 - Strategic Partnership",
+        "name": "Norse Commercial Services ",
+        "alias": "Norse - 10-0990 - Strategic Partnership",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -4452,12 +4749,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 10-0990-Procurement",
+        "name": "Norse",
+        "alias": "Norse - 10-0990-Procurement",
         "referred_by": "",
         "address_one": "280 Fifers Lane",
         "address_two": "",
@@ -4467,12 +4765,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 10-6090 - Gas Engineers",
+        "name": "Norse 10-6090 Gas Engineers",
+        "alias": "Norse - 10-6090 - Gas Engineers",
         "referred_by": "",
         "address_one": "280 Fifers Lane",
         "address_two": "",
@@ -4482,12 +4781,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "Sonya.smith@ncsgrp.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Norse - 10-9008 - Archant",
+        "alias": "Norse - 10-9008 - Archant",
         "referred_by": "",
         "address_one": "Prospect House",
         "address_two": "Rouen Road",
@@ -4497,12 +4797,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 10-xxx08 - FM",
+        "name": "Norse 10-xxx08 - FM",
+        "alias": "Norse - 10-xxx08 - FM",
         "referred_by": "",
         "address_one": "280 Fifers Lane",
         "address_two": "",
@@ -4512,12 +4813,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "norse.helpdek@ncsgrp.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 13 - DO NOT USE",
+        "name": "Norse Commercial Services Ltd",
+        "alias": "Norse - 13 - DO NOT USE",
         "referred_by": "",
         "address_one": "280 Fifers Lane",
         "address_two": "",
@@ -4527,12 +4829,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "trudy.bird@ncsgrp.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 14 - DO NOT USE",
+        "name": "Norse Commercial Services Limited",
+        "alias": "Norse - 14 - DO NOT USE",
         "referred_by": "",
         "address_one": "280 Fifers Lane",
         "address_two": "",
@@ -4542,12 +4845,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "trudy.bird@ncsgrp.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 15 - Norwich Norse (Building) Ltd",
+        "name": "Norwich Norse (Building) Ltd",
+        "alias": "Norse - 15 - Norwich Norse (Building) Ltd",
         "referred_by": "",
         "address_one": "280 Fifers Lane",
         "address_two": "",
@@ -4557,12 +4861,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 16 - Great Yarmouth Norse",
+        "name": "Norse 16 Great Yarmouth Norse",
+        "alias": "Norse - 16 - Great Yarmouth Norse",
         "referred_by": "",
         "address_one": "280 Fifers Lane",
         "address_two": "",
@@ -4572,12 +4877,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 20 - Eventguard",
+        "name": "Eventguard Limited",
+        "alias": "Norse - 20 - Eventguard",
         "referred_by": "",
         "address_one": " 280 Fifers Lane ",
         "address_two": "",
@@ -4587,12 +4893,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 25 - Wellingborough",
+        "name": "Wellingborough Norse Limited",
+        "alias": "Norse - 25 - Wellingborough",
         "referred_by": "",
         "address_one": " 30 Sanders Park",
         "address_two": " Sanders Road",
@@ -4602,12 +4909,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Norse - 29 - Norwich Norse",
+        "alias": "Norse - 29 - Norwich Norse",
         "referred_by": "",
         "address_one": "280 Fifers Lane",
         "address_two": "",
@@ -4617,12 +4925,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 30 - Norse Transport",
+        "name": "Norse Transport ",
+        "alias": "Norse - 30 - Norse Transport",
         "referred_by": "",
         "address_one": " 280 Fifers Lane ",
         "address_two": "",
@@ -4632,12 +4941,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "amanda.armstrong@ncsgrp.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 35 - GYB Services",
+        "name": "GYB Services Ltd",
+        "alias": "Norse - 35 - GYB Services",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -4647,12 +4957,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 40 - Suffolk Coastal Services",
+        "name": "Suffolk Coastal Norse Ltd",
+        "alias": "Norse - 40 - Suffolk Coastal Services",
         "referred_by": "",
         "address_one": " Ufford Park Office",
         "address_two": " Yarmouth Road",
@@ -4662,12 +4973,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 42 - Havant",
+        "name": "Norse South East",
+        "alias": "Norse - 42 - Havant",
         "referred_by": "",
         "address_one": "Southmoor Depot",
         "address_two": "2 Penner Road",
@@ -4677,12 +4989,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 45 - Waveney Norse",
+        "name": "Waveney Norse Limited",
+        "alias": "Norse - 45 - Waveney Norse",
         "referred_by": "",
         "address_one": " Rotterdam Road Depot",
         "address_two": "",
@@ -4692,12 +5005,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 50 - Enfield Norse",
+        "name": "Enfield Norse Ltd",
+        "alias": "Norse - 50 - Enfield Norse",
         "referred_by": "",
         "address_one": " Unit 2",
         "address_two": " 14 Centre Way, Claverings Ind Estate",
@@ -4707,12 +5021,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 55 - Norse Environmental Waste Services Ltd",
+        "name": "Norse Environmental Waste Services Ltd",
+        "alias": "Norse - 55 - Norse Environmental Waste Services Ltd",
         "referred_by": "",
         "address_one": "Costessey RRP",
         "address_two": "Ernest Gage Avenue",
@@ -4722,12 +5037,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 894100",
         "email": "newsfin@ncsgrp.co.uk",
         "fax": "01603 894101",
-        "company_registration": "08714244"
+        "registration": "08714244"
       }
     },
     {
       "company": {
-        "name": "Norse - 60 - Norsecare",
+        "name": "Norsecare Ltd",
+        "alias": "Norse - 60 - Norsecare",
         "referred_by": "",
         "address_one": " 280 Fifers Lane ",
         "address_two": "",
@@ -4737,12 +5053,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 61 - Norsecare (Services)",
+        "name": "Norsecare Services Ltd",
+        "alias": "Norse - 61 - Norsecare (Services)",
         "referred_by": "",
         "address_one": " 280 Fifers Lane ",
         "address_two": "",
@@ -4752,12 +5069,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 70 - Devon Norse",
+        "name": "Devon Norse Ltd",
+        "alias": "Norse - 70 - Devon Norse",
         "referred_by": "",
         "address_one": " 3a Capital Court",
         "address_two": " Bittern Road, Sowton Ind Estate",
@@ -4767,12 +5085,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 73 - Newport",
+        "name": "Norse 73",
+        "alias": "Norse - 73 - Newport",
         "referred_by": "",
         "address_one": "Newport Norse",
         "address_two": "Telford Depot",
@@ -4782,12 +5101,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 80 - Barnsley Norse",
+        "name": "Barnsley Norse Ltd",
+        "alias": "Norse - 80 - Barnsley Norse",
         "referred_by": "",
         "address_one": " Rockland House, 1a Redbrook Business Park",
         "address_two": " Wilthorpe Road",
@@ -4797,12 +5117,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 85 - Medway",
+        "name": "Medway Norse Ltd",
+        "alias": "Norse - 85 - Medway",
         "referred_by": "",
         "address_one": "Pier Approach",
         "address_two": "Gillingham",
@@ -4812,12 +5133,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Norse - 86 - Medway",
+        "alias": "Norse - 86 - Medway",
         "referred_by": "",
         "address_one": "First Floor",
         "address_two": "Compass Centre",
@@ -4827,12 +5149,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 90 - Suffolk Norse",
+        "name": "Suffolk Norse Ltd",
+        "alias": "Norse - 90 - Suffolk Norse",
         "referred_by": "",
         "address_one": " Phoenix House",
         "address_two": " 3 Goddard Road",
@@ -4842,12 +5165,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - 91 - Suffolk Norse Transport",
+        "name": "Suffolk Norse Transport Ltd",
+        "alias": "Norse - 91 - Suffolk Norse Transport",
         "referred_by": "",
         "address_one": " Phoenix House",
         "address_two": " 3 Goddard Road",
@@ -4857,12 +5181,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Norse - DO NOT USE",
+        "name": "",
+        "alias": "Norse - DO NOT USE",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -4872,12 +5197,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Norwich City Football Club",
+        "alias": "Norwich City Football Club",
         "referred_by": "",
         "address_one": "Carrow Road",
         "address_two": "",
@@ -4887,12 +5213,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "NPower",
+        "alias": "NPower",
         "referred_by": "",
         "address_one": "Bridge House",
         "address_two": "200 Clough Road",
@@ -4902,12 +5229,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "NPS 01 Property Consultants",
+        "alias": "NPS 01 Property Consultants",
         "referred_by": "",
         "address_one": "Lancaster House",
         "address_two": "16 Central Avenue",
@@ -4917,12 +5245,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "NPS 03 North West",
+        "alias": "NPS 03 North West",
         "referred_by": "",
         "address_one": "Lancaster House",
         "address_two": "16 Central Avenue",
@@ -4932,12 +5261,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "NPS 05 Stockport",
+        "alias": "NPS 05 Stockport",
         "referred_by": "",
         "address_one": "Lancaster House",
         "address_two": "16 Central Avenue",
@@ -4947,12 +5277,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "NPS 06 Humber",
+        "alias": "NPS 06 Humber",
         "referred_by": "",
         "address_one": "Lancaster House",
         "address_two": "16 Central Avenue",
@@ -4962,12 +5293,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "NPS 07 Barnsley",
+        "alias": "NPS 07 Barnsley",
         "referred_by": "",
         "address_one": "Lancaster House",
         "address_two": "16 Central Avenue",
@@ -4977,12 +5309,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "NPS 08 South West Ltd",
+        "alias": "NPS 08 South West Ltd",
         "referred_by": "",
         "address_one": "Lancaster House",
         "address_two": "16 Central Avenue",
@@ -4992,12 +5325,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "NPS 09 London Ltd",
+        "alias": "NPS 09 London Ltd",
         "referred_by": "",
         "address_one": "Accounts Payable Department",
         "address_two": "Lancaster House",
@@ -5007,12 +5341,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 706000",
         "email": "lisa.martin@nps.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "NPS 10 HamsonJPA",
+        "alias": "NPS 10 HamsonJPA",
         "referred_by": "",
         "address_one": "Lancaster House",
         "address_two": "16 Central Avenue",
@@ -5022,12 +5357,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "NPS 11 Barron and Smith",
+        "alias": "NPS 11 Barron and Smith",
         "referred_by": "",
         "address_one": "Accounts Payable, Lancaster House",
         "address_two": "16 central Avenue",
@@ -5037,12 +5373,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 706000",
         "email": "Susannah.Lansom@nps.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "NPS 12 Robson Liddle",
+        "alias": "NPS 12 Robson Liddle",
         "referred_by": "",
         "address_one": "Lancaster House",
         "address_two": "16 Central Avenue",
@@ -5052,12 +5389,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "NPS 14 Leeds",
+        "alias": "NPS 14 Leeds",
         "referred_by": "",
         "address_one": "Lancaster House",
         "address_two": "16 Central Avenue",
@@ -5067,12 +5405,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "NPS 15 Norwich",
+        "name": "NPS 15 Norwich ",
+        "alias": "NPS 15 Norwich",
         "referred_by": "",
         "address_one": "Lancaster House",
         "address_two": "16 Central Avenue",
@@ -5082,12 +5421,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "NPS 16 BDK",
+        "alias": "NPS 16 BDK",
         "referred_by": "",
         "address_one": "Lancaster House",
         "address_two": "16 Central Avenue",
@@ -5097,12 +5437,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "NPS 17 Norse Energy",
+        "alias": "NPS 17 Norse Energy",
         "referred_by": "",
         "address_one": "Lancaster House",
         "address_two": "16 Central Avenue",
@@ -5112,12 +5453,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "NPS 18 Beattue Passive Norse",
+        "alias": "NPS 18 Beattue Passive Norse",
         "referred_by": "",
         "address_one": "Lancaster House",
         "address_two": "16 Central Avenue",
@@ -5127,12 +5469,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "NPS 19 Newport",
+        "alias": "NPS 19 Newport",
         "referred_by": "",
         "address_one": "Lancaster House",
         "address_two": "16 Central Avenue",
@@ -5142,12 +5485,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "O2 PSN",
+        "name": "",
+        "alias": "O2 PSN",
         "referred_by": "",
         "address_one": "Telefonica UK Limited ",
         "address_two": "260 Bath Road",
@@ -5157,12 +5501,13 @@ task copy_comp_from_drup: :environment do
         "phone": "08009020213",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "O2 Returns - Norwich",
+        "name": "O2 Returns Centre",
+        "alias": "O2 Returns - Norwich",
         "referred_by": "",
         "address_one": "Communications House",
         "address_two": "Vulcan Road North",
@@ -5172,12 +5517,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "OCH Services Ltd",
+        "alias": "OCH Services Ltd",
         "referred_by": "",
         "address_one": "The Old Coach House",
         "address_two": "Bergh Apton",
@@ -5187,12 +5533,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01508 480605",
         "email": "Marion@fwsl.net",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "One Stop Keyrings",
+        "name": "",
+        "alias": "One Stop Keyrings",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5202,12 +5549,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "OnePlus",
+        "name": "",
+        "alias": "OnePlus",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5217,12 +5565,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Orla Healthcare Ltd",
+        "alias": "Orla Healthcare Ltd",
         "referred_by": "",
         "address_one": "3 North Wing",
         "address_two": "Warlies Park House, Horseshoe Hill",
@@ -5232,12 +5581,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01992 568010",
         "email": "",
         "fax": "",
-        "company_registration": "07924658"
+        "registration": "07924658"
       }
     },
     {
       "company": {
-        "name": "Otterbox",
+        "name": "",
+        "alias": "Otterbox",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5247,12 +5597,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "P & L Trading",
+        "name": "",
+        "alias": "P & L Trading",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5262,12 +5613,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "P C E Automation Ltd",
+        "alias": "P C E Automation Ltd",
         "referred_by": "",
         "address_one": "Ellough Industrial Estate",
         "address_two": "",
@@ -5277,12 +5629,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01502 713287",
         "email": "k.rhodes@pce-automation.co.uk",
         "fax": "01502 716679",
-        "company_registration": "3801408"
+        "registration": "3801408"
       }
     },
     {
       "company": {
         "name": "Parker Hydraulics and Pneumatics Ltd",
+        "alias": "Parker Hydraulics and Pneumatics Ltd",
         "referred_by": "APR",
         "address_one": "Unit 5, Ashbourne Estate",
         "address_two": "Mile Cross Lane",
@@ -5292,12 +5645,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 258702",
         "email": "davidmanington@parkerhydraulics.co.uk",
         "fax": "01603 485337",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Part Service Ltd",
+        "name": "",
+        "alias": "Part Service Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5307,12 +5661,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "PayPal",
+        "name": "",
+        "alias": "PayPal",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5322,12 +5677,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "paypal - gpstrackerxyz",
+        "name": "",
+        "alias": "paypal - gpstrackerxyz",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5337,12 +5693,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "PC World",
+        "name": "",
+        "alias": "PC World",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5352,12 +5709,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Peter Ralph Jones",
+        "alias": "Peter Ralph Jones",
         "referred_by": "",
         "address_one": "13 Hellesdon Park Road",
         "address_two": "Drayton High Road",
@@ -5367,12 +5725,13 @@ task copy_comp_from_drup: :environment do
         "phone": "08453 710281",
         "email": "andreajns4@googlemail.com",
         "fax": "01603 894501",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Peter Thomas",
+        "alias": "Peter Thomas",
         "referred_by": "",
         "address_one": "14 Abinger Way",
         "address_two": "Eaton",
@@ -5382,12 +5741,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 501089",
         "email": "PETER2THOMAS@aol.com",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Peterborough Regional College",
+        "alias": "Peterborough Regional College",
         "referred_by": "",
         "address_one": "Park Crescent",
         "address_two": "",
@@ -5397,12 +5757,13 @@ task copy_comp_from_drup: :environment do
         "phone": "07813 368184",
         "email": "steven.forster@kier.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "PF Jones Diesel Services Ltd",
+        "name": "",
+        "alias": "PF Jones Diesel Services Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5412,12 +5773,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Pine Solutions Limited",
+        "alias": "Pine Solutions Limited",
         "referred_by": "",
         "address_one": "2nd Floor, Rouen House",
         "address_two": "Rouen Road",
@@ -5427,12 +5789,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 697610",
         "email": "paul.marshall@cotswoldco.com",
         "fax": "01603 858206",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Pizza hut",
+        "name": "",
+        "alias": "Pizza hut",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5442,12 +5805,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "PJC Group",
+        "name": "",
+        "alias": "PJC Group",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5457,12 +5821,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "PJC Locks & Safe",
+        "name": "",
+        "alias": "PJC Locks & Safe",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5472,12 +5837,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Place UK Ltd",
+        "alias": "Place UK Ltd",
         "referred_by": "APR",
         "address_one": "Church Farm",
         "address_two": "Church Road, Tunstead",
@@ -5487,12 +5853,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01692 536225",
         "email": "jamesstarling@placeuk.com",
         "fax": "01692 536928",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Plasticups",
+        "name": "",
+        "alias": "Plasticups",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5502,12 +5869,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Post Office Ltd",
+        "name": "",
+        "alias": "Post Office Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5517,12 +5885,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Pre pay mania",
+        "name": "",
+        "alias": "Pre pay mania",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5532,12 +5901,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Premier Hazard",
+        "name": "",
+        "alias": "Premier Hazard",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5547,12 +5917,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Premier Inn",
+        "name": "",
+        "alias": "Premier Inn",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5562,12 +5933,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Premium Credit",
+        "name": "",
+        "alias": "Premium Credit",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5577,12 +5949,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Pret A Manager",
+        "name": "",
+        "alias": "Pret A Manager",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5592,12 +5965,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Primavera",
+        "name": "",
+        "alias": "Primavera",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5607,12 +5981,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Printing.com",
+        "alias": "Printing.com",
         "referred_by": "",
         "address_one": "1 Station Road",
         "address_two": "",
@@ -5622,12 +5997,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603519898",
         "email": "norwich@printing.com",
         "fax": "",
-        "company_registration": "878443281"
+        "registration": "878443281"
       }
     },
     {
       "company": {
-        "name": "Protex Fasteners",
+        "name": "",
+        "alias": "Protex Fasteners",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5637,12 +6013,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Rakuten",
+        "name": "",
+        "alias": "Rakuten",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5652,12 +6029,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Randell Refrigeration Services",
+        "alias": "Randell Refrigeration Services",
         "referred_by": "",
         "address_one": "The Small Holding",
         "address_two": "Sheringham Road, West Beckham",
@@ -5667,12 +6045,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01263 825295",
         "email": "ranref@paston.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Red Letter Days Limited",
+        "name": "",
+        "alias": "Red Letter Days Limited",
         "referred_by": "",
         "address_one": "The Grange",
         "address_two": "100 High Street",
@@ -5682,12 +6061,13 @@ task copy_comp_from_drup: :environment do
         "phone": "02084422032",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Reversing Cameras UK Ltd",
+        "alias": "Reversing Cameras UK Ltd",
         "referred_by": "",
         "address_one": "Unit 2 Lysander Close",
         "address_two": "Pysons Road Ind Est",
@@ -5697,12 +6077,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01843 602650",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Rhino roof racks direct",
+        "alias": "Rhino roof racks direct",
         "referred_by": "",
         "address_one": "Unit 5, Phoenix House, Sandall Carr Road",
         "address_two": "Kirk Sandall",
@@ -5712,12 +6093,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01302 892056",
         "email": "",
         "fax": "",
-        "company_registration": "103554644"
+        "registration": "103554644"
       }
     },
     {
       "company": {
         "name": "Richard Long Ltd",
+        "alias": "Richard Long Ltd",
         "referred_by": "",
         "address_one": "White Hall Farm",
         "address_two": "Crownthorpe",
@@ -5727,12 +6109,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01953 603291",
         "email": "",
         "fax": "richard@rlong.co.uk / paula@rlong.co.uk",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "RingGo",
+        "name": "National Car Parks Limited",
+        "alias": "RingGo",
         "referred_by": "",
         "address_one": "14b Saffron Court",
         "address_two": "St Cross Street Clerkenwell",
@@ -5742,12 +6125,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": "253240"
+        "registration": "253240"
       }
     },
     {
       "company": {
-        "name": "Riverside Carpark",
+        "name": "",
+        "alias": "Riverside Carpark",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5757,12 +6141,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Robert Mills",
+        "alias": "Robert Mills",
         "referred_by": "",
         "address_one": "4 Highfield Road",
         "address_two": "",
@@ -5772,12 +6157,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "robmills1962@hotmail.com",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Robin Amis Scaffolding",
+        "alias": "Robin Amis Scaffolding",
         "referred_by": "",
         "address_one": "The Sycamores, 31a Paston Road",
         "address_two": "Mundesley",
@@ -5787,12 +6173,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "robina@fsmail.net",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Robinson Young Ltd",
+        "alias": "Robinson Young Ltd",
         "referred_by": "",
         "address_one": "Ibson House",
         "address_two": "Eastern Way Industrial Estate",
@@ -5802,12 +6189,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01284 766261",
         "email": "mmorris@ry.tm",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Robinsons VW",
+        "name": "",
+        "alias": "Robinsons VW",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5817,12 +6205,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Rosas Carnaby",
+        "name": "",
+        "alias": "Rosas Carnaby",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5832,12 +6221,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Royal Mail",
+        "name": "",
+        "alias": "Royal Mail",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5847,12 +6237,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Royal Mail April",
+        "name": "",
+        "alias": "Royal Mail April",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5862,12 +6253,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "RS Components Ltd",
+        "name": "",
+        "alias": "RS Components Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5877,12 +6269,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "RS Online",
+        "alias": "RS Online",
         "referred_by": "",
         "address_one": "Birchington Road",
         "address_two": "Corby",
@@ -5892,12 +6285,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "RT Training Solutions",
+        "name": "",
+        "alias": "RT Training Solutions",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5907,12 +6301,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "S G Wealth Management",
+        "alias": "S G Wealth Management",
         "referred_by": "APR",
         "address_one": "53-57 St Martin's Lane",
         "address_two": "",
@@ -5922,12 +6317,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 760866",
         "email": "charlie@sgwealthmanagement.co.uk",
         "fax": "",
-        "company_registration": "4164888"
+        "registration": "4164888"
       }
     },
     {
       "company": {
-        "name": "Sandbeck Garage Accessory Shop Ltd",
+        "name": "",
+        "alias": "Sandbeck Garage Accessory Shop Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5937,12 +6333,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Sash Window Preservation Ltd",
+        "alias": "Sash Window Preservation Ltd",
         "referred_by": "",
         "address_one": "Unit 8 & 9 Telford Court",
         "address_two": "Sweet Briar Ind Estate ",
@@ -5952,12 +6349,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 908252",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Satmo Intelligent Vehicle Tracking",
+        "alias": "Satmo Intelligent Vehicle Tracking",
         "referred_by": "",
         "address_one": "Suite 11, Inspire Bus Park",
         "address_two": "Newlands House",
@@ -5967,12 +6365,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Seasons Catering",
+        "name": "",
+        "alias": "Seasons Catering",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5982,12 +6381,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Secure Select",
+        "name": "",
+        "alias": "Secure Select",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -5997,12 +6397,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Silent Sentinel",
+        "alias": "Silent Sentinel",
         "referred_by": "",
         "address_one": "11, Harforde Court",
         "address_two": "John Tate Road",
@@ -6012,12 +6413,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Smart Control Solutions",
+        "alias": "Smart Control Solutions",
         "referred_by": "",
         "address_one": "12 Little End Road",
         "address_two": "Eaton Socon",
@@ -6027,12 +6429,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01480 211234",
         "email": "philippa.shoobert@smart-control.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Snakehive",
+        "name": "",
+        "alias": "Snakehive",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6042,12 +6445,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Snugg",
+        "name": "",
+        "alias": "Snugg",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6057,12 +6461,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "SOTI",
+        "name": "",
+        "alias": "SOTI",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6072,12 +6477,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "South Gloucester Vehicle Managament Ltd",
+        "name": "",
+        "alias": "South Gloucester Vehicle Managament Ltd",
         "referred_by": "",
         "address_one": "7 Cabot Rise",
         "address_two": "",
@@ -6087,12 +6493,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Sprint",
+        "name": "",
+        "alias": "Sprint",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6102,12 +6509,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "St Mellons Hotel",
+        "name": "",
+        "alias": "St Mellons Hotel",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6117,12 +6525,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Stansted Airport Ltd",
+        "alias": "Stansted Airport Ltd",
         "referred_by": "",
         "address_one": "Enterprise House",
         "address_two": "Bassingbourn Road",
@@ -6132,12 +6541,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Staples",
+        "name": "Staples ",
+        "alias": "Staples",
         "referred_by": "",
         "address_one": "Unit E1 & E2",
         "address_two": "Alex Moorhouse Way, Longwater retail park",
@@ -6147,12 +6557,13 @@ task copy_comp_from_drup: :environment do
         "phone": "0344 472 7949",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Sweetbriar Office Solutions",
+        "alias": "Sweetbriar Office Solutions",
         "referred_by": "",
         "address_one": "2 Frensham Road",
         "address_two": "",
@@ -6162,12 +6573,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 787480",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Swift Frames Ltd",
+        "alias": "Swift Frames Ltd",
         "referred_by": "",
         "address_one": "Swift House, Caley Close",
         "address_two": "Sweetbriar Road Industrial Estate",
@@ -6177,12 +6589,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 488030",
         "email": "",
         "fax": "01603 482514",
-        "company_registration": "2196855"
+        "registration": "2196855"
       }
     },
     {
       "company": {
-        "name": "SYL Trading",
+        "name": "",
+        "alias": "SYL Trading",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6192,12 +6605,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "T K Drake Electrical",
+        "alias": "T K Drake Electrical",
         "referred_by": "",
         "address_one": "30 London Street",
         "address_two": "",
@@ -6207,12 +6621,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01760 721328",
         "email": "terry@tkdrake.co.uk",
         "fax": "01760 720518",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Tech Data Mobile",
+        "name": "",
+        "alias": "Tech Data Mobile",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6222,12 +6637,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Tesco",
+        "alias": "Tesco",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6237,12 +6653,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "test",
+        "name": "",
+        "alias": "test",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6252,12 +6669,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "TFL Oyster Card",
+        "name": "",
+        "alias": "TFL Oyster Card",
         "referred_by": "",
         "address_one": "PO Box 6614",
         "address_two": "",
@@ -6267,12 +6685,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "That Cable",
+        "name": "",
+        "alias": "That Cable",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6282,12 +6701,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "The Electrical Gate Store",
+        "name": "",
+        "alias": "The Electrical Gate Store",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6297,12 +6717,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "The Flower Garden",
+        "name": "",
+        "alias": "The Flower Garden",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6312,12 +6733,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "The Magdalen Chapter",
+        "name": "",
+        "alias": "The Magdalen Chapter",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6327,12 +6749,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "The Mortgage Bureau",
+        "alias": "The Mortgage Bureau",
         "referred_by": "",
         "address_one": "3 Baxter Court",
         "address_two": "",
@@ -6342,12 +6765,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01284 700175",
         "email": "shaunc1969@yahoo.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "The Nightingale Centre",
+        "alias": "The Nightingale Centre",
         "referred_by": "APR",
         "address_one": "1 The Street",
         "address_two": "Framingham Earl",
@@ -6357,12 +6781,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01508 495581",
         "email": "gwen@thenightingalecentre.co.uk",
         "fax": "01508 495061",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "The Object Shop",
+        "name": "",
+        "alias": "The Object Shop",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6372,12 +6797,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "the Satellite Shop",
+        "name": "",
+        "alias": "the Satellite Shop",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6387,12 +6813,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "The Toolbox Shop",
+        "name": "",
+        "alias": "The Toolbox Shop",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6402,12 +6829,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "The Whiffler",
+        "name": "",
+        "alias": "The Whiffler",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6417,12 +6845,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "thetrainline.com",
+        "name": "",
+        "alias": "thetrainline.com",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6432,12 +6861,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Thompson Packaging",
+        "alias": "Thompson Packaging",
         "referred_by": "APR",
         "address_one": "Units 20-24 Bowthorpe Industrial Estate",
         "address_two": "Robberds way",
@@ -6447,12 +6877,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603 744399",
         "email": "enquries@thompsonpackaging.co.uk",
         "fax": "01603 740536",
-        "company_registration": "731817732"
+        "registration": "731817732"
       }
     },
     {
       "company": {
-        "name": "Three",
+        "name": "",
+        "alias": "Three",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6462,12 +6893,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Tidswell Childs",
+        "alias": "Tidswell Childs",
         "referred_by": "",
         "address_one": "15 Palace Street",
         "address_two": "",
@@ -6477,12 +6909,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01603443344",
         "email": "tim@tidswellchilds.com",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "TK Drake Electrical",
+        "alias": "TK Drake Electrical",
         "referred_by": "",
         "address_one": "30 London Street",
         "address_two": "",
@@ -6492,12 +6925,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "TME",
+        "name": "",
+        "alias": "TME",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6507,12 +6941,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "TNT",
+        "name": "TNT UK Ltd",
+        "alias": "TNT",
         "referred_by": "",
         "address_one": "PO Box 99 Stubbins Vale Mill",
         "address_two": "Stubbins Vale Road",
@@ -6522,12 +6957,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "TO BE COLLECTED",
+        "name": "",
+        "alias": "TO BE COLLECTED",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6537,12 +6973,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Toolbox",
+        "name": "toolbox",
+        "alias": "Toolbox",
         "referred_by": "",
         "address_one": "Units 2, 3 and 4 Millennium Court",
         "address_two": "Enterprise Way",
@@ -6552,12 +6989,13 @@ task copy_comp_from_drup: :environment do
         "phone": "08443766222",
         "email": "customerservices@toolbox.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Toolstation",
+        "name": "",
+        "alias": "Toolstation",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6567,12 +7005,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Tootlime UK Ltd",
+        "name": "",
+        "alias": "Tootlime UK Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6582,12 +7021,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Top Batteries",
+        "name": "",
+        "alias": "Top Batteries",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6597,12 +7037,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Totally Gadgets",
+        "name": "",
+        "alias": "Totally Gadgets",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6612,12 +7053,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Totally4 Ltd",
+        "name": "",
+        "alias": "Totally4 Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6627,12 +7069,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Touchdown",
+        "alias": "Touchdown",
         "referred_by": "",
         "address_one": "The Hawk Business Park",
         "address_two": "Easingwold",
@@ -6642,12 +7085,13 @@ task copy_comp_from_drup: :environment do
         "phone": "08004048888",
         "email": "",
         "fax": "",
-        "company_registration": "04844444"
+        "registration": "04844444"
       }
     },
     {
       "company": {
-        "name": "Tower Light UK Ltd",
+        "name": "",
+        "alias": "Tower Light UK Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6657,12 +7101,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Towing Centres UK Ltd",
+        "name": "",
+        "alias": "Towing Centres UK Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6672,12 +7117,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Transmission Bearings & Chains Limited",
+        "alias": "Transmission Bearings & Chains Limited",
         "referred_by": "",
         "address_one": "Unit 11 Fleet Road Industrial Estate",
         "address_two": "Fleet",
@@ -6687,12 +7133,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01406 425666",
         "email": "mark@tbc-ltd.com",
         "fax": "01406 426300",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Travelodge",
+        "alias": "Travelodge",
         "referred_by": "",
         "address_one": "Various",
         "address_two": "",
@@ -6702,12 +7149,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Triple X Trading Ltd",
+        "name": "",
+        "alias": "Triple X Trading Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6717,12 +7165,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Trophystore",
+        "name": "",
+        "alias": "Trophystore",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6732,12 +7181,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Trueshopping Ltd - bestecoshop",
+        "name": "",
+        "alias": "Trueshopping Ltd - bestecoshop",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6747,12 +7197,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Turner Maintenance Ltd",
+        "alias": "Turner Maintenance Ltd",
         "referred_by": "APR",
         "address_one": "Milner Road",
         "address_two": "Chilton Industrial Estate",
@@ -6762,12 +7213,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01787 376373",
         "email": "dawnbrown@tiscali.co.uk",
         "fax": "01787 372168",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "UK Mobile Store",
+        "name": "UK Mobile Store Ltd",
+        "alias": "UK Mobile Store",
         "referred_by": "",
         "address_one": "Connaught Business Centre",
         "address_two": "Unit B7 Hyde Estate Rd",
@@ -6777,12 +7229,13 @@ task copy_comp_from_drup: :environment do
         "phone": "08442883295",
         "email": "sales@uk-mobilestore.co.uk",
         "fax": "",
-        "company_registration": "07609139 "
+        "registration": "07609139 "
       }
     },
     {
       "company": {
-        "name": "UK Surplus Central Ltd",
+        "name": "",
+        "alias": "UK Surplus Central Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6792,12 +7245,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "UK Trade Direct",
+        "name": "",
+        "alias": "UK Trade Direct",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6807,12 +7261,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Unielectronics Ltd",
+        "name": "",
+        "alias": "Unielectronics Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6822,12 +7277,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Unispectra Ltd",
+        "name": "",
+        "alias": "Unispectra Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6837,12 +7293,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "UPS Limited",
+        "alias": "UPS Limited",
         "referred_by": "",
         "address_one": "UPS House",
         "address_two": "Forest Road",
@@ -6852,12 +7309,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "UPS Systems Plc",
+        "alias": "UPS Systems Plc",
         "referred_by": "",
         "address_one": "Herongate",
         "address_two": "",
@@ -6867,12 +7325,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01488 680500",
         "email": "",
         "fax": "01488 686315",
-        "company_registration": "2784286"
+        "registration": "2784286"
       }
     },
     {
       "company": {
         "name": "Value power Systems",
+        "alias": "Value power Systems",
         "referred_by": "",
         "address_one": "7 Sycamore Drive",
         "address_two": "Wem",
@@ -6882,12 +7341,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01939 235 862 ",
         "email": "sales@vps-ups.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Veltshaw Builders",
+        "alias": "Veltshaw Builders",
         "referred_by": "",
         "address_one": "Pentney Road",
         "address_two": "Narborough",
@@ -6897,12 +7357,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01760 337424",
         "email": "janis@veltshawbuilders.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Videcon",
+        "name": "Videcon PLC",
+        "alias": "Videcon",
         "referred_by": "",
         "address_one": "Unit 1 Concept Business Park",
         "address_two": "Smithies Lane",
@@ -6912,12 +7373,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01924 528000 - Sales 01924 528006 - Accounts",
         "email": "sales@videcon.co.uk",
         "fax": "01924 528005",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Virgin Rail Group Ltd",
+        "name": "",
+        "alias": "Virgin Rail Group Ltd",
         "referred_by": "",
         "address_one": "179 Harrow Road",
         "address_two": "",
@@ -6927,12 +7389,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Vodafone",
+        "name": "",
+        "alias": "Vodafone",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6942,12 +7405,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Webelec Ltd",
+        "name": "",
+        "alias": "Webelec Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6957,12 +7421,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Wensum Valley Hotel and Golf Club",
+        "name": "",
+        "alias": "Wensum Valley Hotel and Golf Club",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -6972,12 +7437,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Westcotec Limited",
+        "alias": "Westcotec Limited",
         "referred_by": "",
         "address_one": "34 bertie Ward Way",
         "address_two": "",
@@ -6987,12 +7453,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01362 853124",
         "email": "",
         "fax": "01362 851809",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Westlake Communications Ltd",
+        "alias": "Westlake Communications Ltd",
         "referred_by": "",
         "address_one": "D10 & D11 Seedbed Centre",
         "address_two": "Davidson Way",
@@ -7002,12 +7469,13 @@ task copy_comp_from_drup: :environment do
         "phone": "0800 298 8011",
         "email": "",
         "fax": "01708 736365",
-        "company_registration": "4264141"
+        "registration": "4264141"
       }
     },
     {
       "company": {
-        "name": "WF Senate",
+        "name": "",
+        "alias": "WF Senate",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -7017,12 +7485,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Wheldon's",
+        "alias": "Wheldon's",
         "referred_by": "",
         "address_one": "127 High Street",
         "address_two": "",
@@ -7032,12 +7501,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01908 214399",
         "email": "Chris.Hopgood@wheldons.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "White Horse Inn",
+        "alias": "White Horse Inn",
         "referred_by": "",
         "address_one": "Marsh Way",
         "address_two": "Woolstone",
@@ -7047,12 +7517,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01367 820726",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Willcox Lewis",
+        "alias": "Willcox Lewis",
         "referred_by": "",
         "address_one": "Old Coach House",
         "address_two": "Sunnyside, Bergh Apton",
@@ -7062,12 +7533,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01508 480100",
         "email": "jw@willcoxlewis.co.uk",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Wiltshire Hotel",
+        "name": "The Wiltshire Hotel",
+        "alias": "Wiltshire Hotel",
         "referred_by": "",
         "address_one": "Vastern",
         "address_two": "Royal Wootton Bassett",
@@ -7077,12 +7549,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01793 849 999",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "World of accessories",
+        "name": "",
+        "alias": "World of accessories",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -7092,12 +7565,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Wright's Hose Clips Ltd",
+        "name": "",
+        "alias": "Wright's Hose Clips Ltd",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -7107,12 +7581,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Wrights of Brettenham Ltd",
+        "alias": "Wrights of Brettenham Ltd",
         "referred_by": "APR",
         "address_one": "Brettenham Manor",
         "address_two": "Brettenham",
@@ -7122,12 +7597,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01842 754061",
         "email": "jandpwright@talktalkbusiness.net",
         "fax": "01842 764143",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "XL Displays",
+        "alias": "XL Displays",
         "referred_by": "",
         "address_one": "38-39 Manasty Rd",
         "address_two": "Orton Southgate",
@@ -7137,12 +7613,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01733 511030",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Your Insurance",
+        "name": "",
+        "alias": "Your Insurance",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -7152,12 +7629,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Z - do not use - Norse 10",
+        "name": "Norse Commercial Services Limited ",
+        "alias": "Z - do not use - Norse 10",
         "referred_by": "",
         "address_one": " 280 Fifers Lane ",
         "address_two": "",
@@ -7167,12 +7645,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Z - Micro P",
+        "name": "",
+        "alias": "Z - Micro P",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -7182,12 +7661,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
-        "name": "Z do not use - Norse 05",
+        "name": "Norse Eastern Limited ",
+        "alias": "Z do not use - Norse 05",
         "referred_by": "",
         "address_one": " 280 Fifers Lane ",
         "address_two": "",
@@ -7197,12 +7677,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     },
     {
       "company": {
         "name": "Zenith (Gluten-Free) Products",
+        "alias": "Zenith (Gluten-Free) Products",
         "referred_by": "",
         "address_one": "Daryll Farm",
         "address_two": "Mill Road",
@@ -7212,12 +7693,13 @@ task copy_comp_from_drup: :environment do
         "phone": "01362 858899",
         "email": "philgwhitman@gmail.com",
         "fax": "",
-        "company_registration": "4857799"
+        "registration": "4857799"
       }
     },
     {
       "company": {
-        "name": "ZY International",
+        "name": "",
+        "alias": "ZY International",
         "referred_by": "",
         "address_one": "",
         "address_two": "",
@@ -7227,14 +7709,13 @@ task copy_comp_from_drup: :environment do
         "phone": "",
         "email": "",
         "fax": "",
-        "company_registration": ""
+        "registration": ""
       }
     }
   ]
 
-  Company.include_root_in_json = true
 
   companies_json.each do |json|
-    Company.new.from_json json.to_json
+    Company.create!(json[:company])
   end
 end
