@@ -9,6 +9,7 @@ end
 task heroku_reset_all: :environment do
 
   Rake::Task['db:migrate'].invoke
+  Rake::Task['create_users'].invoke
   Rake::Task['initialise_companies'].invoke
   Rake::Task['invoice_requests'].invoke
 

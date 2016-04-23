@@ -32,6 +32,8 @@ class CreateInvoiceRequests < ActiveRecord::Migration[5.0]
 
       t.boolean :delivery_note_only, default: false
 
+      t.integer :user_id
+
       t.timestamps
     end
   end

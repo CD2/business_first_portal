@@ -3,7 +3,6 @@
 %table
   %thead
     %tr
-      %th Name
       %th Company
       %th
 
@@ -11,7 +10,6 @@
     - @companies.each do |company|
       %tr
         %td= company.name
-        %td= company.company
         %td
           = link_to 'Show', company
           = link_to 'Edit', edit_company_path(company)

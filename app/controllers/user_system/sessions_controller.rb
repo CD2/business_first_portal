@@ -1,5 +1,6 @@
 class UserSystem::SessionsController < ApplicationController
-  
+  skip_before_action :require_user
+
   def new
   end
 
@@ -20,23 +21,6 @@ class UserSystem::SessionsController < ApplicationController
   def destroy
     log_out if signed_in?
     redirect_to root_url
-  end
-
-  def admin_visible_toggle
-    respond_to do |format|
-      format.js do 
-        if session[:admin_visible]
-          session.delete(:admin_visible)
-        else 
-          session[:admin_visible] = true
-        end
-      end
-    end
-    render nothing: true
-  end
-
-  def get_user_id
-    render json: current_user
   end
 
   private 
