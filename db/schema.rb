@@ -88,6 +88,7 @@ ActiveRecord::Schema.define(version: 20160423225729) do
   add_index "products", ["reference_type", "reference_id"], name: "index_products_on_reference_type_and_reference_id", using: :btree
 
   create_table "purchase_orders", force: :cascade do |t|
+    t.string   "title"
     t.integer  "status"
     t.integer  "payment_type"
     t.integer  "company_id"
@@ -95,6 +96,7 @@ ActiveRecord::Schema.define(version: 20160423225729) do
     t.boolean  "received_goods"
     t.boolean  "received_invoice"
     t.boolean  "under_query"
+    t.integer  "user_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end

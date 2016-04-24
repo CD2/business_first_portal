@@ -1,6 +1,7 @@
 class CreatePurchaseOrders < ActiveRecord::Migration[5.0]
   def change
     create_table :purchase_orders do |t|
+      t.string :title
       t.integer :status
       t.integer :payment_type
       t.integer :company_id
