@@ -5,7 +5,7 @@ class PurchaseOrdersController < ApplicationController
   end
 
   def index
-    @purchase_orders = PurchaseOrder.all
+    @purchase_orders = PurchaseOrder.paginate(:page => params[:page])
   end
 
   def new

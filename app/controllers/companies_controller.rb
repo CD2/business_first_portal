@@ -2,7 +2,7 @@ class CompaniesController < ApplicationController
   before_action :set_company, only: [:edit, :update, :destroy]
 
   def index
-    @companies = Company.all
+    @companies = Company.paginate(:page => params[:page])
   end
 
   def new

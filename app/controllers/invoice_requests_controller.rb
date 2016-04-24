@@ -6,11 +6,11 @@ class InvoiceRequestsController < ApplicationController
   end
 
   def index
-    @invoice_requests = InvoiceRequest.safe_scope(scope_params)
+    @invoice_requests = InvoiceRequest.includes(:user, :company).safe_scope(scope_params).paginate(:page => params[:page])
   end
 
   def delivery_notes
-    @delivery_notes = InvoiceRequest.delivery_notes
+    @delivery_notes = InvoiceRequest.delivery_notes.paginate(:page => params[:page])
   end
 
   def new
