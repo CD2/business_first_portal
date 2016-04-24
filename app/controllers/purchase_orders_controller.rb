@@ -1,6 +1,9 @@
 class PurchaseOrdersController < ApplicationController
   before_action :set_purchase_order, only: [:edit, :update, :destroy, :show]
 
+  def show
+  end
+
   def index
     @purchase_orders = PurchaseOrder.all
   end
@@ -35,8 +38,12 @@ class PurchaseOrdersController < ApplicationController
 
   private
 
-  def set_purchase_order
-    @purchase_order = PurchaseOrder.find(params[:id])
-  end
+    def set_purchase_order
+      @purchase_order = PurchaseOrder.find(params[:id])
+    end
+
+    def purchase_order_params
+      params.require(:purchase_order).permit(:status, :payment_type, :company_id, :notes, :received_goods, :received_invoice, :under_query)
+    end
   
 end

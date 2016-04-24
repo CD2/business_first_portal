@@ -4,6 +4,8 @@ class InvoiceRequest < ApplicationRecord
   scope :delivery_notes, -> {where(delivery_note_only: false)}
   belongs_to :user
 
+  has_many :products, as: :reference
+
   enum status: [:active, :complete]
 
   def invoice_address

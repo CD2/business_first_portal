@@ -1,0 +1,33 @@
+#column_layout
+  .even_column
+    = field_set_tag 'Company' do
+      = "#{@purchase_order.company.try(:name)}"
+      .address= render_address(@purchase_order.company.try(:address))
+  .even_column
+    = field_set_tag 'Information' do
+      = "Ordered by: #{@invoice_request.user.try(:name)}"
+      %br
+      = "Ordered date: #{@invoice_request.created_at.strftime('%D')}"
+      %br
+      = "PO Number: #{@invoice_request.id}"
+  .even_column
+    = field_set_tag 'Status' do
+      = 'Recieved Goods' if @invoice_request.recieved_goods?
+      = 'Received Invoice' if @invoice_request.recieved_invoice?
+      = 'Under Query' if @invoice_request.under_query?
+      = "Payment type: #{@invoice_request.payment_type}"
+
+%table.invoice_request_products
+  %tr
+    %th Item
+    %th Quantity
+    %th Unit Price
+    %th Line Total
+    %th Additional Line Info
+  - @invoice_request.products.each do |product|
+    %tr
+      %td= product.name
+      %td= product.quantity
+      %td= product.price
+      %td= product.line_total
+      %td= product.notes

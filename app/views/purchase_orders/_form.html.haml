@@ -1,0 +1,46 @@
+#form_page
+  = form_for @purchase_order do |f|
+    = render '_common/validation_errors', object: @purchase_order
+    #two_panel_form
+      #main_panel
+
+        = field_set_tag 'Company' do
+          .field
+            = f.label :company_id, "Supplier"
+            = f.collection_select :company_id, Company.all, :id, :name, prompt: 'Please select the company'
+          .field
+            = f.label :notes
+            = f.text_area :notes
+
+
+      #side_panel
+        = field_set_tag 'Accounts only' do
+          .field
+            = f.label :status
+            = f.select :status, InvoiceRequest.statuses.keys.map { |s| [s.humanize, s] }
+
+
+        = field_set_tag 'Information' do
+          .field
+            = f.label :payment_type
+            = f.select :payment_type, InvoiceRequest.statuses.keys.map { |s| [s.humanize, s] }
+          .field
+            = label_tag :status
+            .field
+              = f.label :received_goods do
+                = f.check_box :received_goods
+                %span Received Goods
+            .field
+              = f.label :received_invoice do
+                = f.check_box :received_invoice
+                %span Received Invoice
+            .field
+              = f.label :under_query do
+                = f.check_box :under_query
+                %span Under Query
+
+    .actions
+      - if @purchase_order.new_record?
+        = f.submit "Save and Add Products", data: {disable_with: 'Creating Purchase Order...'}
+      - else
+        = f.submit :submit, "Save"
