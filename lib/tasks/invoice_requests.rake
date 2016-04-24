@@ -7,6 +7,68 @@ task invoice_requests: :environment do
       "status": "Active",
       "invoice_date": "",
       "delivery_note_only": "Yes",
+      "dispatch_to": "\n \n Att. of: Wayne Morgan C/O Daisy McCorgray \n\n",
+      "invoice_to": "",
+      "products": "\n \n \n \n \n \n \n IMEI Number: \n Item: iPhone 6 16GB - Space Grey \n Line Total: 0 \n Quantity: 1 \n \n \n \n \n \n \n \n",
+      "notes": "",
+      "id": "2119",
+      "created_at": "Wednesday, April 20, 2016 - 12:12",
+      "dispatch_address_one": ""
+    }
+  },
+  {
+    "invoice_request": {
+      "invoice_number": "10487",
+      "status": "Complete",
+      "invoice_date": "Friday, April 22, 2016",
+      "delivery_note_only": "No",
+      "dispatch_to": "\n \n Att. of: Ian Price\n\n \n Company: Medway Norse LtdPier ApproachGillinghamKent NE9 1RX\n\n \n\n",
+      "invoice_to": "\n \n P.O Number: PO MN/21167\n\n \n Company: Medway Norse LtdPier ApproachGillinghamKent NE9 1RX\n\n \n\nEdit\nDelete\n",
+      "products": "\n \n \n \n \n \n \n IMEI Number: \n Item: Monthly line rental for Three router - April \n Line Total: 16.67 \n Quantity: 1 \n \n \n \n \n \n \n \n",
+      "notes": "",
+      "id": "2121",
+      "created_at": "Thursday, April 21, 2016 - 12:30",
+      "dispatch_address_one": ""
+    }
+  },
+
+
+  {
+    "invoice_request": {
+      "invoice_number": "",
+      "status": "Active",
+      "invoice_date": "",
+      "delivery_note_only": "Yes",
+      "dispatch_to": "\n \n Att. of: Matt Dewsbury\n\n \n Company: Norse Commercial Services \n\n \n\n",
+      "invoice_to": "\n \n P.O Number: PROC000003\n\n \n Company: Norse Commercial Services \n\n \n\nEdit\nDelete\n",
+      "products": "\n \n \n \n \n \n \n IMEI Number: 352091078754259 \n Item: iPhone 6 16GB Silver \n Line Total: 0 \n Quantity: 1 \n \n \n \n \n \n \n \n",
+      "notes": "",
+      "id": "2118",
+      "created_at": "Wednesday, April 20, 2016 - 11:22",
+      "dispatch_address_one": ""
+    }
+  },
+  {
+    "invoice_request": {
+      "invoice_number": "10486",
+      "status": "Complete",
+      "invoice_date": "Friday, April 22, 2016",
+      "delivery_note_only": "No",
+      "dispatch_to": "\n \n Att. of: Martika Reynolds\n\n \n Company: Norse Commercial Services \n\n \n\n",
+      "invoice_to": "\n \n P.O Number: 72463\n\n \n Company: Norse Commercial Services \n\n \n\nEdit\nDelete\n",
+      "products": "\n \n \n \n \n \n \n IMEI Number: \n Item: Nokia Lumia 550 - Case \n Line Total: 10 \n Quantity: 1 \n \n \n \n \n \n \n \n",
+      "notes": "",
+      "id": "2120",
+      "created_at": "Wednesday, April 20, 2016 - 15:25",
+      "dispatch_address_one": ""
+    }
+  },
+  {
+    "invoice_request": {
+      "invoice_number": "",
+      "status": "Active",
+      "invoice_date": "",
+      "delivery_note_only": "Yes",
       "dispatch_to": "\n \n Att. of: Martika Reynolds\n\n \n Company: Norse Commercial Services \n\n \n\n",
       "invoice_to": "\n \n P.O Number: 72463\n\n \n Company: Norse Commercial Services \n\n \n\nEdit\nDelete\n",
       "products": "\n \n \n \n \n \n \n IMEI Number: 355132073610117 \n Item: Nokia Lumia 550 \n Line Total: 0 \n Quantity: 1 \n \n \n IMEI Number: \n Item: Nokia Lumia 550 - Case \n Line Total: 0 \n Quantity: 1 \n \n \n \n \n \n \n \n",
@@ -166,66 +228,7 @@ task invoice_requests: :environment do
       "dispatch_address_one": ""
     }
   },
-  {
-    "invoice_request": {
-      "invoice_number": "10487",
-      "status": "Complete",
-      "invoice_date": "Friday, April 22, 2016",
-      "delivery_note_only": "No",
-      "dispatch_to": "\n \n Att. of: Ian Price\n\n \n Company: Medway Norse LtdPier ApproachGillinghamKent NE9 1RX\n\n \n\n",
-      "invoice_to": "\n \n P.O Number: PO MN/21167\n\n \n Company: Medway Norse LtdPier ApproachGillinghamKent NE9 1RX\n\n \n\nEdit\nDelete\n",
-      "products": "\n \n \n \n \n \n \n IMEI Number: \n Item: Monthly line rental for Three router - April \n Line Total: 16.67 \n Quantity: 1 \n \n \n \n \n \n \n \n",
-      "notes": "",
-      "id": "2121",
-      "created_at": "Thursday, April 21, 2016 - 12:30",
-      "dispatch_address_one": ""
-    }
-  },
-  {
-    "invoice_request": {
-      "invoice_number": "10486",
-      "status": "Complete",
-      "invoice_date": "Friday, April 22, 2016",
-      "delivery_note_only": "No",
-      "dispatch_to": "\n \n Att. of: Martika Reynolds\n\n \n Company: Norse Commercial Services \n\n \n\n",
-      "invoice_to": "\n \n P.O Number: 72463\n\n \n Company: Norse Commercial Services \n\n \n\nEdit\nDelete\n",
-      "products": "\n \n \n \n \n \n \n IMEI Number: \n Item: Nokia Lumia 550 - Case \n Line Total: 10 \n Quantity: 1 \n \n \n \n \n \n \n \n",
-      "notes": "",
-      "id": "2120",
-      "created_at": "Wednesday, April 20, 2016 - 15:25",
-      "dispatch_address_one": ""
-    }
-  },
-  {
-    "invoice_request": {
-      "invoice_number": "",
-      "status": "Active",
-      "invoice_date": "",
-      "delivery_note_only": "Yes",
-      "dispatch_to": "\n \n Att. of: Wayne Morgan C/O Daisy McCorgray \n\n",
-      "invoice_to": "",
-      "products": "\n \n \n \n \n \n \n IMEI Number: \n Item: iPhone 6 16GB - Space Grey \n Line Total: 0 \n Quantity: 1 \n \n \n \n \n \n \n \n",
-      "notes": "",
-      "id": "2119",
-      "created_at": "Wednesday, April 20, 2016 - 12:12",
-      "dispatch_address_one": ""
-    }
-  },
-  {
-    "invoice_request": {
-      "invoice_number": "",
-      "status": "Active",
-      "invoice_date": "",
-      "delivery_note_only": "Yes",
-      "dispatch_to": "\n \n Att. of: Matt Dewsbury\n\n \n Company: Norse Commercial Services \n\n \n\n",
-      "invoice_to": "\n \n P.O Number: PROC000003\n\n \n Company: Norse Commercial Services \n\n \n\nEdit\nDelete\n",
-      "products": "\n \n \n \n \n \n \n IMEI Number: 352091078754259 \n Item: iPhone 6 16GB Silver \n Line Total: 0 \n Quantity: 1 \n \n \n \n \n \n \n \n",
-      "notes": "",
-      "id": "2118",
-      "created_at": "Wednesday, April 20, 2016 - 11:22",
-      "dispatch_address_one": ""
-    }
-  },
+
   {
     "invoice_request": {
       "invoice_number": "",
@@ -31690,7 +31693,8 @@ task invoice_requests: :environment do
 ]
 
 
-  invoice_request_json.each do |json|
+  invoice_request_json.each_with_index do |json, i|
+    puts i
     ppp = json[:invoice_request].delete(:products)
     iii = InvoiceRequest.create!(json[:invoice_request])
 

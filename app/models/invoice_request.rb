@@ -3,6 +3,7 @@ class InvoiceRequest < ApplicationRecord
   scope :invoices, -> {where(delivery_note_only: false)}
   scope :delivery_notes, -> {where(delivery_note_only: false)}
   belongs_to :user
+  belongs_to :company, optional: true
 
   has_many :products, as: :reference
 
@@ -10,25 +11,26 @@ class InvoiceRequest < ApplicationRecord
 
   has_many :products, as: :reference
 
-
-
   def status= val
     super val.downcase
   end
 
   def dispatch_to= val
     self.attention_of = val[/(?<=Att\. of: )[\w ]+/]
-    
-    comp = Company.find_by(name: val[/(?<=Company: )[\w ]+/])
-    return unless comp
 
-    self.dispatch_address_one = comp.address_one
-    self.dispatch_address_two = comp.address_two
-    self.dispatch_address_city = comp.city
-    self.dispatch_address_county = comp.county
-    self.dispatch_address_postcode = comp.postcode
+    if (comp = Company.find_by(name: val[/(?<=Company: )[\w ]+/]))
+      self.company_id = comp.id
 
+      self.dispatch_address_one = comp.address_one
+      self.dispatch_address_two = comp.address_two
+      self.dispatch_address_city = comp.city
+      self.dispatch_address_county = comp.county
+      self.dispatch_address_postcode = comp.postcode
+    else
+      puts self.id
+    end
   end
+
 
   def invoice_to= val
 
@@ -45,11 +47,13 @@ class InvoiceRequest < ApplicationRecord
 
   end
 
-  
-
   def id= val
     self.user_id = 1
     super val
+  end
+
+  def company_name
+
   end
 
   def invoice_address

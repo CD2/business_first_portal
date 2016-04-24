@@ -1,1 +1,14 @@
 - provide :title, "Invoice Requests"
+
+%table
+  %thead
+    %tr
+      %th No.
+      %th Created By
+      %th Company
+  %tbody
+    - @invoice_requests.each do |ir|
+      %tr
+        %td= link_to ir.id, ir
+        %td= ir.user.try(:name)
+        %td= ir.company.try(:name)

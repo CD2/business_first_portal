@@ -95,6 +95,7 @@ ActiveRecord::Schema.define(version: 20160423225729) do
     t.boolean  "received_goods"
     t.boolean  "received_invoice"
     t.boolean  "under_query"
+    t.integer  "user_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end

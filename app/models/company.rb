@@ -1,7 +1,7 @@
 class Company < ApplicationRecord
-  validates :name, presence: true
 
-  before_save :set_name
+  validates :name, presence: true
+  before_validation :set_name
 
   def address
     [address_one, address_two, city, county, postcode].reject!(&:blank?)
@@ -9,10 +9,8 @@ class Company < ApplicationRecord
 
   private
 
-  def set_name
-    self.name ||= self.alias
-  end
-
-
+    def set_name
+      self.name = self.alias if self.name.blank?
+    end
 
 end
