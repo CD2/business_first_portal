@@ -4,7 +4,7 @@ class PurchaseOrder < ApplicationRecord
   belongs_to :user
   has_many :products, as: :reference
 
-  enum status: [:active, :compelte]
+  enum status: [:active, :complete]
   enum payment_type: [:account, :credit_card, :bank]
 
   def status= val
@@ -12,13 +12,13 @@ class PurchaseOrder < ApplicationRecord
   end
 
   def company= val
-    c = Company.find_by(name: val)
+    c = Company.find_by(alias: val)
     return unless c
     self.company_id = c.id
   end
 
   def pt= val
-    payment_type = val.downcase.gsub(' ', '_')
+    self.payment_type = val.downcase.gsub(' ', '_')
   end
 
 end
