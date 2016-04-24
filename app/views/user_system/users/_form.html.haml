@@ -1,6 +1,6 @@
 = form_for @user do |f|
   - if @user.errors.any? 
-    = render 'layouts/errors', object: f.object
+    = render 'errors', object: f.object
   .field
     = f.text_field :name, placeholder: "Name"
   .field

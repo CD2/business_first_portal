@@ -10,7 +10,7 @@
     #page_wrapper
       #sidebar
         = link_to image_tag('logo.png'), root_path, class: 'admin_logo_link'
-        = render '_common/side_menu'
+        = render 'side_menu'
       #page
         #title_bar
           %h1= yield :title

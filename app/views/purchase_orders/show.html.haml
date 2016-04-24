@@ -2,7 +2,7 @@
   .even_column
     = field_set_tag 'Company' do
       = "#{@purchase_order.company.try(:name)}"
-      .address= render_address(@purchase_order.company.try(:address))
+      = render_address @purchase_order.company.try(:address)
   .even_column
     = field_set_tag 'Information' do
       = "Ordered by: #{@invoice_request.user.try(:name)}"
