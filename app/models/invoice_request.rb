@@ -17,8 +17,9 @@ class InvoiceRequest < ApplicationRecord
 
   def dispatch_to= val
     self.attention_of = val[/(?<=Att\. of: )[\w ]+/]
+    comp_name = val[/(?<=Company: )[\w ]*?(Ltd|Limited|Transport|\n)/]
 
-    if (comp = Company.find_by(name: val[/(?<=Company: )[\w ]+/]))
+    if (comp = Company.find_by(name: comp_name)
       self.company_id = comp.id
 
       self.dispatch_address_one = comp.address_one
