@@ -2,11 +2,11 @@
   .even_column
     = field_set_tag 'Dispatch' do
       = "Att. of #{@invoice_request.attention_of}"
-      .address= render_address(@invoice_request.dispatch_address)
+      = render_address @invoice_request.dispatch_address
   .even_column
     = field_set_tag 'Invoice' do
       = "PO Number: #{@invoice_request.po_number}"
-      .address= render_address(@invoice_request.invoice_address)
+      = render_address @invoice_request.invoice_address
   .even_column
     = field_set_tag 'Infomation' do
       = "Requested by: #{@invoice_request.user.try(:name)}"

@@ -21,4 +21,8 @@ class PurchaseOrder < ApplicationRecord
     self.payment_type = val.downcase.gsub(' ', '_')
   end
 
+  def display_status
+    'PUT THE ACTUAL THING HERE'
+  end
+
 end

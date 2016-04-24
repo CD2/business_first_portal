@@ -2,8 +2,19 @@ class InvoiceRequest < ApplicationRecord
 
   scope :invoices, -> {where(delivery_note_only: false).order(id: :desc)}
   scope :delivery_notes, -> {where(delivery_note_only: true).order(id: :desc)}
+
   belongs_to :user
-  belongs_to :company, optional: true
+  belongs_to :company
+
+  validates :attention_of, :invoice_address_one, :invoice_address_two, :invoice_address_city, :invoice_address_county, :invoice_address_postcode, presence: true
+
+  with_options if: '!same_dispatch_address' do |ir|
+    ir.validates :dispatch_address_one, presence: true
+    ir.validates :dispatch_address_two, presence: true
+    ir.validates :dispatch_address_city, presence: true
+    ir.validates :dispatch_address_county, presence: true
+    ir.validates :dispatch_address_postcode, presence: true
+  end
 
   has_many :products, as: :reference
 
@@ -78,6 +89,6 @@ class InvoiceRequest < ApplicationRecord
     end
   end
 
-  AVAILABLE_SCOPES = [:all, :invoices, :delivery_notes, :active, :complete]
+  AVAILABLE_SCOPES = ['all', 'invoices', 'delivery_notes', 'active', 'complete']
 
 end
