@@ -6,6 +6,9 @@ class InvoiceRequest < ApplicationRecord
 
   enum status: [:active, :complete]
 
+  has_many :products, as: :reference
+
+
 
   def status= val
     super val.downcase
@@ -40,8 +43,11 @@ class InvoiceRequest < ApplicationRecord
 
   end
 
-  def products= val
-    #####SORT OUT PRODUCTS
+  
+
+  def id= val
+    self.user_id = 1
+    super val
   end
 
   def invoice_address
@@ -55,5 +61,5 @@ class InvoiceRequest < ApplicationRecord
       [dispatch_address_one, dispatch_address_two, dispatch_address_city, dispatch_address_county, dispatch_address_postcode].reject!(&:blank?)
     end
   end
-  
+
 end
