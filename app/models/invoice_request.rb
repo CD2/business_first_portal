@@ -1,7 +1,7 @@
 class InvoiceRequest < ApplicationRecord
 
-  scope :invoices, -> {where(delivery_note_only: false)}
-  scope :delivery_notes, -> {where(delivery_note_only: false)}
+  scope :invoices, -> {where(delivery_note_only: false).order(id: :desc)}
+  scope :delivery_notes, -> {where(delivery_note_only: true).order(id: :desc)}
   belongs_to :user
   belongs_to :company, optional: true
 
@@ -11,15 +11,24 @@ class InvoiceRequest < ApplicationRecord
 
   has_many :products, as: :reference
 
+  def self.safe_scope scope_params
+    scope = scope_params.values & AVAILABLE_SCOPES
+    scope.inject(invoices, &:send)
+  end
+
   def status= val
     super val.downcase
   end
 
+  def delivery_note_only= val
+    super val == "No" ? false : true
+  end
+
   def dispatch_to= val
     self.attention_of = val[/(?<=Att\. of: )[\w ]+/]
-    comp_name = val[/(?<=Company: )[\w ]*?(Ltd|Limited|Transport|\n)/]
+    comp_name = val[/(?<=Company: )[\w ]*?(Ltd|Limited|Transport|CSI|Partners|Armstrong|Equipment|Club|Management|Clarke|73|16|Thomson|\n)/]
 
-    if (comp = Company.find_by(name: comp_name)
+    if (comp = Company.find_by(name: comp_name))
       self.company_id = comp.id
 
       self.dispatch_address_one = comp.address_one
@@ -28,7 +37,7 @@ class InvoiceRequest < ApplicationRecord
       self.dispatch_address_county = comp.county
       self.dispatch_address_postcode = comp.postcode
     else
-      puts self.id
+      puts comp_name
     end
   end
 
@@ -68,5 +77,7 @@ class InvoiceRequest < ApplicationRecord
       [dispatch_address_one, dispatch_address_two, dispatch_address_city, dispatch_address_county, dispatch_address_postcode].reject!(&:blank?)
     end
   end
+
+  AVAILABLE_SCOPES = [:all, :invoices, :delivery_notes, :active, :complete]
 
 end

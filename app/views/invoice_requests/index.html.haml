@@ -6,9 +6,15 @@
       %th No.
       %th Created By
       %th Company
+      %th Status
+      %th Date
   %tbody
     - @invoice_requests.each do |ir|
       %tr
         %td= link_to ir.id, ir
         %td= ir.user.try(:name)
         %td= ir.company.try(:name)
+        %td= ir.status.humanize
+        %td= ir.created_at.strftime('%D')
+
+= console

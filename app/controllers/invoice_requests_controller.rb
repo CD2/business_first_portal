@@ -6,14 +6,11 @@ class InvoiceRequestsController < ApplicationController
   end
 
   def index
-    @invoice_requests = InvoiceRequest.send(params[:filter])
-  rescue
-    flash[:notice] = "Invalid filter" if params[:channel].present?
-    @invoice_requests = InvoiceRequest.all
+    @invoice_requests = InvoiceRequest.safe_scope(scope_params)
   end
 
   def delivery_notes
-    @invoice_requests = InvoiceRequest.delivery_notes
+    @delivery_notes = InvoiceRequest.delivery_notes
   end
 
   def new
@@ -46,6 +43,10 @@ class InvoiceRequestsController < ApplicationController
   end
 
   private
+
+    def scope_params
+      params.permit(:filter, :status)
+    end
 
     def set_invoice_request
       @invoice_request = InvoiceRequest.find(params[:id])

@@ -1,1 +1,18 @@
 - provide :title, "Delivery Notes"
+
+%table
+  %thead
+    %tr
+      %th No.
+      %th Created By
+      %th Company
+      %th Status
+      %th Date
+  %tbody
+    - @delivery_notes.each do |dl|
+      %tr
+        %td= link_to dl.id, dl
+        %td= dl.user.try(:name)
+        %td= dl.company.try(:name)
+        %td= dl.status.humanize
+        %td= dl.created_at.strftime('%D')
