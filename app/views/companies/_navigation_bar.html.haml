@@ -1,3 +1,6 @@
 = link_to  '+ Create Company', new_company_path
-/ .right_buttons
-/ RIGHT LINKS HERE
+
+.right_buttons
+  = link_to 'All', url_for
+  = link_to 'Active', url_for(status: 'active')
+  = link_to 'Complete', url_for(status: 'complete')
