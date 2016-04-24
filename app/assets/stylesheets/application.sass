@@ -48,6 +48,7 @@
     width: 100%
     margin-bottom: 20px
     background-color: white
+    box-shadow: $card_box_shadow
     &.order_items
       margin-bottom: 0
     thead tr
@@ -175,3 +176,15 @@ input:checked + .check_box_hidden_div
 
 .check_box_hidden_div
   padding-top: 20px
+
+#column_layout
+  +flexbox
+
+.even_column
+  +flex(1)
+
+#error_explanation
+  background: #C13434
+  color: white
+  padding: 16px
+  margin: 0 22px 28px 4px

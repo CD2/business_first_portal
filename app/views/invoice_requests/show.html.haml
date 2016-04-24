@@ -1,13 +1,30 @@
-= field_set_tag 'Dispatch' do
-  = "Att. of #{@invoice_request.attention_of}"
-  .address= render_address(@invoice_request.dispatch_address)
+#column_layout
+  .even_column
+    = field_set_tag 'Dispatch' do
+      = "Att. of #{@invoice_request.attention_of}"
+      .address= render_address(@invoice_request.dispatch_address)
+  .even_column
+    = field_set_tag 'Invoice' do
+      = "PO Number: #{@invoice_request.po_number}"
+      .address= render_address(@invoice_request.invoice_address)
+  .even_column
+    = field_set_tag 'Infomation' do
+      = "Requested by: #{@invoice_request.user.try(:name)}"
+      = "Date: #{@invoice_request.invoice_date.try{strftime('%D')}}"
+      = "Device User: #{@invoice_request.device_user}"
+      = "Device User: #{@invoice_request.cost_code}"
 
-= field_set_tag 'Invoice' do
-  = "PO Number: #{@invoice_request.po_number}"
-  .address= render_address(@invoice_request.invoice_address)
-
-= field_set_tag 'Infomation' do
-  = "Requested by: #{@invoice_request.user.try(:name)}"
-  = "Date: #{@invoice_request.invoice_date.try{strftime('%D')}}"
-  = "Device User: #{@invoice_request.device_user}"
-  = "Device User: #{@invoice_request.cost_code}"
+%table.invoice_request_products
+  %tr
+    %th Item
+    %th Quantity
+    %th Unit Price
+    %th Line Total
+    %th Additional Line Info
+  - @invoice_request.products.each do |product|
+    %tr
+      %td= product.name
+      %td= product.quantity
+      %td= product.price
+      %td= product.line_total
+      %td= product.notes
