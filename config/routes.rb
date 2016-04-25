@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
 
-  resources :invoice_requests
-  resources :purchase_orders
-  resources :order_price_requests
-  resources :companies, except: :show
+  concern :filterable do
+    post :filters, on: :collection
+  end
+
+  resources :invoice_requests, concerns: :filterable
+  resources :purchase_orders, concerns: :filterable
+  resources :order_price_requests, concerns: :filterable
+  resources :companies, except: :show, concerns: :filterable
   resources :users
 
   get '/delivery_notes' => 'invoice_requests#delivery_notes'

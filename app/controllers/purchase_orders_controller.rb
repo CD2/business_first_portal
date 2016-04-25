@@ -5,7 +5,7 @@ class PurchaseOrdersController < ApplicationController
   end
 
   def index
-    @purchase_orders = PurchaseOrder.scope_chain(scope_params).paginate(:page => params[:page])
+    @purchase_orders = PurchaseOrder.scope_chain(params).paginate(:page => params[:page])
   end
 
   def new
