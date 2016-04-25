@@ -5,8 +5,11 @@
     #main_panel
       = field_set_tag 'Company Details' do
         .field
-          = f.label :company
-          = f.text_field :company
+          = f.label :name
+          = f.text_field :name
+        .field
+          = f.label :alias
+          = f.text_field :alias
 
       = field_set_tag 'Address' do
         .field
@@ -33,8 +36,8 @@
           = f.label :fax
           = f.text_field :fax
         .field
-          = f.label :company_registration
-          = f.text_field :company_registration
+          = f.label :registration
+          = f.text_field :registration
         .field
           = f.label :referred_by
           = f.text_field :referred_by

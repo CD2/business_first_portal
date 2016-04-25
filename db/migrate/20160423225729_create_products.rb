@@ -3,8 +3,8 @@ class CreateProducts < ActiveRecord::Migration[5.0]
     create_table :products do |t|
       t.string :name
       t.string :imei
-      t.string :quantity
-      t.string :price
+      t.integer :quantity
+      t.integer :price
       t.string :notes
       t.belongs_to :reference, polymorphic: true
 

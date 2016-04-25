@@ -12,7 +12,7 @@
   %tbody
     - @purchase_orders.each do |po|
       %tr
-        %td= po.id
+        %td= link_to po.id, po
         %td= po.user.try(:name)
         %td= po.created_at.strftime('%D')
         %td= po.company.try(:name)

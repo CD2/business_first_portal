@@ -9,7 +9,7 @@
   %tbody
     - @companies.each do |company|
       %tr
-        %td= company.name
+        %td= company.alias
         %td
           = link_to 'Show', company
           = link_to 'Edit', edit_company_path(company)

@@ -1,5 +1,7 @@
 class PurchaseOrder < ApplicationRecord
 
+  default_scope -> { order id: :desc}
+
   belongs_to :company
   belongs_to :user
   has_many :products, as: :reference

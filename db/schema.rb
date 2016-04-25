@@ -76,8 +76,8 @@ ActiveRecord::Schema.define(version: 20160423225729) do
   create_table "products", force: :cascade do |t|
     t.string   "name"
     t.string   "imei"
-    t.string   "quantity"
-    t.string   "price"
+    t.integer  "quantity"
+    t.integer  "price"
     t.string   "notes"
     t.string   "reference_type"
     t.integer  "reference_id"

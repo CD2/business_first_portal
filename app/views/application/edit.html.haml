@@ -1,2 +1,2 @@
-- provide :title, "Edit #{controller_name.classify}"
+- provide :title, "Edit #{controller_name.gsub('_', ' ').classify}"
 = render 'form'
