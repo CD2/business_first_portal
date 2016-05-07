@@ -5,6 +5,7 @@
   #scope_container_inner
 
 
+= will_paginate
 
 %table
   %thead
@@ -15,12 +16,13 @@
       %th Status
       %th Date
   %tbody
-    - @invoice_requests.each do |ir|
+    - @invoice_requests.each do |invoice_request|
       %tr
-        %td= link_to ir.id, ir
-        %td= ir.user.try(:name)
-        %td= ir.company.try(:name)
-        %td= ir.status.humanize
-        %td= ir.created_at.strftime('%D')
+        %td= link_to invoice_request.id, invoice_request
+
+        %td= invoice_request.user.try(:name)
+        %td= invoice_request.company.try(:name)
+        %td= invoice_request.status.humanize
+        %td= invoice_request.created_at.strftime('%D')
 
 = console

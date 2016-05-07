@@ -23,7 +23,7 @@ class InvoiceRequest < ApplicationRecord
   has_many :products, as: :reference
 
   def self.safe_scope scope_params
-    scope = scope_params.values & AVAILABLE_SCOPES
+    scope = scope_params.values & ['all', 'invoices', 'delivery_notes', 'active', 'complete']
     scope.inject(invoices, &:send)
   end
 
@@ -81,6 +81,5 @@ class InvoiceRequest < ApplicationRecord
     end
   end
 
-  AVAILABLE_SCOPES = ['all', 'invoices', 'delivery_notes', 'active', 'complete']
 
 end
