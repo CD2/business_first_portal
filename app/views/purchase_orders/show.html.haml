@@ -1,8 +1,10 @@
+- provide :title, "Purchase Order ##{@purchase_order.id}"
+
 #display_page
   #show_actions
     = link_to 'Edit', edit_purchase_order_path(@purchase_order)
     = link_to "Print", "javascript:frames['frame'].print()", class: 'minor_button'
-    //%iframe.hidden{src: print_admin_order_path(@order), name: "frame"}
+    %iframe.hidden{src: print_purchase_order_path(@purchase_order), name: "frame"}
   #column_layout
     .even_column
       = field_set_tag 'Company' do
@@ -20,6 +22,7 @@
         = 'Recieved Goods' if @purchase_order.received_goods?
         = 'Received Invoice' if @purchase_order.received_invoice?
         = 'Under Query' if @purchase_order.under_query?
+        %br
         = "Payment type: #{@purchase_order.payment_type}"
 
   %table.invoice_request_products
@@ -37,3 +40,5 @@
         %td= number_to_currency product.price
         %td= number_to_currency product.line_total
         %td= product.notes
+  #table_actions
+    = link_to 'Add Item', new_purchase_order_product_path(@purchase_order)

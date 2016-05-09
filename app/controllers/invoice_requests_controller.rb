@@ -1,16 +1,15 @@
 class InvoiceRequestsController < ApplicationController
-  before_action :set_invoice_request, only: [:edit, :update, :destroy, :show]
+  before_action :set_invoice_request, only: [:edit, :update, :destroy, :show, :print, :complete, :open]
 
 
   def show
+    if @invoice_request.delivery_note_only
+      redirect_to delivery_note_path(@invoice_request)
+    end
   end
 
   def index
-    @invoice_requests = InvoiceRequest.includes(:user, :company).safe_scope(scope_params).paginate(:page => params[:page])
-  end
-
-  def delivery_notes
-    @delivery_notes = InvoiceRequest.delivery_notes.paginate(:page => params[:page])
+    @invoice_requests = InvoiceRequest.scope_chain(params).paginate(:page => params[:page])
   end
 
   def new
@@ -22,7 +21,11 @@ class InvoiceRequestsController < ApplicationController
     @invoice_request.assign_creator current_user
     if @invoice_request.save
       flash[:notice] = "Invoice Request Created"
-      redirect_to @invoice_request
+      if @invoice_request.delivery_note_only
+        redirect_to delivery_note_path(@invoice_request)
+      else
+        redirect_to @invoice_request
+      end
     else
       render :new
     end
@@ -31,7 +34,11 @@ class InvoiceRequestsController < ApplicationController
   def update
     if @invoice_request.update(invoice_request_params)
       flash[:notice] = "Invoice Request Updated"
-      redirect_to @invoice_request
+      if @invoice_request.delivery_note_only
+        redirect_to delivery_note_path(@invoice_request)
+      else
+        redirect_to @invoice_request
+      end
     else
       render :new
     end
@@ -40,6 +47,19 @@ class InvoiceRequestsController < ApplicationController
   def destroy
     @invoice_request.destroy
     redirect_to invoice_requests_url
+  end
+
+  def print
+  end
+
+  def complete
+    @invoice_request.complete!
+    redirect_to @invoice_request
+  end
+
+  def open
+    @invoice_request.active!
+    redirect_to @invoice_request
   end
 
   private

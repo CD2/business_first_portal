@@ -1,0 +1,38 @@
+#print_page
+  .header
+    = image_tag 'bw_logo.png'
+    .order
+      Purchase Order
+
+  #split_fieldset_holder
+    = field_set_tag 'Company' do
+      = "#{@purchase_order.company.try(:name)}"
+      = render_address @purchase_order.company.try(:address)
+    = field_set_tag 'Information' do
+      = "Ordered by: #{@purchase_order.user.try(:name)}"
+      %br
+      = "Ordered date: #{@purchase_order.created_at.strftime('%D')}"
+      %br
+      = "PO Number: #{@purchase_order.id}"
+    = field_set_tag 'Status' do
+      = 'Recieved Goods' if @purchase_order.received_goods?
+      = 'Received Invoice' if @purchase_order.received_invoice?
+      = 'Under Query' if @purchase_order.under_query?
+      = "Payment type: #{@purchase_order.payment_type}"
+
+  = field_set_tag 'Products' do
+    %table.invoice_request_products
+      %thead
+        %tr
+          %th Item
+          %th Quantity
+          %th Unit Price
+          %th Line Total
+          %th Additional Line Info
+      - @purchase_order.products.each do |product|
+        %tr
+          %td= product.name
+          %td= product.quantity
+          %td= number_to_currency product.price
+          %td= number_to_currency product.line_total
+          %td= product.notes

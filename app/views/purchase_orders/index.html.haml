@@ -1,29 +1,20 @@
 - provide :title, "Purchase Orders"
 
-= will_paginate if @purchase_orders.size > 0
+
 
 
 #filters
-  / # = form_tag(action: url_for, method: :get) do
 
-  = link_to 'Account', url_for(filter_params.merge(payment_type: 'account'))
-  = link_to 'Credit Card', url_for(filter_params.merge(payment_type: 'credit_card'))
-  = link_to 'Other', url_for(filter_params.merge(payment_type: 'other'))
+  .filter_group
+    = link_to 'Account', url_for(filter_params.merge(payment_type: 'account'))
+    = link_to 'Credit Card', url_for(filter_params.merge(payment_type: 'credit_card'))
+    = link_to 'Other', url_for(filter_params.merge(payment_type: 'other'))
 
+  .filter_group
+    = form_tag url_for(filter_params), method: :get do
+      = select_tag :company_name, options_from_collection_for_select(Company.all, :alias, :alias), prompt: '-- Filter by Company --'
+      = submit_tag :filter
 
-  = form_tag url_for(filter_params), method: :get do
-    = text_field_tag :company_name, '', list: :companies
-    %datalist#companies
-      - Company.pluck(:name).each do |company_name|
-        %option{value: company_name}
-
-
-  #current_filters
-    - filter_params.each do |name, filter|
-      .current_filter
-        .name= name.humanize
-        .filter= filter.humanize
-        = link_to 'remove', url_for(filter_params.except(name))
 
 
 %table
@@ -38,9 +29,11 @@
   %tbody
     - @purchase_orders.each do |purchase_order|
       %tr
-        %td= purchase_order.id
+        %td= link_to purchase_order.id, purchase_order
         %td= purchase_order.user.try(:name)
         %td= purchase_order.created_at.strftime('%D')
-        %td= purchase_order.company.try(:name)
+        %td= purchase_order.company.try(:alias)
         %td= purchase_order.payment_type.humanize
         %td= purchase_order.display_status
+
+= will_paginate if @purchase_orders.size > 0

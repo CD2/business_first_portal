@@ -1,5 +1,5 @@
 class PurchaseOrdersController < ApplicationController
-  before_action :set_purchase_order, only: [:edit, :update, :destroy, :show]
+  before_action :set_purchase_order, only: [:edit, :update, :destroy, :show, :print]
 
   def show
   end
@@ -34,6 +34,9 @@ class PurchaseOrdersController < ApplicationController
   def destroy
     @purchase_order.destroy
     redirect_to purchase_orders_url
+  end
+
+  def print
   end
 
   private

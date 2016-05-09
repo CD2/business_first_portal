@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 20160423225729) do
   end
 
   create_table "order_price_requests", force: :cascade do |t|
+    t.integer  "user_id"
     t.integer  "order_type"
     t.string   "item"
     t.integer  "quantity"
@@ -69,6 +70,8 @@ ActiveRecord::Schema.define(version: 20160423225729) do
     t.datetime "ordered"
     t.string   "ordered_from"
     t.integer  "status"
+    t.text     "notes"
+    t.string   "charge"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end

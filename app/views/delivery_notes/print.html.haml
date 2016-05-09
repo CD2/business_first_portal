@@ -1,0 +1,41 @@
+- 2.times do
+  #print_page.delivery_note
+    .header
+      = image_tag 'bw_logo.png'
+      .order
+        Delivery Note
+
+    #split_fieldset_holder.dual_split
+      = field_set_tag 'Dispatch' do
+        = "Att. of #{@delivery_note.attention_of}"
+        = render_address @delivery_note.dispatch_address
+      = field_set_tag 'Details' do
+        %b DL Number:
+        = @delivery_note.user.try(:name)
+        %br
+        %b Date:
+        = @delivery_note.invoice_date.try{strftime('%D')}
+
+    %table.invoice_request_products
+      %thead
+        %tr
+          %th Item
+          %th Quantity
+          %th Unit Price
+          %th Line Total
+          %th Additional Line Info
+      - @delivery_note.products.each do |product|
+        %tr
+          %td= product.name
+          %td= product.quantity
+          %td= number_to_currency product.price
+          %td= number_to_currency product.line_total
+          %td= product.notes
+
+#signing_area
+  .sign
+    %label Customer Signature:
+  .sign
+    %label Customer Name:
+  .sign
+    %label Date:

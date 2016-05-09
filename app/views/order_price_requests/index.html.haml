@@ -1,0 +1,25 @@
+- provide :title, "Order Price Requests"
+
+
+%table
+  %thead
+    %tr
+      %th Request
+      %th Created
+      %th Item
+      %th Ordered
+      %th Notes
+      %th
+  %tbody
+    - @order_price_requests.each do |order_price_request|
+      %tr
+        %td= order_price_request.order_type.humanize
+        %td= "#{order_price_request.user.name} at #{order_price_request.created_at.strftime("%D")}"
+        %td= "#{order_price_request.quantity} x #{order_price_request.item}"
+        %td= "#{order_price_request.ordered} from #{order_price_request.ordered_from}"
+        %td= order_price_request.notes
+
+
+
+
+= will_paginate if @order_price_requests.count > 0

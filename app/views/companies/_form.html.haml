@@ -1,48 +1,49 @@
-= form_for @company do |f|
-  = render 'validation_errors', object: @company
+#form_page
+  = form_for @company do |f|
+    = render 'validation_errors', object: @company
 
-  #two_panel_form
-    #main_panel
-      = field_set_tag 'Company Details' do
-        .field
-          = f.label :name
-          = f.text_field :name
-        .field
-          = f.label :alias
-          = f.text_field :alias
+    #two_panel_form
+      #main_panel
+        = field_set_tag 'Company Details' do
+          .field
+            = f.label :name
+            = f.text_field :name
+          .field
+            = f.label :alias
+            = f.text_field :alias
 
-      = field_set_tag 'Address' do
-        .field
-          = f.label :address_one
-          = f.text_field :address_one
-        .field
-          = f.label :address_two
-          = f.text_field :address_two
-        .field
-          = f.label :city
-          = f.text_field :city
-        .field
-          = f.label :county
-          = f.text_field :county
-        .field
-          = f.label :postcode
-          = f.text_field :postcode
-    #side_panel
-      = field_set_tag 'Information' do
-        .field
-          = f.label :phone
-          = f.text_field :phone
-        .field
-          = f.label :fax
-          = f.text_field :fax
-        .field
-          = f.label :registration
-          = f.text_field :registration
-        .field
-          = f.label :referred_by
-          = f.text_field :referred_by
-        .field
-          = f.label :vat_number
-          = f.text_field :vat_number
-  .actions
-    = f.submit 'Save'
+        = field_set_tag 'Address' do
+          .field
+            = f.label :address_one
+            = f.text_field :address_one
+          .field
+            = f.label :address_two
+            = f.text_field :address_two
+          .field
+            = f.label :city
+            = f.text_field :city
+          .field
+            = f.label :county
+            = f.text_field :county
+          .field
+            = f.label :postcode
+            = f.text_field :postcode
+      #side_panel
+        = field_set_tag 'Information' do
+          .field
+            = f.label :phone
+            = f.text_field :phone
+          .field
+            = f.label :fax
+            = f.text_field :fax
+          .field
+            = f.label :registration
+            = f.text_field :registration
+          .field
+            = f.label :referred_by
+            = f.text_field :referred_by
+          .field
+            = f.label :vat_number
+            = f.text_field :vat_number
+    .actions
+      = f.submit 'Save'

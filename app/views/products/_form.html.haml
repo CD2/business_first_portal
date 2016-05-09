@@ -1,0 +1,27 @@
+#form_page
+  = form_for [@ref, @product] do |f|
+    = render 'validation_errors', object: @product
+    #two_panel_form
+      #main_panel
+        .field
+          = f.label :name, "Item Name"
+          = f.text_field :name
+        .field
+          = f.label :imei, "IMEI"
+          = f.text_field :imei
+        .field
+          = f.label :quantity
+          = f.text_field :quantity
+        .field
+          = f.label :price
+          = f.text_field :price
+
+
+      #side_panel
+        .field
+          = f.label :notes
+          = f.text_area :notes, rows: 8
+
+
+    .actions
+      = f.submit "Save"

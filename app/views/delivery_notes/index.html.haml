@@ -1,0 +1,25 @@
+- provide :title, "Delivery Notes"
+
+
+#scope_container
+  #scope_container_inner
+
+%table
+  %thead
+    %tr
+      %th No.
+      %th Created By
+      %th Company
+      %th Status
+      %th Date
+  %tbody
+    - @delivery_notes.each do |delivery_note|
+      %tr
+        %td= link_to delivery_note.id, delivery_note_path(delivery_note)
+
+        %td= delivery_note.user.try(:name)
+        %td= delivery_note.company.try(:name)
+        %td= delivery_note.status.humanize
+        %td= delivery_note.created_at.strftime('%D')
+
+= will_paginate

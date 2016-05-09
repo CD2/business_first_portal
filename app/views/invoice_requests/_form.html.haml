@@ -7,7 +7,7 @@
         = field_set_tag 'Company' do
           .field
             = f.label :company_id
-            = f.collection_select :company_id, Company.all, :id, :alias, prompt: 'Please select the company'
+            = f.collection_select :company_id, Company.all, :id, :alias_name, prompt: 'Please select the company'
           .field
             = f.label :attention_of
             = f.text_field :attention_of
@@ -62,7 +62,7 @@
 
         = field_set_tag 'Information' do
           .field
-            = f.label :device_user
+            = f.label :device_user, "User"
             = f.text_field :device_user
           .field
             = f.label :po_number, 'PO Number'
@@ -75,7 +75,7 @@
             = f.text_area :notes
           .field
             = f.label :delivery_note_only do
-              = f.check_box :delivery_note_only
+              = f.check_box :delivery_note_only, checked: params[:delivery_note_only].present?
               %span Create delivery note only
 
     .actions

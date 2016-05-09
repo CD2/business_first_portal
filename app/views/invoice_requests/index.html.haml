@@ -1,11 +1,12 @@
 - provide :title, "Invoice Requests"
 
+#filters
 
-#scope_container
-  #scope_container_inner
+  .filter_group
+    = form_tag url_for(filter_params), method: :get do
 
-
-= will_paginate
+      = select_tag :company_name, options_from_collection_for_select(Company.all, :name, :name), prompt: '-- Filter by Company --'
+      = submit_tag :filter
 
 %table
   %thead
@@ -15,6 +16,7 @@
       %th Company
       %th Status
       %th Date
+      %th
   %tbody
     - @invoice_requests.each do |invoice_request|
       %tr
@@ -24,5 +26,6 @@
         %td= invoice_request.company.try(:name)
         %td= invoice_request.status.humanize
         %td= invoice_request.created_at.strftime('%D')
+        %td= link_to
 
-= console
+= will_paginate

@@ -1,0 +1,47 @@
+#print_page
+  .header
+    = image_tag 'bw_logo.png'
+    .order
+      Invoice Request
+
+  #split_fieldset_holder
+    = field_set_tag 'Dispatch' do
+      = "Att. of #{@invoice_request.attention_of}"
+      %br
+      = @invoice_request.company.try(:name)
+      = render_address @invoice_request.dispatch_address
+    = field_set_tag 'Invoice' do
+      = @invoice_request.company.try(:name)
+      = render_address @invoice_request.invoice_address
+    = field_set_tag 'Infomation' do
+      %b PO Number
+      = @invoice_request.po_number
+      %br
+      %b Requested by:
+      = @invoice_request.user.try(:name)
+      %br
+      %b Date:
+      = @invoice_request.invoice_date.try{strftime('%D')}
+      %br
+      %b Device User:
+      = @invoice_request.device_user
+      %br
+      %b Cost Code:
+      = @invoice_request.cost_code
+
+  = field_set_tag 'Products' do
+    %table.invoice_request_products
+      %thead
+        %tr
+          %th Item
+          %th Quantity
+          %th Unit Price
+          %th Line Total
+          %th Additional Line Info
+      - @invoice_request.products.each do |product|
+        %tr
+          %td= product.name
+          %td= product.quantity
+          %td= number_to_currency product.price
+          %td= number_to_currency product.line_total
+          %td= product.notes

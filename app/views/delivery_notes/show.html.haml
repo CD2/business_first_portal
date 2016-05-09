@@ -1,0 +1,42 @@
+- provide :title, "Delivery Note ##{@delivery_note.id}"
+#display_page
+
+  #show_actions
+    - if @delivery_note.active?
+      = link_to 'Edit', edit_invoice_request_path(@delivery_note)
+    = link_to "Print", "javascript:frames['frame'].print()", class: 'minor_button'
+    %iframe.hidden{src: print_delivery_note_path(@delivery_note), name: "frame"}
+
+  #column_layout
+    .even_column
+      = field_set_tag 'Dispatch' do
+        = "Att. of #{@delivery_note.attention_of}"
+        = render_address @delivery_note.dispatch_address
+    .even_column
+      = field_set_tag 'Details' do
+        %b DL Number:
+        = @delivery_note.user.try(:name)
+        %br
+        %b Date:
+        = @delivery_note.invoice_date.try{strftime('%D')}
+
+  %table.invoice_request_products
+    %thead
+      %tr
+        %th Item
+        %th Quantity
+        %th Unit Price
+        %th Line Total
+        %th Additional Line Info
+        %th
+    - @delivery_note.products.each do |product|
+      %tr
+        %td= product.name
+        %td= product.quantity
+        %td= number_to_currency product.price
+        %td= number_to_currency product.line_total
+        %td= product.notes
+        %td
+          = link_to 'X', [@delivery_note, product], method: :delete, data: { confirm: "Are you sure you want to delete this item?" } if @delivery_note.active?
+  #table_actions
+    = link_to 'Add Item', new_invoice_request_product_path(@delivery_note) if @delivery_note.active?

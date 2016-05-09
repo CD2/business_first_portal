@@ -12,7 +12,7 @@ class CompaniesController < ApplicationController
   def create
     @company = Company.new(company_params)
     if @company.save
-      redirect_to @company, notice: 'Company was successfully created.'
+      redirect_to companies_path, notice: 'Company was successfully created.'
     else
       render :new
     end
@@ -20,7 +20,7 @@ class CompaniesController < ApplicationController
 
   def update
     if @company.update(company_params)
-      redirect_to @company
+      redirect_to companies_path
       flash[:notice] = 'Company was successfully updated.'
     else
       render :edit
@@ -40,6 +40,6 @@ class CompaniesController < ApplicationController
     end
 
     def company_params
-      params.require(:company).permit(:name, :address_one, :address_two, :city, :county, :postcode, :phone, :fax, :company_registration, :referred_by, :vat_number)
+      params.require(:company).permit(:name, :address_one, :address_two, :city, :county, :postcode, :phone, :fax, :company_registration, :referred_by, :vat_number, :alias)
     end
 end

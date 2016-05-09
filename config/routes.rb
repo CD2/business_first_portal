@@ -4,13 +4,27 @@ Rails.application.routes.draw do
     post :filters, on: :collection
   end
 
-  resources :invoice_requests, concerns: :filterable
-  resources :purchase_orders, concerns: :filterable
+  resources :invoice_requests, concerns: :filterable do
+    member do
+      get :print
+      get :complete
+      get :open
+    end
+    resources :products, only: [:new, :create, :edit, :update, :destroy]
+  end
+  resources :purchase_orders, concerns: :filterable do
+    member do
+      get :print
+    end
+    resources :products, only: [:new, :create, :edit, :update, :destroy]
+  end
+  resources :delivery_notes, only: [:index, :show] do
+    member { get :print }
+  end
   resources :order_price_requests, concerns: :filterable
   resources :companies, except: :show, concerns: :filterable
   resources :users
 
-  get '/delivery_notes' => 'invoice_requests#delivery_notes'
   root 'pages#home'
 
   scope module: :user_system do

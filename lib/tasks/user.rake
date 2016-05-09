@@ -1,6 +1,6 @@
 task create_users: :environment do
 
-User.create!(name: "Shane Morgan", email: "shane@cd2solutions.co.uk", password: 'password')
+User.create!(name: "Shane Morgan", email: "shane@cd2solutions.co.uk", password: 'password', admin: true)
 User.create!(name: "Tilly Sweet", email: "tilly.sweet@business-first.com", password: 'password')
 User.create!(name: "Andy Smith", email: "andy.smith@business-first.com", password: 'password')
 User.create!(name: "Colin Peach", email: "colin.peach@business-first.com", password: 'password')

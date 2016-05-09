@@ -1,0 +1,39 @@
+#form_page
+  = form_for @order_price_request do |f|
+    = render 'validation_errors', object: @order_price_request
+    #two_panel_form
+      #main_panel
+        = field_set_tag 'Item Details' do
+          .field
+            = f.label :item
+            = f.text_field :item
+          .field
+            = f.label :quantity
+            = f.text_field :quantity
+          .field
+            = f.label :notes
+            = f.text_area :notes
+          .field
+            = f.label :charge
+            = f.select :charge, [['Yes', 'Yes'],['No', 'No']]
+
+      #side_panel
+        = field_set_tag 'Info' do
+          .field
+            = f.label :order_type
+            = f.select :order_type, OrderPriceRequest.order_types.keys.map { |s| [s.humanize, s] }
+          .field
+            = f.label :needed_by
+            = f.date_field :needed_by
+        = field_set_tag 'Order Information' do
+          .field
+            = f.label :ordered, "Date Ordered"
+            = f.date_field :ordered
+          .field
+            = f.label :ordered_from
+            = f.text_field :ordered_from
+          .field
+            = f.label :status
+            = f.select :status, OrderPriceRequest.statuses.keys.map { |s| [s.humanize, s] }
+    .actions
+      = f.submit "Save"
