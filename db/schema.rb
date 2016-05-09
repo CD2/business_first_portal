@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20160423225729) do
   end
 
   create_table "invoice_requests", force: :cascade do |t|
-    t.integer  "status"
+    t.integer  "status",                    default: 0
     t.datetime "invoice_date"
     t.string   "invoice_number"
     t.integer  "company_id"
@@ -108,11 +108,12 @@ ActiveRecord::Schema.define(version: 20160423225729) do
     t.string   "name"
     t.string   "email"
     t.string   "password_digest"
-    t.boolean  "admin",           default: false
     t.string   "remember_digest"
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
     t.string   "user_type"
+    t.boolean  "admin",           default: false
+    t.boolean  "sub_admin",       default: false
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
   end

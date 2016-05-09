@@ -15,7 +15,7 @@
             = f.text_area :notes
           .field
             = f.label :charge
-            = f.select :charge, [['Yes', 'Yes'],['No', 'No']]
+            = f.select :charge, [['Yes', 'Yes'],['No', 'No']], include_blank: '-- Select --'
 
       #side_panel
         = field_set_tag 'Info' do

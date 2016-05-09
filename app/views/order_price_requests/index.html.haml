@@ -1,5 +1,4 @@
-- provide :title, "Order Price Requests"
-
+- provide :title, "#{params[:status]} Order Price Requests"
 
 %table
   %thead
@@ -16,8 +15,11 @@
         %td= order_price_request.order_type.humanize
         %td= "#{order_price_request.user.name} at #{order_price_request.created_at.strftime("%D")}"
         %td= "#{order_price_request.quantity} x #{order_price_request.item}"
-        %td= "#{order_price_request.ordered} from #{order_price_request.ordered_from}"
-        %td= order_price_request.notes
+        %td= "#{order_price_request.ordered.try{strftime("%D")}} #{'from' unless order_price_request.ordered_from.blank?} #{order_price_request.ordered_from}"
+        %td= simple_format order_price_request.notes
+        %td.table_actions
+          = link_to 'Edit', [:edit, order_price_request]
+          = link_to 'Delete', order_price_request, method: :delete, data: { confirm: "Are you sure?" }
 
 
 

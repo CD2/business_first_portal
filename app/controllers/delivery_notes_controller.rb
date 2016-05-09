@@ -8,6 +8,14 @@ class DeliveryNotesController < ApplicationController
     @delivery_note = InvoiceRequest.find(params[:id])
   end
 
+  def new
+    @invoice_request = InvoiceRequest.new
+  end
+
+  def edit
+    @invoice_request = InvoiceRequest.find(params[:id])
+  end
+
   def print
     @delivery_note = InvoiceRequest.find(params[:id])
   end

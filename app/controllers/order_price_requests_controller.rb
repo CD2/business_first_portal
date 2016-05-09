@@ -11,6 +11,7 @@ class OrderPriceRequestsController < ApplicationController
 
   def create
     @order_price_request = OrderPriceRequest.new(order_price_request_params)
+    @order_price_request.assign_creator current_user
     if @order_price_request.save
       redirect_to order_price_requests_path
     else

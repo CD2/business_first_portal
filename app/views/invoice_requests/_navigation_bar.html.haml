@@ -1,6 +1,6 @@
 = link_to '+ New Invoice Request', new_invoice_request_path
 
 .right_buttons
-  = link_to 'All', url_for
-  = link_to 'Active', url_for(status: 'active')
-  = link_to 'Complete', url_for(status: 'complete')
+  = link_to 'All', url_for, class: "#{'active' unless params[:status]}"
+  = link_to 'Active', url_for(status: 'active'), class: "#{'active' if params[:status] == 'active'}"
+  = link_to 'Complete', url_for(status: 'complete'), class: "#{'active' if params[:status] == 'complete'}"

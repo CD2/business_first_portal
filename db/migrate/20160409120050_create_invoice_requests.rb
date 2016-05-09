@@ -3,7 +3,7 @@ class CreateInvoiceRequests < ActiveRecord::Migration[5.0]
     create_table :invoice_requests do |t|
 
       #ACCOUNTS
-      t.integer :status
+      t.integer :status, default: 0
       t.datetime :invoice_date
       t.string :invoice_number
 

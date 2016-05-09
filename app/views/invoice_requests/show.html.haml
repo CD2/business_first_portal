@@ -3,7 +3,7 @@
 #display_page
   #show_actions
     - if @invoice_request.active?
-      = link_to 'Mark Complete', complete_invoice_request_path(@invoice_request)
+      = link_to 'Mark Complete', complete_invoice_request_path(@invoice_request) if current_user.sub_admin?
       = link_to 'Edit', edit_invoice_request_path(@invoice_request)
     - else
       - if current_user.admin?
@@ -59,7 +59,7 @@
         %td= number_to_currency product.price
         %td= number_to_currency product.line_total
         %td= product.notes
-        %td
+        %td.table_actions
           = link_to 'X', [@invoice_request, product], method: :delete, data: { confirm: "Are you sure you want to delete this item?" } if @invoice_request.active?
   #table_actions
-    = link_to 'Add Item', new_invoice_request_product_path(@invoice_request) if @invoice_request.active?
+    = link_to 'Add Item', new_invoice_request_product_path(@invoice_request), remote: true if @invoice_request.active?

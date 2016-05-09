@@ -4,11 +4,13 @@ class CreateUsers < ActiveRecord::Migration
       t.string :name
       t.string :email
       t.string :password_digest
-      t.boolean :admin, default: false
       t.string :remember_digest
       t.string :reset_digest
       t.datetime :reset_sent_at
       t.string :user_type
+
+      t.boolean :admin, default: false
+      t.boolean :sub_admin, default: false
 
       t.timestamps null: false
     end

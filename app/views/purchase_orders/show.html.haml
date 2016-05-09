@@ -12,18 +12,21 @@
         = render_address @purchase_order.company.try(:address)
     .even_column
       = field_set_tag 'Information' do
-        = "Ordered by: #{@purchase_order.user.try(:name)}"
+        %b Ordered by:
+        = @purchase_order.user.try(:name)
         %br
-        = "Ordered date: #{@purchase_order.created_at.strftime('%D')}"
+        %b Ordered date:
+        = @purchase_order.created_at.strftime('%D')
         %br
-        = "PO Number: #{@purchase_order.id}"
+        %b PO Number:
+        = @purchase_order.id
     .even_column
       = field_set_tag 'Status' do
-        = 'Recieved Goods' if @purchase_order.received_goods?
-        = 'Received Invoice' if @purchase_order.received_invoice?
-        = 'Under Query' if @purchase_order.under_query?
+        %b Status:
+        = @purchase_order.display_status
         %br
-        = "Payment type: #{@purchase_order.payment_type}"
+        %b Payment type:
+        = @purchase_order.payment_type
 
   %table.invoice_request_products
     %thead
@@ -41,4 +44,4 @@
         %td= number_to_currency product.line_total
         %td= product.notes
   #table_actions
-    = link_to 'Add Item', new_purchase_order_product_path(@purchase_order)
+    = link_to '+ Add Item', new_purchase_order_product_path(@purchase_order), remote: true

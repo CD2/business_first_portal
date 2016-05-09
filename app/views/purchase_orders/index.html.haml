@@ -6,9 +6,9 @@
 #filters
 
   .filter_group
-    = link_to 'Account', url_for(filter_params.merge(payment_type: 'account'))
-    = link_to 'Credit Card', url_for(filter_params.merge(payment_type: 'credit_card'))
-    = link_to 'Other', url_for(filter_params.merge(payment_type: 'other'))
+    = link_to 'Account', url_for(filter_params.merge(payment_type: 'account')), class: "#{'active' if params[:payment_type] == 'account'}"
+    = link_to 'Credit Card', url_for(filter_params.merge(payment_type: 'credit_card')), class: "#{'active' if params[:payment_type] == 'credit_card'}"
+    = link_to 'Other', url_for(filter_params.merge(payment_type: 'other')), class: "#{'active' if params[:payment_type] == 'other'}"
 
   .filter_group
     = form_tag url_for(filter_params), method: :get do

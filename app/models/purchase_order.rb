@@ -1,6 +1,7 @@
 class PurchaseOrder < ApplicationRecord
 
   default_scope -> { order id: :desc}
+  validates :payment_type, presence: true
 
   belongs_to :company
   belongs_to :user

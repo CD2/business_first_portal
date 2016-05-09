@@ -132,6 +132,8 @@
   a
     text-decoration: none
     margin: 0 5px
+    &.active
+      font-weight: bold
   .right_buttons
     float: right
 
@@ -231,6 +233,9 @@ input:checked + .check_box_hidden_div
       padding: 0 30px
       border-radius: 3px
       box-sizing: border-box
+      &.active
+        background-color: $red
+        color: white
 
     select
       display: inline-block
@@ -248,3 +253,35 @@ input:checked + .check_box_hidden_div
       width: 75px
       margin-left: -4px
       vertical-align: top
+
+.table_actions
+  width: 1px
+  white-space: nowrap
+  a
+    margin-right: 10px
+
+#table_actions
+  text-align: right
+  a
+    display: inline-block
+    padding: 10px 16px
+    font-size: 14px
+    border-radius: 4px
+    color: white
+    background-color: $red
+
+#modal_form_wrapper
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  min-height: 100%
+  background: rgba(0, 0, 0, 0.60)
+  #modal_form
+    background-color: #e7e7e7
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5)
+    border-radius: 3px
+    max-width: 600px
+    padding: 30px
+    margin: 0 auto
+    margin-top: 50px

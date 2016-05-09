@@ -14,16 +14,17 @@
 
 
       #side_panel
-        = field_set_tag 'Accounts only' do
-          .field
-            = f.label :status
-            = f.select :status, PurchaseOrder.statuses.keys.map { |s| [s.humanize, s] }
+        - if current_user.admin?
+          = field_set_tag 'Accounts only' do
+            .field
+              = f.label :status
+              = f.select :status, PurchaseOrder.statuses.keys.map { |s| [s.humanize, s] }
 
 
         = field_set_tag 'Information' do
           .field
             = f.label :payment_type
-            = f.select :payment_type, PurchaseOrder.payment_types.keys.map { |s| [s.humanize, s] }
+            = f.select :payment_type, PurchaseOrder.payment_types.keys.map { |s| [s.humanize, s] }, prompt: '-- Please Select --'
           .field
             = label_tag :status
             .field
@@ -43,4 +44,4 @@
       - if @purchase_order.new_record?
         = f.submit "Save and Add Products", data: {disable_with: 'Creating Purchase Order...'}
       - else
-        = f.submit :submit, "Save"
+        = f.submit :submit

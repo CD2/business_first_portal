@@ -5,6 +5,8 @@
       #main_panel
 
         = field_set_tag 'Company' do
+          - if params[:delivery_note]
+            = f.hidden_field :delivery_note, value: true
           .field
             = f.label :company_id
             = f.collection_select :company_id, Company.all, :id, :alias_name, prompt: 'Please select the company'
@@ -26,6 +28,7 @@
           .field
             = f.label :invoice_address_postcode, "Postcode"
             = f.text_field :invoice_address_postcode
+
           .field.check_box_hiding_div
             = f.label :same_dispatch_address, "Dispatch to Invoice Address"
             = f.check_box :same_dispatch_address
@@ -47,16 +50,17 @@
                 = f.text_field :dispatch_address_postcode
 
       #side_panel
-        = field_set_tag 'Accounts only' do
-          .field
-            = f.label :status
-            = f.select :status, InvoiceRequest.statuses.keys.map { |s| [s.humanize, s] }
-          .field
-            = f.label :invoice_date
-            = f.date_field :invoice_date
-          .field
-            = f.label :invoice_number
-            = f.text_field :invoice_number
+        - if current_user.admin?
+          = field_set_tag 'Accounts only' do
+            .field
+              = f.label :status
+              = f.select :status, InvoiceRequest.statuses.keys.map { |s| [s.humanize, s] }
+            .field
+              = f.label :invoice_date
+              = f.date_field :invoice_date
+            .field
+              = f.label :invoice_number
+              = f.text_field :invoice_number
 
 
 

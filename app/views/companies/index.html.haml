@@ -1,19 +1,21 @@
 - provide :title, "Companies"
 
-= will_paginate
+
 
 
 %table
   %thead
     %tr
       %th Company
+      %th Alias
       %th
 
   %tbody
     - @companies.each do |company|
       %tr
+        %td= company.name
         %td= company.alias
-        %td
-          = link_to 'Show', company
-          = link_to 'Edit', edit_company_path(company)
-          = link_to 'Destroy', company, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td.table_actions
+          = link_to 'Edit', [:edit, company]
+          = link_to 'Delete', company, :method => :delete, :data => { :confirm => 'Are you sure?' } if current_user.admin?
+= will_paginate

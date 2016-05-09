@@ -3,7 +3,7 @@
 
   #show_actions
     - if @delivery_note.active?
-      = link_to 'Edit', edit_invoice_request_path(@delivery_note)
+      = link_to 'Edit', edit_delivery_note_path(@delivery_note, delivery_note: '')
     = link_to "Print", "javascript:frames['frame'].print()", class: 'minor_button'
     %iframe.hidden{src: print_delivery_note_path(@delivery_note), name: "frame"}
 

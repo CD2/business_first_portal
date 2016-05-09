@@ -14,6 +14,7 @@ class PurchaseOrdersController < ApplicationController
 
   def create
     @purchase_order = PurchaseOrder.new(purchase_order_params)
+    @purchase_order.assign_creator current_user
     if @purchase_order.save
       flash[:notice] = "Purchase Order Created"
       redirect_to @purchase_order

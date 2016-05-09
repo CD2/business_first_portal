@@ -34,7 +34,7 @@ class InvoiceRequestsController < ApplicationController
   def update
     if @invoice_request.update(invoice_request_params)
       flash[:notice] = "Invoice Request Updated"
-      if @invoice_request.delivery_note_only
+      if @invoice_request.delivery_note_only || params[:invoice_request][:delivery_note]
         redirect_to delivery_note_path(@invoice_request)
       else
         redirect_to @invoice_request
