@@ -19,6 +19,12 @@ Rails.application.routes.draw do
     end
     resources :products, only: [:new, :create, :edit, :update, :destroy]
   end
+  resources :credit_notes, concerns: :filterable do
+    member do
+      get :print
+    end
+    resources :products, only: [:new, :create, :edit, :update, :destroy]
+  end
   resources :delivery_notes, only: [:index, :show, :new, :edit] do
     member { get :print }
   end

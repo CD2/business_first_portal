@@ -1,0 +1,6 @@
+= link_to '+ New Credit Note', new_credit_note_path
+
+.right_buttons
+  = link_to 'All', url_for, class: "#{'active' unless params[:status]}"
+  = link_to 'Active', url_for(status: 'active'), class: "#{'active' if params[:status] == 'active'}"
+  = link_to 'Complete', url_for(status: 'complete'), class: "#{'active' if params[:status] == 'complete'}"

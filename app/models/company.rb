@@ -6,7 +6,7 @@ class Company < ApplicationRecord
   before_validation :set_name
 
   def address
-    [address_one, address_two, city, county, postcode].reject!(&:blank?)
+    [address_one, address_two, city, county, postcode].reject(&:blank?)
   end
 
   def alias_name

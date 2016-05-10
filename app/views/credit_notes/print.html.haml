@@ -2,7 +2,7 @@
   .header.address_header
     = image_tag 'bw_logo.png'
     .order.with_address
-      %h2 Purchase Order
+      %h2 Credit Note
       %p
         Business First Solutions Ltd.
         %br
@@ -16,19 +16,19 @@
 
   #split_fieldset_holder
     = field_set_tag 'Company' do
-      = "#{@purchase_order.company.try(:name)}"
-      = render_address @purchase_order.company.try(:address)
+      = "#{@credit_note.company.try(:name)}"
+      = render_address @credit_note.company.try(:address)
     = field_set_tag 'Information' do
-      = "Ordered by: #{@purchase_order.user.try(:name)}"
+      = "Ordered by: #{@credit_note.user.try(:name)}"
       %br
-      = "Ordered date: #{@purchase_order.created_at.strftime('%D')}"
+      = "Ordered date: #{@credit_note.created_at.strftime('%D')}"
       %br
-      = "PO Number: #{@purchase_order.id}"
+      = "PO Number: #{@credit_note.id}"
     = field_set_tag 'Status' do
-      = 'Recieved Goods' if @purchase_order.received_goods?
-      = 'Received Invoice' if @purchase_order.received_invoice?
-      = 'Under Query' if @purchase_order.under_query?
-      = "Payment type: #{@purchase_order.payment_type}"
+      = 'Recieved Goods' if @credit_note.received_goods?
+      = 'Received Invoice' if @credit_note.received_invoice?
+      = 'Under Query' if @credit_note.under_query?
+      = "Payment type: #{@credit_note.payment_type}"
 
   = field_set_tag 'Products' do
     %table.invoice_request_products
@@ -39,7 +39,7 @@
           %th Unit Price
           %th Line Total
           %th Additional Line Info
-      - @purchase_order.products.each do |product|
+      - @credit_note.products.each do |product|
         %tr
           %td= product.name
           %td= product.quantity

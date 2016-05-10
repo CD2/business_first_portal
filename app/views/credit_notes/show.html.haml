@@ -1,0 +1,51 @@
+- provide :title, "Credit Note ##{@credit_note.id}"
+
+#display_page
+  #show_actions
+    = link_to 'Edit', edit_credit_note_path(@credit_note)
+    = link_to "Print", "javascript:frames['frame'].print()", class: 'minor_button'
+    %iframe.hidden{src: print_credit_note_path(@credit_note), name: "frame"}
+  #column_layout
+    .even_column
+      = field_set_tag 'Company' do
+        = "#{@credit_note.company.try(:name)}"
+        = render_address @credit_note.company.try(:address)
+    .even_column
+      = field_set_tag 'Information' do
+        %b Ordered by:
+        = @credit_note.user.try(:name)
+        %br
+        %b Ordered date:
+        = @credit_note.created_at.strftime('%D')
+        %br
+        %b PO Number:
+        = @credit_note.id
+    .even_column
+      = field_set_tag 'Status' do
+        %b Status:
+        = @credit_note.display_status
+        %br
+        %b Payment type:
+        = @credit_note.payment_type
+
+  %table.invoice_request_products
+    %thead
+      %tr
+        %th Item
+        %th Quantity
+        %th Unit Price
+        %th Line Total
+        %th Additional Line Info
+        %th
+    - @credit_note.products.each do |product|
+      %tr
+        %td= product.name
+        %td= product.quantity
+        %td= number_to_currency product.price
+        %td= number_to_currency product.line_total
+        %td= product.notes
+        %td.table_actions
+          = link_to fa_icon("pencil"), edit_credit_note_product_path(@credit_note, product), remote: true if @credit_note.active?
+          = link_to fa_icon("close"), [@credit_note, product], method: :delete, data: { confirm: "Are you sure you want to delete this item?" } if @credit_note.active?
+  #table_actions
+    = link_to '+ Add Item', new_credit_note_product_path(@credit_note), remote: true

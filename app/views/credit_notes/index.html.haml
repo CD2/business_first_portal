@@ -1,0 +1,34 @@
+- provide :title, "Credit Notes"
+
+#filters
+
+  .filter_group
+    = link_to 'Account', url_for(filter_params.merge(payment_type: 'account')), class: "#{'active' if params[:payment_type] == 'account'}"
+    = link_to 'Credit Card', url_for(filter_params.merge(payment_type: 'credit_card')), class: "#{'active' if params[:payment_type] == 'credit_card'}"
+    = link_to 'Other', url_for(filter_params.merge(payment_type: 'other')), class: "#{'active' if params[:payment_type] == 'other'}"
+
+  .filter_group
+    = form_tag url_for(filter_params), method: :get do
+      = select_tag :company_name, options_from_collection_for_select(Company.all, :alias, :alias), prompt: '-- Filter by Company --'
+      = submit_tag :filter
+
+
+
+%table
+  %thead
+    %tr
+      %th No.
+      %th Raised By
+      %th Date
+      %th Supplier
+      %th Payment Type
+  %tbody
+    - @credit_notes.each do |credit_note|
+      %tr
+        %td= link_to credit_note.id, credit_note
+        %td= credit_note.user.try(:name)
+        %td= credit_note.created_at.strftime('%D')
+        %td= credit_note.company.try(:alias)
+        %td= credit_note.payment_type.humanize
+
+= will_paginate if @credit_notes.size > 0
