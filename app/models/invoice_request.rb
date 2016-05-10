@@ -10,7 +10,7 @@ class InvoiceRequest < ApplicationRecord
   belongs_to :user
   belongs_to :company, optional: true
 
-  validates :company_id, :attention_of, :invoice_address_one, :invoice_address_city, :invoice_address_county, :invoice_address_postcode, presence: true
+  validates :company_id, :invoice_address_one, :invoice_address_city, :invoice_address_county, :invoice_address_postcode, presence: true
 
   with_options if: '!same_dispatch_address' do |ir|
     ir.validates :dispatch_address_one, presence: true

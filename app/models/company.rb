@@ -1,6 +1,8 @@
 class Company < ApplicationRecord
 
-  validates :name, :address_one, :county, :postcode, presence: true
+  default_scope -> { order name: :asc }
+
+  #validates :name, :address_one, :county, :postcode, presence: true
   before_validation :set_name
 
   def address

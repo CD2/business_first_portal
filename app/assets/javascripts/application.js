@@ -13,3 +13,28 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+$(function () {
+
+    $('#invoice_request_company_id').on('change', function(){
+        $.get('/companies/' + this.value + '.json', function (resp) {
+            for(key in resp) {
+                $('#invoice_request_invoice_' + key).val(resp[key])
+            }
+        })
+    });
+    
+    $('#purchase_order_payment_type').on('change', function () {
+        if (this.value == 'credit_card') {
+            $('.credit_card_spent').removeClass('hidden')
+        } else {
+            $('.credit_card_spent').addClass('hidden')
+        }
+    });
+
+    if ($('#purchase_order_payment_type').val() == 'credit_card') {
+        $('.credit_card_spent').removeClass('hidden')
+    }
+    
+});

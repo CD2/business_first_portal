@@ -3,6 +3,10 @@ class OrderPriceRequestsController < ApplicationController
 
   def index
     @order_price_requests = OrderPriceRequest.scope_chain(params).paginate(:page => params[:page])
+    respond_to do |format|
+      format.html
+      format.json { render json: OrderPriceRequest.all }
+    end
   end
 
   def new

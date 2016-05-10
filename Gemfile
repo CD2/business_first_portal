@@ -13,6 +13,7 @@ gem 'haml-rails'
 gem 'bcrypt'
 
 gem 'will_paginate'
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'byebug'

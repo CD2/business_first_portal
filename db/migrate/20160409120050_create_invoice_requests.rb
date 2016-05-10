@@ -27,8 +27,6 @@ class CreateInvoiceRequests < ActiveRecord::Migration[5.0]
       t.string :dispatch_address_postcode
 
       t.text :notes
-      t.string :device_user
-      t.string :cost_code
 
       t.boolean :delivery_note_only, default: false
 

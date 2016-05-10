@@ -20,6 +20,10 @@ class ProductsController < ApplicationController
   end
 
   def edit
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def update
@@ -33,6 +37,12 @@ class ProductsController < ApplicationController
   def destroy
     @product.destroy
     redirect_to @ref
+  end
+
+  def index
+    respond_to do |format|
+      format.json { render json: Product.all }
+    end
   end
 
   private
@@ -50,7 +60,7 @@ class ProductsController < ApplicationController
     end
 
     def product_params
-      params.require(:product).permit(:name, :imei, :quantity, :price, :notes)
+      params.require(:product).permit(:name, :imei, :quantity, :price, :notes, :device_user, :cost_code)
     end
 
 end

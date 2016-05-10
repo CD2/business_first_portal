@@ -6,6 +6,10 @@ class PurchaseOrdersController < ApplicationController
 
   def index
     @purchase_orders = PurchaseOrder.scope_chain(params).paginate(:page => params[:page])
+    respond_to do |format|
+      format.html
+      format.json { render json: PurchaseOrder.all }
+    end
   end
 
   def new
@@ -51,7 +55,7 @@ class PurchaseOrdersController < ApplicationController
     end
 
     def purchase_order_params
-      params.require(:purchase_order).permit(:status, :payment_type, :company_id, :notes, :received_goods, :received_invoice, :under_query)
+      params.require(:purchase_order).permit(:status, :payment_type, :company_id, :notes, :received_goods, :received_invoice, :under_query, :amount_spent)
     end
   
 end

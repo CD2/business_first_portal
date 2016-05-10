@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     post :filters, on: :collection
   end
 
+  resources :products, only: :index
   resources :invoice_requests, concerns: :filterable do
     member do
       get :print
@@ -22,7 +23,7 @@ Rails.application.routes.draw do
     member { get :print }
   end
   resources :order_price_requests, concerns: :filterable
-  resources :companies, except: :show, concerns: :filterable
+  resources :companies, concerns: :filterable
   resources :users
 
   root 'pages#home'

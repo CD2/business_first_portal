@@ -36,6 +36,7 @@
         %th Unit Price
         %th Line Total
         %th Additional Line Info
+        %th
     - @purchase_order.products.each do |product|
       %tr
         %td= product.name
@@ -43,5 +44,8 @@
         %td= number_to_currency product.price
         %td= number_to_currency product.line_total
         %td= product.notes
+        %td.table_actions
+          = link_to fa_icon("pencil"), edit_purchase_order_product_path(@purchase_order, product), remote: true if @purchase_order.active?
+          = link_to fa_icon("close"), [@purchase_order, product], method: :delete, data: { confirm: "Are you sure you want to delete this item?" } if @purchase_order.active?
   #table_actions
     = link_to '+ Add Item', new_purchase_order_product_path(@purchase_order), remote: true

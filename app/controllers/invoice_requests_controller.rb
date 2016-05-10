@@ -10,6 +10,10 @@ class InvoiceRequestsController < ApplicationController
 
   def index
     @invoice_requests = InvoiceRequest.scope_chain(params).paginate(:page => params[:page])
+    respond_to do |format|
+      format.html
+      format.json { render json: InvoiceRequest.all }
+    end
   end
 
   def new
@@ -73,7 +77,7 @@ class InvoiceRequestsController < ApplicationController
     end
 
     def invoice_request_params
-      params.require(:invoice_request).permit(:status, :date, :invoice_number, :company_id, :same_dispatch_address, :device_user, :cost_code, :notes, :delivery_note_only,
+      params.require(:invoice_request).permit(:status, :date, :invoice_number, :company_id, :same_dispatch_address, :notes, :delivery_note_only,
                                               :invoice_address_one, :invoice_address_two, :invoice_address_city, :invoice_address_county, :invoice_address_postcode, :dispatch_address_one, :dispatch_address_two, :dispatch_address_city, :dispatch_address_county, :dispatch_address_postcode,
                                               :invoice_date, :po_number, :attention_of)
     end

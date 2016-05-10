@@ -25,6 +25,9 @@
           .field
             = f.label :payment_type
             = f.select :payment_type, PurchaseOrder.payment_types.keys.map { |s| [s.humanize, s] }, prompt: '-- Please Select --'
+          .field.credit_card_spent.hidden
+            = f.label :amount_spent, "This amount spent on the Credit Card"
+            = f.text_field :amount_spent
           .field
             = label_tag :status
             .field

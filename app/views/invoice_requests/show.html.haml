@@ -36,12 +36,6 @@
         %br
         %b Date:
         = @invoice_request.invoice_date.try{strftime('%D')}
-        %br
-        %b Device User:
-        = @invoice_request.device_user
-        %br
-        %b Cost Code:
-        = @invoice_request.cost_code
 
   %table.invoice_request_products
     %thead
@@ -60,6 +54,7 @@
         %td= number_to_currency product.line_total
         %td= product.notes
         %td.table_actions
-          = link_to 'X', [@invoice_request, product], method: :delete, data: { confirm: "Are you sure you want to delete this item?" } if @invoice_request.active?
+          = link_to fa_icon("pencil"), edit_invoice_request_product_path(@invoice_request, product), remote: true if @invoice_request.active?
+          = link_to fa_icon("close"), [@invoice_request, product], method: :delete, data: { confirm: "Are you sure you want to delete this item?" } if @invoice_request.active?
   #table_actions
     = link_to 'Add Item', new_invoice_request_product_path(@invoice_request), remote: true if @invoice_request.active?

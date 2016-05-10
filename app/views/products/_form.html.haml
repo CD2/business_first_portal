@@ -20,6 +20,12 @@
 
         #side_panel
           .field
+            = f.label :device_user, "User"
+            = f.text_field :device_user
+          .field
+            = f.label :cost_code
+            = f.text_field :cost_code
+          .field
             = f.label :notes
             = f.text_area :notes, rows: 8
 

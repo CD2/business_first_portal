@@ -53,8 +53,6 @@ ActiveRecord::Schema.define(version: 20160423225729) do
     t.string   "dispatch_address_county"
     t.string   "dispatch_address_postcode"
     t.text     "notes"
-    t.string   "device_user"
-    t.string   "cost_code"
     t.boolean  "delivery_note_only",        default: false
     t.integer  "user_id"
     t.datetime "created_at",                                null: false
@@ -80,28 +78,31 @@ ActiveRecord::Schema.define(version: 20160423225729) do
     t.string   "name"
     t.string   "imei"
     t.integer  "quantity"
-    t.integer  "price"
+    t.decimal  "price",          precision: 8, scale: 2, default: "0.0"
     t.string   "notes"
+    t.string   "device_user"
+    t.string   "cost_code"
     t.string   "reference_type"
     t.integer  "reference_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                                             null: false
+    t.datetime "updated_at",                                             null: false
   end
 
   add_index "products", ["reference_type", "reference_id"], name: "index_products_on_reference_type_and_reference_id", using: :btree
 
   create_table "purchase_orders", force: :cascade do |t|
     t.string   "title"
-    t.integer  "status"
+    t.integer  "status",           default: 0
     t.integer  "payment_type"
     t.integer  "company_id"
     t.text     "notes"
     t.boolean  "received_goods"
     t.boolean  "received_invoice"
     t.boolean  "under_query"
+    t.string   "amount_spent"
     t.integer  "user_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
 
   create_table "users", force: :cascade do |t|

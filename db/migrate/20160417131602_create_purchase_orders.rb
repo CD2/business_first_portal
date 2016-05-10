@@ -9,6 +9,7 @@ class CreatePurchaseOrders < ActiveRecord::Migration[5.0]
       t.boolean :received_goods
       t.boolean :received_invoice
       t.boolean :under_query
+      t.string :amount_spent
 
       t.integer :user_id
 

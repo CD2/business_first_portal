@@ -1,8 +1,18 @@
 class CompaniesController < ApplicationController
-  before_action :set_company, only: [:edit, :update, :destroy]
+  before_action :set_company, only: [:show, :edit, :update, :destroy]
+
+  def show
+    respond_to do |format|
+      format.json { render json: @company }
+    end
+  end
 
   def index
     @companies = Company.paginate(:page => params[:page])
+    respond_to do |format|
+      format.html
+      format.json { render json: Company.all }
+    end
   end
 
   def new
