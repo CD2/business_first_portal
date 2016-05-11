@@ -21,7 +21,7 @@
       = @invoice_request.user.try(:name)
       %br
       %b Date:
-      = @invoice_request.invoice_date.try{strftime('%D')}
+      = @invoice_request.created_at.try{strftime('%D')}
 
   = field_set_tag 'Products' do
     %table.invoice_request_products
