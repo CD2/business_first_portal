@@ -11,14 +11,16 @@
     .even_column
       = field_set_tag 'Dispatch' do
         = "Att. of #{@delivery_note.attention_of}"
+        %br
+        = @delivery_note.company.try(:name)
         = render_address @delivery_note.dispatch_address
     .even_column
       = field_set_tag 'Details' do
         %b DL Number:
-        = @delivery_note.user.try(:name)
+        = @delivery_note.id
         %br
         %b Date:
-        = @delivery_note.invoice_date.try{strftime('%D')}
+        = @delivery_note.created_at.try{strftime('%D')}
 
   %table.invoice_request_products
     %thead
