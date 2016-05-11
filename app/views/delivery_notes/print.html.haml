@@ -13,7 +13,7 @@
         = render_address @delivery_note.dispatch_address
       = field_set_tag 'Details' do
         %b DL Number:
-        = @delivery_note.user.try(:name)
+        = @delivery_note.id
         %br
         %b Date:
         = @delivery_note.created_at.try{strftime('%D')}

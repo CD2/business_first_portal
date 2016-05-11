@@ -32,6 +32,8 @@
           %th Unit Price
           %th Line Total
           %th Additional Line Info
+          %th User
+          %th Cost Code
       - @invoice_request.products.each do |product|
         %tr
           %td= product.name
@@ -39,3 +41,5 @@
           %td= number_to_currency product.price
           %td= number_to_currency product.line_total
           %td= product.notes
+          %td= product.device_user
+          %td= product.cost_code

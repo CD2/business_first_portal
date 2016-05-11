@@ -27,4 +27,8 @@ class PurchaseOrder < ApplicationRecord
     columns << 'company_name'
   end
 
+  def total
+    products.inject(0) { |t, i| t + i.line_total }
+  end
+
 end

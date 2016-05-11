@@ -46,3 +46,9 @@
           %td= number_to_currency product.price
           %td= number_to_currency product.line_total
           %td= product.notes
+      %tr
+        %th Total
+        %th
+        %th
+        %th= number_to_currency @purchase_order.total
+        %th

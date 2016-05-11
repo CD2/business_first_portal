@@ -45,6 +45,8 @@
         %th Unit Price
         %th Line Total
         %th Additional Line Info
+        %th User
+        %th Cost Code
         %th
     - @invoice_request.products.each do |product|
       %tr
@@ -53,6 +55,8 @@
         %td= number_to_currency product.price
         %td= number_to_currency product.line_total
         %td= product.notes
+        %td= product.device_user
+        %td= product.cost_code
         %td.table_actions
           = link_to fa_icon("pencil"), edit_invoice_request_product_path(@invoice_request, product), remote: true if @invoice_request.active?
           = link_to fa_icon("close"), [@invoice_request, product], method: :delete, data: { confirm: "Are you sure you want to delete this item?" } if @invoice_request.active?

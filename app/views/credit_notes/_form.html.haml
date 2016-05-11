@@ -20,29 +20,6 @@
               = f.label :status
               = f.select :status, PurchaseOrder.statuses.keys.map { |s| [s.humanize, s] }
 
-
-        = field_set_tag 'Information' do
-          .field
-            = f.label :payment_type
-            = f.select :payment_type, PurchaseOrder.payment_types.keys.map { |s| [s.humanize, s] }, prompt: '-- Please Select --'
-          .field.credit_card_spent.hidden
-            = f.label :amount_spent, "This amount spent on the Credit Card"
-            = f.text_field :amount_spent
-          .field
-            = label_tag :status
-            .field
-              = f.label :received_goods do
-                = f.check_box :received_goods
-                %span Received Goods
-            .field
-              = f.label :received_invoice do
-                = f.check_box :received_invoice
-                %span Received Invoice
-            .field
-              = f.label :under_query do
-                = f.check_box :under_query
-                %span Under Query
-
     .actions
       - if @credit_note.new_record?
         = f.submit "Save and Add Products", data: {disable_with: 'Creating Purchase Order...'}
