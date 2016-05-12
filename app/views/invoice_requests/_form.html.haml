@@ -15,19 +15,19 @@
             = f.text_field :attention_of
           .field
             = f.label :invoice_address_one, "Address One"
-            = f.text_field :invoice_address_one
+            = f.text_field :invoice_address_one, class: 'address_one'
           .field
             = f.label :invoice_address_two, "Address Two"
-            = f.text_field :invoice_address_two
+            = f.text_field :invoice_address_two, class: 'address_two'
           .field
             = f.label :invoice_address_city, "City"
-            = f.text_field :invoice_address_city
+            = f.text_field :invoice_address_city, class: 'city'
           .field
             = f.label :invoice_address_county, "County"
-            = f.text_field :invoice_address_county
+            = f.text_field :invoice_address_county, class: 'county'
           .field
             = f.label :invoice_address_postcode, "Postcode"
-            = f.text_field :invoice_address_postcode
+            = f.text_field :invoice_address_postcode, class: 'postcode'
 
           .field.check_box_hiding_div
             = f.label :same_dispatch_address, "Dispatch to Invoice Address"

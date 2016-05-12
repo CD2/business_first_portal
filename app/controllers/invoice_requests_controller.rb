@@ -9,7 +9,7 @@ class InvoiceRequestsController < ApplicationController
   end
 
   def index
-    @invoice_requests = InvoiceRequest.scope_chain(params).paginate(:page => params[:page])
+    @invoice_requests = InvoiceRequest.invoices.scope_chain(params).paginate(:page => params[:page])
     respond_to do |format|
       format.html
       format.json { render json: InvoiceRequest.all }

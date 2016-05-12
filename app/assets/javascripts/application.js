@@ -20,7 +20,7 @@ $(function () {
     $('#invoice_request_company_id').on('change', function(){
         $.get('/companies/' + this.value + '.json', function (resp) {
             for(key in resp) {
-                $('#invoice_request_invoice_' + key).val(resp[key])
+                $('.' + key).val(resp[key])
             }
         })
     });

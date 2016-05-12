@@ -23,15 +23,11 @@
         %tr
           %th Item
           %th Quantity
-          %th Unit Price
-          %th Line Total
           %th Additional Line Info
       - @delivery_note.products.each do |product|
         %tr
           %td= product.name
           %td= product.quantity
-          %td= number_to_currency product.price
-          %td= number_to_currency product.line_total
           %td= product.notes
 
 #signing_area

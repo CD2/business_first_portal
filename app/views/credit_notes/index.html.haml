@@ -21,7 +21,6 @@
       %th Raised By
       %th Date
       %th Supplier
-      %th Payment Type
   %tbody
     - @credit_notes.each do |credit_note|
       %tr
@@ -29,6 +28,5 @@
         %td= credit_note.user.try(:name)
         %td= credit_note.created_at.strftime('%D')
         %td= credit_note.company.try(:alias)
-        %td= credit_note.payment_type.humanize
 
 = will_paginate if @credit_notes.size > 0
