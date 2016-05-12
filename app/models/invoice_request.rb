@@ -1,4 +1,7 @@
 class InvoiceRequest < ApplicationRecord
+
+  default_scope -> { order id: :desc }
+
   attr_accessor :delivery_note
 
   scope :invoices, -> {where(delivery_note_only: false).order(id: :desc)}

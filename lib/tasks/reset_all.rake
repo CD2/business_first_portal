@@ -20,4 +20,16 @@ task heroku_reset_all: :environment do
     ActiveRecord::Base.connection.reset_pk_sequence!(t)
   end
 
+  table = 'invoice_requests'
+  auto_inc_val = 2500    # New auto increment start point
+  ActiveRecord::Base.connection.execute(
+      "ALTER SEQUENCE #{table}_id_seq RESTART WITH #{auto_inc_val}"
+  )
+
+  table = 'purchase_orders'
+  auto_inc_val = 2500    # New auto increment start point
+  ActiveRecord::Base.connection.execute(
+      "ALTER SEQUENCE #{table}_id_seq RESTART WITH #{auto_inc_val}"
+  )
+
 end
