@@ -17,7 +17,6 @@ class InvoiceRequest < ApplicationRecord
 
   with_options if: '!same_dispatch_address' do |ir|
     ir.validates :dispatch_address_one, presence: true
-    ir.validates :dispatch_address_two, presence: true
     ir.validates :dispatch_address_city, presence: true
     ir.validates :dispatch_address_county, presence: true
     ir.validates :dispatch_address_postcode, presence: true
