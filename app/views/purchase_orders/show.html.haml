@@ -2,7 +2,12 @@
 
 #display_page
   #show_actions
-    = link_to 'Edit', edit_purchase_order_path(@purchase_order)
+    - if @purchase_order.active?
+      = link_to 'Mark Complete', complete_purchase_order_path(@purchase_order) if current_user.sub_admin?
+      = link_to 'Edit', edit_purchase_order_path(@purchase_order)
+    - else
+      = link_to 'Open', open_purchase_order_path(@purchase_order) if current_user.sub_admin?
+
     = link_to "Print", "javascript:frames['frame'].print()", class: 'minor_button'
     %iframe.hidden{src: print_purchase_order_path(@purchase_order), name: "frame"}
   #column_layout

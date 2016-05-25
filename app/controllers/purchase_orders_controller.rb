@@ -1,5 +1,5 @@
 class PurchaseOrdersController < ApplicationController
-  before_action :set_purchase_order, only: [:edit, :update, :destroy, :show, :print]
+  before_action :set_purchase_order, only: [:edit, :update, :destroy, :show, :print, :complete, :open]
 
   def show
   end
@@ -42,6 +42,16 @@ class PurchaseOrdersController < ApplicationController
   end
 
   def print
+  end
+
+  def complete
+    @purchase_order.complete!
+    redirect_to @purchase_order
+  end
+
+  def open
+    @purchase_order.active!
+    redirect_to @purchase_order
   end
 
   private

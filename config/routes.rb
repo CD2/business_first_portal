@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   resources :purchase_orders, concerns: :filterable do
     member do
       get :print
+      get :complete
+      get :open
     end
     resources :products, only: [:new, :create, :edit, :update, :destroy]
   end
