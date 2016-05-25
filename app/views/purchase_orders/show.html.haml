@@ -57,6 +57,6 @@
       %th
       %th
       %th= number_to_currency @purchase_order.total
-
-  #table_actions
-    = link_to '+ Add Item', new_purchase_order_product_path(@purchase_order), remote: true
+  - if @purchase_order.active?
+    #table_actions
+      = link_to '+ Add Item', new_purchase_order_product_path(@purchase_order), remote: true
