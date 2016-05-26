@@ -13,7 +13,7 @@
     - @order_price_requests.each do |order_price_request|
       %tr
         %td= order_price_request.order_type.humanize
-        %td= "#{order_price_request.user.name} at #{order_price_request.created_at.strftime("%D")}"
+        %td= "#{order_price_request.user.name} at #{order_price_request.created_at}"
         %td= "#{order_price_request.quantity} x #{order_price_request.item}"
         %td= "#{order_price_request.ordered.try{strftime("%D")}} #{'from' unless order_price_request.ordered_from.blank?} #{order_price_request.ordered_from}"
         %td= simple_format order_price_request.notes

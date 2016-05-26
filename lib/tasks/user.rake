@@ -13,6 +13,7 @@ User.create!(name: "Amanda Abbs", email: "amanda@business-first.com", password: 
 User.create!(name: "Emma Holmes", email: "emma@business-first.com", password: 'bfsl2016')
 User.create!(name: "Tessa Robinson", email: "tessa.robinson@business-first.com", password: 'bfsl2016')
 User.create!(name: "Lucy Osborne", email: "lucy.osborne@business-first.com", password: 'bfsl2016')
+User.create!(name: "Lucy Osborne", email: "tilly.sweet@business-first.com", password: 'bfs2016')
 User.create!(name: "Sally Morgan", email: "sally@business-first.com", password: 'bfsl2016', admin: true, sub_admin: true)
 
 end

@@ -20,6 +20,6 @@
         %td= delivery_note.user.try(:name)
         %td= delivery_note.company.try(:name)
         %td= delivery_note.status.humanize
-        %td= delivery_note.created_at.strftime('%D')
+        %td= delivery_note.created_at
 
 = will_paginate

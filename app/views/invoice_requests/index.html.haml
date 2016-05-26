@@ -25,7 +25,7 @@
         %td= invoice_request.user.try(:name)
         %td= invoice_request.company.try(:name)
         %td= invoice_request.status.humanize
-        %td= invoice_request.created_at.strftime('%D')
+        %td= invoice_request.created_at
         %td.table_actions
           = link_to 'Delete', invoice_request, method: :delete, data: { confirm: 'Are you sure?' }
 

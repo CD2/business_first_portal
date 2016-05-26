@@ -30,7 +30,7 @@
       %tr
         %td= link_to purchase_order.id, purchase_order
         %td= purchase_order.user.try(:name)
-        %td= purchase_order.created_at.strftime('%D')
+        %td= purchase_order.created_at
         %td= purchase_order.company.try(:alias)
         %td= purchase_order.payment_type.humanize
 

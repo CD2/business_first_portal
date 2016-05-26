@@ -26,7 +26,7 @@
       %tr
         %td= link_to credit_note.id, credit_note
         %td= credit_note.user.try(:name)
-        %td= credit_note.created_at.strftime('%D')
+        %td= credit_note.created_at
         %td= credit_note.company.try(:alias)
 
 = will_paginate if @credit_notes.size > 0

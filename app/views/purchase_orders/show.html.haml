@@ -22,7 +22,7 @@
         = @purchase_order.user.try(:name)
         %br
         %b Ordered date:
-        = @purchase_order.created_at.strftime('%D')
+        = @purchase_order.created_at
         %br
         %b PO Number:
         = @purchase_order.id

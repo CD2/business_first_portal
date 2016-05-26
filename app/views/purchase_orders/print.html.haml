@@ -21,7 +21,7 @@
     = field_set_tag 'Information' do
       = "Ordered by: #{@purchase_order.user.try(:name)}"
       %br
-      = "Ordered date: #{@purchase_order.created_at.strftime('%D')}"
+      = "Ordered date: #{@purchase_order.created_at}"
       %br
       = "PO Number: #{@purchase_order.id}"
     = field_set_tag 'Status' do

@@ -16,7 +16,7 @@
         = @credit_note.user.try(:name)
         %br
         %b Ordered date:
-        = @credit_note.created_at.strftime('%D')
+        = @credit_note.created_at
         %br
         %b PO Number:
         = @credit_note.id
