@@ -20,7 +20,7 @@
         = @delivery_note.id
         %br
         %b Date:
-        = @delivery_note.created_at.try{strftime('%D')}
+        = @delivery_note.created_at
 
   %table.invoice_request_products
     %thead

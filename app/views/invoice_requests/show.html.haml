@@ -35,7 +35,7 @@
         = @invoice_request.user.try(:name)
         %br
         %b Date:
-        = @invoice_request.created_at.try{strftime('%D')}
+        = @invoice_request.created_at
 
   %table.invoice_request_products
     %thead
@@ -60,5 +60,14 @@
         %td.table_actions
           = link_to fa_icon("pencil"), edit_invoice_request_product_path(@invoice_request, product), remote: true if @invoice_request.active?
           = link_to fa_icon("close"), [@invoice_request, product], method: :delete, data: { confirm: "Are you sure you want to delete this item?" } if @invoice_request.active?
+    %tr.total_row
+      %td Total
+      %td
+      %td
+      %td= number_to_currency @invoice_request.products.collect(&:line_total).sum
+      %td
+      %td
+      %td
+      %td
   #table_actions
     = link_to 'Add Item', new_invoice_request_product_path(@invoice_request), remote: true if @invoice_request.active?
