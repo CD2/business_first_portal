@@ -1,5 +1,6 @@
 = link_to '+ New Order Price Request', new_order_price_request_path
 
 .right_buttons
+  = link_to 'All', url_for(status: nil), class: "#{'active' if params[:status].nil?}"
   = link_to 'Active', url_for(status: 'active'), class: "#{'active' if params[:status] == 'active'}"
   = link_to 'Complete', url_for(status: 'complete'), class: "#{'active' if params[:status] == 'complete'}"
