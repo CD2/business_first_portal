@@ -15,6 +15,8 @@ gem 'bcrypt'
 gem 'will_paginate'
 gem 'font-awesome-rails'
 
+gem 'ransack', github: 'activerecord-hackery/ransack'
+
 group :development, :test do
   gem 'byebug'
 end
