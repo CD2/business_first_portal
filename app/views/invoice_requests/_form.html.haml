@@ -73,9 +73,14 @@
             = f.label :notes
             = f.text_area :notes
           .field
-            = f.label :delivery_note_only do
-              = f.check_box :delivery_note_only, checked: params[:delivery_note_only].present?
-              %span Create delivery note only
+            - if @invoice_request.new_record?
+              = f.label :delivery_note_only do
+                = f.check_box :delivery_note_only, checked: params[:delivery_note_only].present?
+                %span Create delivery note only
+            - else
+              = f.label :delivery_note_only do
+                = f.check_box :delivery_note_only
+                %span Create delivery note only
 
     .actions
       - if @invoice_request.new_record?
